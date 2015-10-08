@@ -1,4 +1,4 @@
-(function() {
+(function (angular) {
   'use strict';
 
   angular
@@ -11,4 +11,4 @@
 
     vm.awesomeThings = [];
   }
-})();
+})(angular);
