@@ -1,3 +1,21 @@
-html {
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+$button-dim: 36px;
 
+form-item {
+  .option-item {
+    min-height: 75px;
+
+    .md-button {
+      min-height: $button-dim;
+      min-width: $button-dim;
+      height: $button-dim;
+      width: $button-dim;
+      line-height: 0;
+      margin-top: 20px;
+
+      &.handle:active, &.handle:hover {
+        cursor: move;
+      }
+    }
+  }
 }

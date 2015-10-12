@@ -8,7 +8,9 @@
     "toastr": "~2.1.1",
     "moment": "~2.10.3",
     "animate.css": "~3.3.0",
-    "angular": "~1.4.0"
+    "angular": "~1.4.0",
+    "angular-sortable-view": "~0.0.13",
+    "angular-messages": "~1.4.7"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

@@ -19,7 +19,7 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body flex leyout="column" >
+  <body flex leyout="column" ng-controller="MainController as main">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,8 +28,10 @@
       <h2>Angular Material Form Builder</h2>
 
       <div class="content" flex layout="column">
-        sdfsdfdsf
+        <form-item type="checkboxes" item="main.form.formItems[0]"></form-item>
       </div>
+      <h2>Preview</h2>
+      <form-view form="main.form"></form-view>
     </div>
 
     <!-- build:js(src) scripts/vendor.js -->

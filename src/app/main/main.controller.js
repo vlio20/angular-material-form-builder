@@ -9,6 +9,8 @@
   function MainController() {
     var vm = this;
 
-    vm.awesomeThings = [];
+    vm.form = {
+      formItems: [{}]
+    }
   }
 })(angular);
