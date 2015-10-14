@@ -8,7 +8,6 @@
   </div>
 
   <div ng-messages="CheckboxesView.form.$error">
-    <!--<div ng-message ng-if="CheckboxesView.formItem.config.required && CheckboxesView.selectedOptions.length === 0">Must select {{CheckboxesView.formItem.maxSelections || 1}} items</div>-->
     <div ng-message="minSelections">Must select {{CheckboxesView.formItem.maxSelections || 1}} items</div>
   </div>
 </md-input-container>

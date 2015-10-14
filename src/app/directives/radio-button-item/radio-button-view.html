@@ -1,0 +1,15 @@
+<md-input-container>
+    <md-radio-group name="formItemInput"
+                    ng-required="RadioButtonView.formItem.config.required"
+                    ng-model="RadioButtonView.formItem.value"
+                    layout="{{RadioButtonView.formItem.config.direction == 'horizontal' ? 'column' : 'row'}}"
+                    required>
+      <md-radio-button ng-repeat="option in RadioButtonView.formItem.options track by $index" value={{option.value}} aria-label="...">
+        {{option.value}}
+      </md-radio-button>
+    </md-radio-group>
+
+  <div ng-messages="RadioButtonView.form.$error">
+    <div ng-message="required">This field is required</div>
+  </div>
+</md-input-container>

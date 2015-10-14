@@ -12,7 +12,7 @@
         item: '='
       },
       controller: CheckboxesItemCtrl,
-      controllerAs: 'CheckboxesItem',
+      controllerAs: 'Checkboxes',
       bindToController: true
     };
 
@@ -32,8 +32,8 @@
     });
   }
 
-  CheckboxesItemCtrl.prototype.deleteOption = function ($index) {
-    this.item.options.splice($index, 1);
+  CheckboxesItemCtrl.prototype.deleteOption = function (index) {
+    this.item.options.splice(index, 1);
   };
 
   CheckboxesItemCtrl.prototype.addOption = function () {

@@ -32,18 +32,16 @@
   function FormItemCtrl($attrs, Utils) {
     this.Attrs = $attrs;
     this.Utils = Utils;
-    this.item.bla = 1;
     this.templates = {
       input: '<bet-form-input item="FormItem.item"></bet-form-input>',
       chooseFromList: '<bet-form-choose-from-list item="FormItem.item"></bet-form-choose-from-list>',
-      multipleChoices: '<bet-form-multiple-choices item="FormItem.item"></bet-form-mul>',
+      multipleChoices: '<radio-button-item item="FormItem.item"></radio-button-item>',
       matrix: '<bet-form-matrix item="FormItem.item"></bet-form-matrix>',
       checkboxes: '<checkboxes-item item="FormItem.item"></checkboxes-item>'
     };
   }
 
   FormItemCtrl.prototype.init = function () {
-    this.item.bla = 2;
     this.Utils.extend(this.item, {
       type: this.Attrs.type,
       props: {
@@ -54,8 +52,6 @@
         required: false
       }
     });
-
-    this.item.bla = 3;
   };
 
   FormItemCtrl.prototype._getItemTemplate = function (type) {

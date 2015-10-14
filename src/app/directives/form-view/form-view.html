@@ -1,8 +1,14 @@
  <div class="formItem" ng-repeat="formItem in FormView.form.items track by $index" ng-switch="formItem.type" layout="column">
-    <span class="formItem-title">{{formItem.props.title}}</span>
-    <span class="formItem-help-text">{{formItem.props.helpText}}</span>
+   {{formItem.type}}
+   <ng-form name="formItemForm">
+     <div>
+       <div class="formItem-title">{{formItem.props.title}}</div>
+       <div class="formItem-help-text">{{formItem.props.helpText}}</div>
 
-    <ng-form name="formItemForm">
+       <checkboxes-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="checkboxes"></checkboxes-view>
+       <radio-button-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="multipleChoices"></radio-button-view>
+     </div>
+
       <!--<md-input-container class="text-input" ng-switch-when="input">-->
         <!--<label>{{formItem.label}}</label>-->
         <!--<input name="formItemInput" ng-model="formItem.value" ng-required="formItem.required"/>-->
@@ -48,7 +54,5 @@
           <!--<div ng-message="matrixRequired">This is required</div>-->
         <!--</div>-->
       <!--</md-input-container>-->
-
-      <checkboxes-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="checkboxes"></checkboxes-view>
     </ng-form>
   </div>

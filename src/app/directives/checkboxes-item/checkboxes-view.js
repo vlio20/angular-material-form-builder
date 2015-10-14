@@ -5,13 +5,12 @@
     .directive('checkboxesView', CheckboxesView);
 
   /*@ngInject*/
-  function CheckboxesView() {
+  function CheckboxesView($timeout) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/directives/checkboxes-item/checkboxes-view.html',
       scope: {
         formItem: '=',
-        isValid: '=',
         isPreview: '&',
         form: '='
       },
@@ -22,7 +21,11 @@
     };
 
     function linker(scope, elem, attrs, ctrl) {
-      ctrl.init();
+
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      $timeout(function() {
+        ctrl.init();
+      });
     }
 
     return directive;
@@ -31,17 +34,18 @@
   /*@ngInject*/
   function CheckboxesViewCtrl($scope, Utils) {
     this.Scope = $scope;
-    Utils.extend(this.formItem, {
+    this.Utils = Utils;
+  }
+
+  CheckboxesViewCtrl.prototype.init = function () {
+    this.Utils.extend(this.formItem, {
       config: {},
       options: []
     });
 
-    this.formItem.bla = 6;
     this.selectedOptions = this._getSelectedOptions();
     this.disableOptions = false;
-  }
 
-  CheckboxesViewCtrl.prototype.init = function () {
     this.isValid = true;
     this._updateView();
     this._updateValidity();

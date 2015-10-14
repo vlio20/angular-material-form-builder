@@ -1,0 +1,26 @@
+<div class="sortable-container" layout="column" sv-root sv-part="RadioButton.item.options">
+
+  <md-switch ng-model="RadioButton.item.config.direction" ng-true-value="'horizontal'" ng-false-value="'vertical'">
+    Layout direction ({{RadioButton.item.config.direction == 'horizontal' ? 'Horizontal' : 'Vertical'}})
+  </md-switch>
+
+  <div class="option-item" layout="row" ng-repeat="option in RadioButton.item.options track by $index" sv-element>
+
+    <md-button class="md-button handle" md-no-ink aria-label="reorder option item" sv-handle>
+      <i class="material-icons">reorder</i>
+    </md-button>
+
+    <md-input-container>
+      <label>Option {{$index + 1}}</label>
+      <input ng-model="option.value" />
+    </md-input-container>
+
+    <md-button class="md-button" ng-click="RadioButton.deleteOption($index)">
+      <i class="material-icons">delete</i>
+    </md-button>
+
+  </div>
+  <div layout="row" layout-align="start">
+    <md-button class="md-primary add-option-button" ng-click="RadioButton.addOption()">Add Option</md-button>
+  </div>
+</div>
