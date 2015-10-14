@@ -19,8 +19,9 @@
     return directive;
   }
 
-  function CheckboxesItemCtrl() {
-    this.item = angular.merge({
+  /*@ngInject*/
+  function CheckboxesItemCtrl(Utils) {
+    Utils.extend(this.item, {
       config: {
         maxSelections: null
       },
@@ -28,7 +29,7 @@
         value: '',
         selected: false
       }]
-    }, this.item);
+    });
   }
 
   CheckboxesItemCtrl.prototype.deleteOption = function ($index) {

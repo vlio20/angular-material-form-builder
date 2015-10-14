@@ -1,6 +1,15 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 $button-dim: 36px;
 
+.content {
+  height: 800px;
+  overflow: auto;
+
+  .builder {
+    border-right: 1px solid #CCCCCC;
+  }
+}
+
 form-item {
   .option-item {
     min-height: 75px;
@@ -17,5 +26,27 @@ form-item {
         cursor: move;
       }
     }
+  }
+}
+
+form-view {
+  .formItem-title {
+    font-size: 18px;
+  }
+
+  .formItem-help-text {
+    font-size: 14px;
+    color: #6c6c6c;
+  }
+}
+
+i.material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &.medium {
+    font-size: 36px;
   }
 }

@@ -29,13 +29,14 @@
   }
 
   /*@ngInject*/
-  function CheckboxesViewCtrl($scope) {
+  function CheckboxesViewCtrl($scope, Utils) {
     this.Scope = $scope;
-    this.formItem = angular.extend({
+    Utils.extend(this.formItem, {
       config: {},
       options: []
-    }, this.formItem);
+    });
 
+    this.formItem.bla = 6;
     this.selectedOptions = this._getSelectedOptions();
     this.disableOptions = false;
   }
@@ -44,8 +45,8 @@
     this.isValid = true;
     this._updateView();
     this._updateValidity();
-    if(this.isPreview()) {
-     this._enableWatchers();
+    if (this.isPreview()) {
+      this._enableWatchers();
     }
   };
 
@@ -72,7 +73,7 @@
   };
 
   CheckboxesViewCtrl.prototype._updateValidity = function () {
-    if(this.formItem.config.required) {
+    if (this.formItem.config.required) {
       this.isValid = this.selectedOptions.length > 0;
     } else {
       this.isValid = true;
@@ -82,8 +83,8 @@
   };
 
   CheckboxesViewCtrl.prototype._enableWatchers = function () {
-    this.Scope.$watch('CheckboxesView.formItem.config.required', function(newVal) {
-      if(newVal !== undefined) {
+    this.Scope.$watch('CheckboxesView.formItem.config.required', function (newVal) {
+      if (newVal !== undefined) {
         this._updateView();
         this._updateValidity();
       }

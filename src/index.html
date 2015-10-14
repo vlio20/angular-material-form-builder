@@ -19,20 +19,61 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body flex leyout="column" ng-controller="MainController as main">
+  <body ng-controller="MainController as main">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div flex layout="column" layout-fill>
-      <h2>Angular Material Form Builder</h2>
-
-      <div class="content" flex layout="column">
-        <form-item type="checkboxes" item="main.form.formItems[0]"></form-item>
+    <div class="content" layout="row" layout-padding layout-margin layout-fill>
+      <div flex layout="column" class="builder">
+        <h2>Angular Material Form Builder</h2>
+        <div class="content" layout="column">
+          <form-item ng-repeat="item in main.form.items track by $index" type="{{item.type}}" item="item"></form-item>
+        </div>
       </div>
-      <h2>Preview</h2>
-      <form-view form="main.form"></form-view>
+
+      <div flex layout="column" class="view">
+        <h2>Preview</h2>
+
+        <form name="myFrom" >
+          <form-view form="main.form"></form-view>
+          <div ng-if="myFrom.$valid">valid</div>
+          <div ng-if="myFrom.$invalid">invalid</div>
+        </form>
+
+
+      </div>
     </div>
+
+    <md-fab-speed-dial md-open="main.isOpen" md-direction="up" class="md-fab-bottom-right md-scale">
+      <md-fab-trigger>
+        <md-button aria-label="..." class="md-fab md-warn">
+          <i class="material-icons medium">add</i>
+        </md-button>
+      </md-fab-trigger>
+      <md-fab-actions>
+        <md-button aria-label="..." class="md-fab md-raised md-mini">
+          <i class="material-icons">grid_on</i>
+          <md-tooltip md-direction="left" md-autohide>Matrix</md-tooltip>
+        </md-button>
+        <md-button aria-label="..." class="md-fab md-raised md-mini">
+          <i class="material-icons">keyboard</i>
+          <md-tooltip md-direction="left" md-autohide>Text-Area</md-tooltip>
+        </md-button>
+        <md-button aria-label="..." class="md-fab md-raised md-mini">
+          <i class="material-icons">text_format</i>
+          <md-tooltip md-direction="left" md-autohide>Text-Input</md-tooltip>
+        </md-button>
+        <md-button aria-label="..." class="md-fab md-raised md-mini">
+          <i class="material-icons">radio_button_checked</i>
+          <md-tooltip md-direction="left" md-autohide>Radio-Buttons</md-tooltip>
+        </md-button>
+        <md-button aria-label="..." class="md-fab md-raised md-mini" ng-click="main.addItem('checkboxes')">
+          <i class="material-icons">check_box</i>
+          <md-tooltip md-direction="left" md-autohide>Checkboxes</md-tooltip>
+        </md-button>
+      </md-fab-actions>
+    </md-fab-speed-dial>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

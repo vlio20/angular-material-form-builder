@@ -13,14 +13,27 @@
       },
       controller: FormViewCtrl,
       controllerAs: 'FormView',
-      bindToController: true
+      bindToController: true,
+      link: linker
     };
+
+    function linker(scope, elem, attrs, ctrl) {
+      ctrl.init();
+    }
 
     return directive;
   }
 
-  function FormViewCtrl() {
-    //this.config.options = this.config.options || [{}];
+  function FormViewCtrl($scope) {
+    this.Scope = $scope;
+  }
+
+  FormViewCtrl.prototype.init = function () {
+    //this.Scope.$watch(function () {
+    //
+    //}, function(newVal) {
+    //
+    //});
   }
 
 })(angular);

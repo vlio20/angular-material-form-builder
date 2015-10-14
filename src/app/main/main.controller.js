@@ -8,9 +8,13 @@
   /** @ngInject */
   function MainController() {
     var vm = this;
-
-    vm.form = {
-      formItems: [{}]
-    }
+    vm.form = { "items": [ { "type": "checkboxes", "bla": 6, "props": { "title": "asdasd", "helpText": "adasdasd" }, "config": { "maxSelections": 1, "required": true }, "options": [ { "value": "13", "selected": false }, { "value": "222", "selected": false } ] } ] };
   }
+
+  MainController.prototype.addItem = function (type) {
+    this.form.items.push({
+      type: type
+    });
+  }
+
 })(angular);
