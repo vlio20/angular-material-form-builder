@@ -20,7 +20,8 @@
   }
 
   /*@ngInject*/
-  function RadioButtonCtrl(Utils) {
+  function RadioButtonCtrl(Utils, $element) {
+    this.Element = $element;
     Utils.extend(this.item, {
       config: {},
       options: [{
@@ -37,6 +38,12 @@
     this.item.options.push({
       value: ''
     });
+
+    setTimeout(function() {
+      var options = this.Element.find('input');
+      var addedOption = options[options.length - 1];
+      addedOption.focus();
+    }.bind(this), 0);
   };
 
 })(angular);

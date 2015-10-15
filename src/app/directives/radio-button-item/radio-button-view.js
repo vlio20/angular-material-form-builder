@@ -25,7 +25,7 @@
       //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
       $timeout(function() {
         ctrl.init();
-      });
+      }, 50);
     }
 
     return directive;

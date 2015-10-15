@@ -20,7 +20,9 @@
   }
 
   /*@ngInject*/
-  function CheckboxesItemCtrl(Utils) {
+  function CheckboxesItemCtrl(Utils, $element) {
+    this.Element = $element;
+
     Utils.extend(this.item, {
       config: {
         maxSelections: null
@@ -41,6 +43,12 @@
       value: '',
       selected: false
     });
+
+    setTimeout(function() {
+      var options = this.Element.find('input');
+      var addedOption = options[options.length - 1];
+      addedOption.focus();
+    }.bind(this), 0);
   };
 
 })(angular);

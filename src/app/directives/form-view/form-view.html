@@ -1,5 +1,4 @@
  <div class="formItem" ng-repeat="formItem in FormView.form.items track by $index" ng-switch="formItem.type" layout="column">
-   {{formItem.type}}
    <ng-form name="formItemForm">
      <div>
        <div class="formItem-title">{{formItem.props.title}}</div>

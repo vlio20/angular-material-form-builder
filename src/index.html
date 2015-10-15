@@ -37,8 +37,7 @@
 
         <form name="myFrom" >
           <form-view form="main.form"></form-view>
-          <div ng-if="myFrom.$valid">valid</div>
-          <div ng-if="myFrom.$invalid">invalid</div>
+          <div ng-if="myFrom.$valid">form {{myFrom.$valid ? 'valid' : 'invalid'}}</div>
         </form>
 
 
