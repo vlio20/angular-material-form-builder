@@ -1,0 +1,9 @@
+<md-input-container>
+  <input ng-model="InputView.formItem.value"
+         type="{{InputView.formItem.config.type}}"
+         placeholder="{{InputView.formItem.config.placeholder}}"
+         ng-required="InputView.formItem.config.required" />
+  <div ng-messages="InputView.form.$error">
+    <div ng-message="required">This field is required</div>
+  </div>
+</md-input-container>

@@ -10,8 +10,10 @@
     Object.keys(src).forEach(function(key) {
       if(!dest.hasOwnProperty(key)) {
         dest[key] = src[key];
+      } else if(typeof src[key] === 'object') {
+        this.extend(dest[key], src[key]);
       }
-    });
+    }.bind(this));
 
     return dest;
   }

@@ -33,7 +33,7 @@
     this.Attrs = $attrs;
     this.Utils = Utils;
     this.templates = {
-      input: '<bet-form-input item="FormItem.item"></bet-form-input>',
+      input: '<input-item item="FormItem.item"></input-item>',
       chooseFromList: '<bet-form-choose-from-list item="FormItem.item"></bet-form-choose-from-list>',
       multipleChoices: '<radio-button-item item="FormItem.item"></radio-button-item>',
       matrix: '<bet-form-matrix item="FormItem.item"></bet-form-matrix>',
