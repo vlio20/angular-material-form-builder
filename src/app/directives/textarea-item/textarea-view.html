@@ -1,0 +1,8 @@
+<md-input-container>
+  <textarea ng-model="TextareaView.formItem.value"
+         placeholder="{{TextareaView.formItem.config.placeholder}}"
+         ng-required="TextareaView.formItem.config.required"></textarea>
+  <div ng-messages="TextareaView.form.$error">
+    <div ng-message="required">This field is required</div>
+  </div>
+</md-input-container>
