@@ -1,4 +1,3 @@
-{{FormView.form | json}}
 <div class="formItem" ng-repeat="formItem in FormView.form.items track by $index" ng-switch="formItem.type" layout="column">
   <ng-form name="formItemForm">
     <div>
@@ -9,52 +8,7 @@
       <radio-button-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="multipleChoices"></radio-button-view>
       <input-view form-item="formItem" form="formItemForm" ng-switch-when="input"></input-view>
       <textarea-view form-item="formItem" form="formItemForm" ng-switch-when="textarea"></textarea-view>
+      <matrix-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="matrix"></matrix-view>
     </div>
-
-    <!--<md-input-container class="text-input" ng-switch-when="input">-->
-    <!--<label>{{formItem.label}}</label>-->
-    <!--<input name="formItemInput" ng-model="formItem.value" ng-required="formItem.required"/>-->
-    <!--<div ng-messages="formItemForm.formItemInput.$error">-->
-    <!--<div ng-message="required">This is required</div>-->
-    <!--</div>-->
-    <!--</md-input-container>-->
-
-    <!--<md-input-container class="choose-from-list" ng-switch-when="chooseFromList">-->
-    <!--<md-select name="formItemInput" ng-required="formItem.required"  placeholder="Choose an option" ng-model="formItem.value">-->
-    <!--<md-option ng-repeat="option in formItem.options track by $index" value={{option.value}}>{{option.value}}</md-option>-->
-    <!--</md-select>-->
-    <!--<div ng-messages="formItemForm.formItemInput.$error">-->
-    <!--<div ng-message="required">This is required</div>-->
-    <!--</div>-->
-    <!--</md-input-container>-->
-
-    <!--<md-input-container ng-switch-when="multipleChoices">-->
-    <!--<md-radio-group name="formItemInput" ng-required="formItem.required" ng-model="formItem.value" layout="{{formItem.direction == 'horizontal' ? 'column' : 'row'}}">-->
-    <!--<md-radio-button ng-repeat="option in formItem.options track by $index"  value={{option.value}}>{{option.value}}</md-radio-button>-->
-    <!--</md-radio-group>-->
-    <!--<div ng-messages="formItemForm.formItemInput.$error">-->
-    <!--<div ng-message="required">This is required</div>-->
-    <!--</div>-->
-    <!--</md-input-container>-->
-
-    <!--<md-input-container class="matrix-container" ng-switch-when="matrix" layout="column" name="formItemInput" ng-model="formItem" matrix-model="formItem" matrix-required>-->
-    <!--<div class="matrix">-->
-    <!--<div class="matrix-row" flex layout="row">-->
-    <!--<span class="matrix-cell" flex="20"></span>-->
-    <!--<span class="matrix-cell matrix-cell-header" flex ng-repeat="column in formItem.columns track by $index">{{column.value}}</span>-->
-    <!--</div>-->
-    <!--<div class="matrix-row" ng-repeat="row in formItem.rows track by $index" layout="row">-->
-    <!--<span class="matrix-cell" flex="20" layout="column" layout-align="center">{{row.value}}</span>-->
-    <!--<md-radio-group  ng-model="row.selected" flex layout="row">-->
-    <!--<span class="matrix-cell radio-button-cell" flex ng-repeat="column in formItem.columns track by $index">-->
-    <!--<md-radio-button value={{column.value}}></md-radio-button>-->
-    <!--</span>-->
-    <!--</md-radio-group>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div ng-messages="formItemForm.formItemInput.$error">-->
-    <!--<div ng-message="matrixRequired">This is required</div>-->
-    <!--</div>-->
-    <!--</md-input-container>-->
   </ng-form>
 </div>

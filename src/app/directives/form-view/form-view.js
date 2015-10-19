@@ -29,11 +29,6 @@
   }
 
   FormViewCtrl.prototype.init = function () {
-    //this.Scope.$watch(function () {
-    //
-    //}, function(newVal) {
-    //
-    //});
-  }
+  };
 
 })(angular);

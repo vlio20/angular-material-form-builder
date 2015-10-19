@@ -16,6 +16,6 @@
     }.bind(this));
 
     return dest;
-  }
+  };
 
 })(angular);

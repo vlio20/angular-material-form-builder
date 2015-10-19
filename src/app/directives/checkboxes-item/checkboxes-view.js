@@ -54,7 +54,7 @@
     }
   };
 
-  CheckboxesViewCtrl.prototype.toggleSelectedOption = function (option) {
+  CheckboxesViewCtrl.prototype.toggleSelectedOption = function () {
     this.selectedOptions = this._getSelectedOptions();
     this._updateView();
     this._updateValidity();
@@ -92,7 +92,7 @@
         this._updateView();
         this._updateValidity();
       }
-    }.bind(this))
+    }.bind(this));
   };
 
 })(angular);

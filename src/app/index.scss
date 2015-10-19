@@ -2,12 +2,14 @@
 
 $button-dim: 36px;
 
-.content {
-  height: 800px;
-  overflow: auto;
+.main-view {
+  .content {
+    height: 800px;
+    overflow: auto;
 
-  .builder {
-    border-right: 1px solid #CCCCCC;
+    .builder {
+      border-right: 1px solid #CCCCCC;
+    }
   }
 }
 
@@ -38,6 +40,35 @@ form-view {
   .formItem-help-text {
     font-size: 14px;
     color: #6c6c6c;
+  }
+
+
+  .matrix-container {
+    overflow: auto;
+
+    .matrix {
+      min-width: 660px;
+
+      .matrix-row {
+        border-bottom: 1px solid #4caf50;
+      }
+
+      .matrix-cell {
+        text-align: center;
+        overflow: hidden;
+      }
+
+      md-radio-button {
+        .md-label {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      md-radio-button, .md-switch-thumb {
+        margin: 15px 0;
+      }
+    }
   }
 }
 
