@@ -1,6 +1,10 @@
 {
   "name": "angularMaterialFormBuilder",
   "version": "0.0.0",
+  "main": [
+    "dist/scripts/app.js",
+    "dist/styles/app.css"
+  ],
   "dependencies": {
     "angular-sanitize": "~1.4.0",
     "angular-material": "~0.11.3",
