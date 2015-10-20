@@ -52,3 +52,8 @@ In order to preview the form you will need to use the `form-view` directive:
     	formItems: [{...}, {...}, ..., {...}]
     }
 Each object in the `formItems` array should be the product of the `form-item` provided *item* object. 
+
+Contribution
+-------------
+1. Fork the repo, run `npm install` then `bower install` and then `gulp server` in order to run the server locally. When ready run `gulp build` commit your changes and make a pull request.  
+2. Report bugs and suggest enhancements.  
