@@ -4,11 +4,11 @@ $button-dim: 36px;
 
 .main-view {
   .content {
-    height: 800px;
-    overflow: auto;
 
-    .builder {
+    .builder, .view, .json {
       border-right: 1px solid #CCCCCC;
+      height: 800px;
+      overflow: auto;
     }
   }
 }

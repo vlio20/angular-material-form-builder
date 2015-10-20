@@ -25,19 +25,24 @@
     <![endif]-->
 
     <div class="content" layout="row" layout-padding layout-margin layout-fill>
+
       <div flex layout="column" class="builder">
         <h2>Form Builder</h2>
-        <div class="content" layout="column">
+        <div layout="column">
           <form-item ng-repeat="item in main.form.items track by $index" type="{{item.type}}" item="item"></form-item>
         </div>
       </div>
 
       <div flex layout="column" class="view">
         <h2>Preview</h2>
-
-        <form name="myFrom" >
+        <form name="myFrom">
           <form-view form="main.form"></form-view>
         </form>
+      </div>
+
+      <div flex="20" layout="column" class="json">
+        <h2>Json</h2>
+        <pre>{{main.form | json}}</pre>
       </div>
     </div>
 
