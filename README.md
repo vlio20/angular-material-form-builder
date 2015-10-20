@@ -1,17 +1,19 @@
 Angular Material Form Builder!
 ===================
-
-
 This module enables you to easily build forms, just the way you do it in Google forms.  
 The Module has two directives, one to create the form and the second to preview it:
 ![example1](http://i.imgur.com/i4e6KWQ.png)
 
 ----------
 
+DEMO
+-------------
+Here you can find a demo app:
+[http://vlio20.github.io/angular-material-form-builder/](http://vlio20.github.io/angular-material-form-builder/)
+
 
 Supported For Items
 -------------
-
 Here is the list of form items which are supported by the module:
 
  1. Checkboxes (Group)
