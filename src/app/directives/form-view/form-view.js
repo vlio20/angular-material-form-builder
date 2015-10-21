@@ -24,6 +24,7 @@
     return directive;
   }
 
+  /*@ngInject*/
   function FormViewCtrl($scope) {
     this.Scope = $scope;
   }
