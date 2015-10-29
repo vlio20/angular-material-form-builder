@@ -1,12 +1,11 @@
 {
   "name": "angularMaterialFormBuilder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": [
     "dist/scripts/app.js",
     "dist/styles/app.css"
   ],
   "dependencies": {
-    "angular-sanitize": "~1.4.0",
     "angular-material": "~0.11.3",
     "angular": "~1.4.0",
     "angular-sortable-view": "~0.0.13",
@@ -17,5 +16,14 @@
   },
   "resolutions": {
     "angular": "~1.4.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "material",
+    "design",
+    "form",
+    "builder",
+    "generator"
+  ]
 }
