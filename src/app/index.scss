@@ -13,21 +13,41 @@ $button-dim: 36px;
   }
 }
 
+.builder-icon {
+  min-height: $button-dim;
+  min-width: $button-dim;
+  height: $button-dim;
+  width: $button-dim;
+  line-height: 0;
+}
+
 form-item {
   .option-item {
     min-height: 75px;
 
     .md-button {
-      min-height: $button-dim;
-      min-width: $button-dim;
-      height: $button-dim;
-      width: $button-dim;
+      @extend .builder-icon;
       line-height: 0;
       margin-top: 20px;
 
       &.handle:active, &.handle:hover {
         cursor: move;
       }
+    }
+  }
+
+  .form-item-container {
+    position: relative;
+    padding-top: 30px;
+
+    .form-item-actions {
+      position: absolute;
+      right: 20px;
+      top: 0;
+    }
+
+    .md-button {
+      @extend .builder-icon;
     }
   }
 }

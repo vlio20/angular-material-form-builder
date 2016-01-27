@@ -5,9 +5,10 @@
     .module('angularMaterialFormBuilder')
     .controller('MainController', MainController);
 
+  var vm;
   /** @ngInject */
   function MainController() {
-    var vm = this;
+    vm = this;
     //vm.form = { "items": [ { "type": "checkboxes", "bla": 6, "props": { "title": "asdasd", "helpText": "adasdasd" }, "config": { "maxSelections": 1, "required": true }, "options": [ { "value": "13", "selected": false }, { "value": "222", "selected": false } ] } ] };
     vm.form = {
       items: []
@@ -18,6 +19,26 @@
     this.form.items.push({
       type: type
     });
+  };
+
+  MainController.prototype.delete = function(item, index) {
+    vm.form.items.splice(index, 1);
+  };
+
+  MainController.prototype.up = function(item, index) {
+    if(index !== 0) {
+      var prevItem = vm.form.items[index - 1];
+      vm.form.items[index] = prevItem;
+      vm.form.items[index - 1] = item;
+    }
+  };
+
+  MainController.prototype.down = function(item, index) {
+    if(index !== vm.form.items.length + 1) {
+      var nextItem = vm.form.items[index + 1];
+      vm.form.items[index] = nextItem;
+      vm.form.items[index + 1] = item;
+    }
   };
 
 })(angular);

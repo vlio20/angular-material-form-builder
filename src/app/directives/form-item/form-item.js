@@ -10,7 +10,11 @@
       restrict: 'E',
       link: linker,
       scope: {
-        item: '='
+        item: '=',
+        onDelete: '&',
+        onUp: '&',
+        onDown: '&',
+        index: '&'
       },
       controller: FormItemCtrl,
       controllerAs: 'FormItem',
@@ -55,21 +59,38 @@
     });
   };
 
+  FormItemCtrl.prototype.deleteClicked = function() {
+    this.onDelete({item: this.item, index: this.index()});
+  };
+
   FormItemCtrl.prototype._getItemTemplate = function (type) {
     var prefix = '' +
-      '<md-input-container>' +
-        '<label>Field Title</label>' +
-        '<input ng-model="FormItem.item.props.title"/>' +
-      '</md-input-container>' +
-      '<md-input-container>' +
-        '<label>Help Text</label>' +
-        '<input ng-model="FormItem.item.props.helpText" />' +
-      '</md-input-container>';
+      '<div class="form-item-container">' +
+        '<div class="form-item-actions">' +
+          '<md-button class="md-button" ng-click="FormItem.deleteClicked()"> ' +
+            '<i class="material-icons small">delete</i>' +
+          '</md-button>' +
+          '<md-button class="md-button" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})"> ' +
+            '<i class="material-icons small">arrow_drop_up</i>' +
+          '</md-button>' +
+          '<md-button class="md-button" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})"> ' +
+            '<i class="material-icons small">arrow_drop_down</i>' +
+          '</md-button>' +
+        '</div>' +
+        '<md-input-container>' +
+          '<label>Field Title</label>' +
+          '<input ng-model="FormItem.item.props.title"/>' +
+        '</md-input-container>' +
+        '<md-input-container>' +
+          '<label>Help Text</label>' +
+          '<input ng-model="FormItem.item.props.helpText" />' +
+        '</md-input-container>';
 
     var suffix = '' +
       '<md-input-container>' +
         '<md-checkbox ng-model="FormItem.item.config.required">Required field</md-checkbox>' +
-      '</md-input-container>';
+      '</md-input-container>' +
+    '</div>';
 
     return prefix + this.templates[type] + suffix;
   };
