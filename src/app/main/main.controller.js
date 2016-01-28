@@ -33,7 +33,7 @@
   };
 
   MainController.prototype.down = function(item, index) {
-    if(index !== vm.form.items.length + 1) {
+    if(index !== vm.form.items.length - 1) {
       var nextItem = vm.form.items[index + 1];
       vm.form.items[index] = nextItem;
       vm.form.items[index + 1] = item;
