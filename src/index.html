@@ -30,16 +30,17 @@
       <div flex layout="column" class="builder">
         <h2>Form Builder</h2>
         <div layout="column">
-          <form-item ng-repeat="item in main.form.items track by $index"
-                     type="{{item.type}}"
-                     item="item"
-                     index="$index"
-                     on-delete="main.delete(item, index)"
-                     on-up="main.up(item, index)"
-                     on-down="main.down(item, index)">
+        <form-item ng-repeat="item in main.form.items track by $index"
+                   type="{{item.type}}"
+                   item="item"
+                   index="$index"
+                   on-delete="main.delete(item, index)"
+                   on-up="main.up(item, index)"
+                   on-down="main.down(item, index)">
 
-          </form-item>
-        </div>
+        </form-item>
+      </div>
+        <!--<form-items-container form="main.form"></form-items-container>-->
       </div>
 
       <div flex layout="column" class="view">

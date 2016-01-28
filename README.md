@@ -51,7 +51,52 @@ In order to preview the form you will need to use the `form-view` directive:
     {
     	formItems: [{...}, {...}, ..., {...}]
     }
-Each object in the `formItems` array should be the product of the `form-item` provided *item* object. 
+Each object in the `formItems` array should be the product of the `form-item` provided *item* object.  
+
+*Action Attributes:*
+there are also the following attributes: `on-delete`, `on-up`, `on-down`, if provided then the action will appear at the top right left corner of the item. This attribute expects callback function which will be executed after clicking on the action. If you will provide the index of the item (like in the example below) you will also receive it in your callback. 
+Here is HTML example:  
+```
+<form-item ng-repeat="item in main.form.items track by $index"
+             type="{{item.type}}"
+             item="item"
+             index="$index"
+             on-delete="main.delete(item, index)"
+             on-up="main.up(item, index)"
+             on-down="main.down(item, index)">
+
+        </form-item>
+```
+
+JS example:  
+```
+  MainController.prototype.delete = function(item, index) {
+    vm.form.items.splice(index, 1);
+  };
+
+  MainController.prototype.up = function(item, index) {
+    if(index !== 0) {
+      var prevItem = vm.form.items[index - 1];
+      vm.form.items[index] = prevItem;
+      vm.form.items[index - 1] = item;
+    }
+  };
+
+  MainController.prototype.down = function(item, index) {
+    if(index !== vm.form.items.length + 1) {
+      var nextItem = vm.form.items[index + 1];
+      vm.form.items[index] = nextItem;
+      vm.form.items[index + 1] = item;
+    }
+  };
+```
+
+Also - Use
+-------------
+You can also use `form-items-container` directive. This directives adds the option to handle movement and deletion of items in the list. You just need to pass it the form and it will make the rest for you. Here is a code example:
+```
+<form-items-container form="main.form"></form-items-container>
+```
 
 Contribution
 -------------
