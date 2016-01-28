@@ -53,6 +53,13 @@ In order to preview the form you will need to use the `form-view` directive:
     }
 Each object in the `formItems` array should be the product of the `form-item` provided *item* object.  
 
+Also - Use
+-------------
+You can also use `form-items-container` directive. This directives adds the option to handle movement and deletion of items in the list. You just need to pass it the form and it will make the rest for you. Here is a code example:
+```
+<form-items-container form="main.form"></form-items-container>
+```
+
 *Action Attributes:*
 there are also the following attributes: `on-delete`, `on-up`, `on-down`, if provided then the action will appear at the top right left corner of the item. This attribute expects callback function which will be executed after clicking on the action. If you will provide the index of the item (like in the example below) you will also receive it in your callback. 
 Here is HTML example:  
@@ -89,13 +96,6 @@ JS example:
       vm.form.items[index + 1] = item;
     }
   };
-```
-
-Also - Use
--------------
-You can also use `form-items-container` directive. This directives adds the option to handle movement and deletion of items in the list. You just need to pass it the form and it will make the rest for you. Here is a code example:
-```
-<form-items-container form="main.form"></form-items-container>
 ```
 
 Contribution
