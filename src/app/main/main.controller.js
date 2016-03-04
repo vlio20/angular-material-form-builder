@@ -6,11 +6,29 @@
     .controller('MainController', MainController);
 
   var vm;
+
+  var json = {
+    "items": [
+        {
+        "type": "textarea",
+        "props": {
+            "title": "",
+            "helpText": ""
+        },
+        "config": {
+            "required": false,
+            "placeholder": "From Json"
+        },
+        "value": ""
+        }
+    ]
+    };
+
   /** @ngInject */
   function MainController() {
     vm = this;
     vm.form = {
-      items: []
+      items: json
     };
   }
 
