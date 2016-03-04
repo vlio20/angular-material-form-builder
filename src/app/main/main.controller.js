@@ -27,9 +27,7 @@
   /** @ngInject */
   function MainController() {
     vm = this;
-    vm.form = {
-      items: json
-    };
+    vm.form = json;
   }
 
   MainController.prototype.addItem = function (type) {
