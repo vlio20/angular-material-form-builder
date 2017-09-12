@@ -1,6 +1,6 @@
 {
   "name": "angularMaterialFormBuilder",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "main": [
     "dist/scripts/app.js",
     "dist/styles/app.css"
