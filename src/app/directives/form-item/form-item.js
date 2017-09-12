@@ -8,7 +8,7 @@
   function FormItem($compile) {
     var directive = {
       restrict: 'E',
-      link: linker,
+      //link: linker,
       scope: {
         item: '=',
         onDelete: '&',
@@ -18,7 +18,8 @@
       },
       controller: FormItemCtrl,
       controllerAs: 'FormItem',
-      bindToController: true
+      bindToController: true,
+      templateUrl: 'app/directives/form-item/form-item.html'
     };
 
     function linker(scope, elem, attrs, ctrl) {
