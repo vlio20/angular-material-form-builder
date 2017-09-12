@@ -10,17 +10,16 @@
       <i class="material-icons">reorder</i>
     </md-button>
 
-    <md-input-container>
+    <md-input-container class="md-block">
       <label>Option {{$index + 1}}</label>
       <input ng-model="option.value" />
     </md-input-container>
 
-    <md-button class="md-button" ng-click="RadioButton.deleteOption($index)">
+    <md-button class="md-button md-warn" ng-click="RadioButton.deleteOption($index)">
       <i class="material-icons">delete</i>
     </md-button>
 
   </div>
-  <div layout="row" layout-align="start">
-    <md-button class="md-primary add-option-button" ng-click="RadioButton.addOption()">Add Option</md-button>
-  </div>
+
+  <md-button class="md-raised md-accent" ng-click="RadioButton.addOption()">Add Option</md-button>
 </div>
