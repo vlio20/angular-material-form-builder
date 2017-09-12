@@ -1,5 +1,5 @@
 <div class="sortable-container" layout="column" sv-root sv-part="Checkboxes.item.options">
-  <md-input-container>
+  <md-input-container class="md-block">
     <label>Max Selections</label>
     <input type="number" ng-model="Checkboxes.item.config.maxSelections" />
   </md-input-container>
@@ -14,7 +14,7 @@
       <i class="material-icons">reorder</i>
     </md-button>
 
-    <md-input-container>
+    <md-input-container class="md-block">
       <label>Option {{$index + 1}}</label>
       <input ng-model="option.value" />
     </md-input-container>
