@@ -1,0 +1,20 @@
+<md-input-container class="matrix-container" layout="column">
+  <div class="matrix">
+    <div class="matrix-row" flex layout="row">
+      <span class="matrix-cell" flex="20"></span>
+      <span class="matrix-cell matrix-cell-header" flex ng-repeat="column in MatrixView.formItem.config.columns track by $index">{{column.value}}</span>
+    </div>
+    <div class="matrix-row" ng-repeat="row in MatrixView.formItem.config.rows track by $index" layout="row">
+      <span class="matrix-cell" flex="20" layout="column" layout-align="center">{{row.value}}</span>
+      <md-radio-group ng-model="row.selected" ng-change="MatrixView._updateValidity()" flex layout="row">
+        <span class="matrix-cell radio-button-cell" flex ng-repeat="column in MatrixView.formItem.config.columns track by $index">
+        <md-radio-button value={{column.value}} aria-label="..."></md-radio-button>
+        </span>
+      </md-radio-group>
+    </div>
+  </div>
+
+  <div ng-messages="MatrixView.form.$error">
+    <div ng-message="required">This is required</div>
+  </div>
+</md-input-container>

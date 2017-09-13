@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+$button-dim: 36px;
+
+.main-view {
+  .content {
+
+    .builder, .view, .json {
+      border-right: 1px solid #CCCCCC;
+      height: 800px;
+      overflow: auto;
+    }
+  }
+}
+
+.builder-icon {
+  min-height: $button-dim;
+  min-width: $button-dim;
+  height: $button-dim;
+  width: $button-dim;
+  line-height: 0;
+}
+
+form-item {
+  .option-item {
+    min-height: 75px;
+
+    .md-button {
+      @extend .builder-icon;
+      line-height: 0;
+      margin-top: 20px;
+
+      &.handle:active, &.handle:hover {
+        cursor: move;
+      }
+    }
+  }
+
+  .form-item-container {
+    position: relative;
+    padding-top: 30px;
+
+    .form-item-actions {
+      position: absolute;
+      right: 20px;
+      top: 0;
+    }
+
+    .md-button {
+      @extend .builder-icon;
+    }
+  }
+}
+
+form-view {
+  .formItem-title {
+    font-size: 18px;
+  }
+
+  .formItem-help-text {
+    font-size: 14px;
+    color: #6c6c6c;
+  }
+
+
+  .matrix-container {
+    overflow: auto;
+
+    .matrix {
+      .matrix-row {
+        border-bottom: 1px solid #4caf50;
+      }
+
+      .matrix-cell {
+        text-align: center;
+        overflow: hidden;
+      }
+
+      md-radio-button {
+        .md-label {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      md-radio-button, .md-switch-thumb {
+        margin: 15px 0;
+      }
+    }
+  }
+}
+
+i.material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &.medium {
+    font-size: 36px;
+  }
+}

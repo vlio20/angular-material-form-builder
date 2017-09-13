@@ -1,0 +1,15 @@
+<div class="formItem" ng-repeat="formItem in FormView.form.items track by $index" ng-switch="formItem.type" layout="column">
+  <ng-form name="formItemForm">
+    <div>
+      <div class="formItem-title">{{formItem.props.title}}</div>
+      <div class="formItem-help-text">{{formItem.props.helpText}}</div>
+
+      <checkboxes-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="checkboxes"></checkboxes-view>
+      <radio-button-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="multipleChoices"></radio-button-view>
+      <input-view form-item="formItem" form="formItemForm" ng-switch-when="input"></input-view>
+      <textarea-view form-item="formItem" form="formItemForm" ng-switch-when="textarea"></textarea-view>
+      <matrix-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="matrix"></matrix-view>
+      <select-view form-item="formItem" is-preview="true" form="formItemForm" ng-switch-when="chooseFromList"></select-view>
+    </div>
+  </ng-form>
+</div>
