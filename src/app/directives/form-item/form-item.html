@@ -1,0 +1,39 @@
+<div class="form-item-container" class="md-inline-form">
+
+  <div class="form-item-actions">
+    <md-button class="md-button" ng-if="FormItem.Attrs.onDelete" ng-click="FormItem.deleteClicked()">
+      <i class="material-icons small">delete</i>
+    </md-button>
+    <md-button class="md-button" ng-if="FormItem.Attrs.onUp" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})">
+      <i class="material-icons small">arrow_drop_up</i>
+    </md-button>
+    <md-button class="md-button" ng-if="FormItem.Attrs.onDown" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})">
+      <i class="material-icons small">arrow_drop_down</i>
+    </md-button>
+  </div>
+
+  <md-input-container class="md-block">
+    <label>Field Title</label>
+    <input ng-model="FormItem.item.props.title"/>
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>Help Text</label>
+    <input ng-model="FormItem.item.props.helpText" />
+  </md-input-container>
+
+  <div ng-switch="FormItem.item.type">
+    <input-item ng-switch-when="input" item="FormItem.item"></input-item>
+    <radio-button-item ng-switch-when="multipleChoices" item="FormItem.item"></radio-button-item>
+    <matrix-item ng-switch-when="matrix" item="FormItem.item"></matrix-item>
+    <checkboxes-item ng-switch-when="checkboxes" item="FormItem.item"></checkboxes-item>
+    <textarea-item ng-switch-when="textarea" item="FormItem.item"></textarea-item>
+    <select-item ng-switch-when="chooseFromList" item="FormItem.item"></select-item>
+    <p ng-switch-default>UNKNOWN TYPE</p>
+  </div>
+
+  <md-input-container class="md-block">
+    <md-checkbox ng-model="FormItem.item.config.required">Required field</md-checkbox>
+  </md-input-container>
+
+</div>

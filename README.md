@@ -9,7 +9,7 @@ The Module has two directives, one to create the form and the second to preview 
 DEMO
 -------------
 Here you can find a demo app:
-[http://vlio20.github.io/angular-material-form-builder/](http://vlio20.github.io/angular-material-form-builder/)
+[https://gcareri.github.io/angular-material-form-builder/](https://gcareri.github.io/angular-material-form-builder/)
 
 
 Supported For Items
@@ -21,6 +21,7 @@ Here is the list of form items which are supported by the module:
  3. Plain input (Text, Number)
  4. Textarea
  5. Matrix
+ 6. Select
 
 Installation
 -------------
@@ -49,9 +50,9 @@ In order to preview the form you will need to use the `form-view` directive:
 **Note:** the *form* attribute should receive the following object:  
 
     {
-    	formItems: [{...}, {...}, ..., {...}]
+    	items: [{...}, {...}, ..., {...}]
     }
-Each object in the `formItems` array should be the product of the `form-item` provided *item* object.  
+Each object in the `items` array should be the product of the `form-item` provided *item* object.  
 
 Also - Use
 -------------
@@ -61,7 +62,7 @@ You can also use `form-items-container` directive. This directives adds the opti
 ```
 
 *Action Attributes:*
-there are also the following attributes: `on-delete`, `on-up`, `on-down`, if provided then the action will appear at the top right left corner of the item. This attribute expects callback function which will be executed after clicking on the action. If you will provide the index of the item (like in the example below) you will also receive it in your callback. 
+there are also the following attributes: `on-delete`, `on-up`, `on-down`, if provided then the action will appear at the top right left corner of the item. This attribute expects callback function which will be executed after clicking on the action. If you will provide the index of the item (like in the example below) you will also receive it in your callback.
 Here is HTML example:  
 ```
 <form-item ng-repeat="item in main.form.items track by $index"
