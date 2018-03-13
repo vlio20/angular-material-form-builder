@@ -12,7 +12,7 @@ Here you can find a demo app:
 [https://gcareri.github.io/angular-material-form-builder/](https://gcareri.github.io/angular-material-form-builder/)
 
 
-Supported For Items
+Supported Form Items
 -------------
 Here is the list of form items which are supported by the module:
 
