@@ -1,0 +1,31 @@
+{
+  // extends the root folder configuration with front-end specific env
+  "extends": [
+    "../.eslintrc.json",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": ["import"],
+  "root": true,
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": false,
+    "commonjs": false,
+    "jquery": true
+  },
+  "globals": {
+    "PRODUCTION": "readonly",
+    "VERSION": "readonly",
+    "angular": "readonly"
+  },
+  "rules": {
+    "no-use-before-define": ["error", { "functions": true, "classes": true }],
+    // Let's consider using a logger
+    "no-console": "off"
+  }
+}

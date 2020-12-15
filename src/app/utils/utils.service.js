@@ -1,24 +1,22 @@
-(function (angular) {
-  'use strict';
+class Utils {
+  /**
+   *
+   * @param {Object} dest
+   * @param {Object} src
+   */
+  extend(dest, src) {
+    return Object.keys(src).reduce(
+      (result, key) => {
+        if (!result.hasOwnProperty(key)) {
+          result[key] = src[key]
+        } else if (typeof src[key] === 'object') {
+          result = this.extend(result[key], src[key])
+        }
+        return result
+      },
+      typeof dest === 'undefined' ? {} : dest
+    )
+  }
+}
 
-  angular.module('angularMaterialFormBuilder')
-    .service('Utils', Utils);
-
-  function Utils() { }
-
-  Utils.prototype.extend = function (dest, src) {
-    if (typeof dest === 'undefined') {
-      dest = {};
-    }
-    Object.keys(src).forEach(function (key) {
-      if (!dest.hasOwnProperty(key)) {
-        dest[key] = src[key];
-      } else if (typeof src[key] === 'object') {
-        this.extend(dest[key], src[key]);
-      }
-    }.bind(this));
-
-    return dest;
-  };
-
-})(angular);
+export { Utils }

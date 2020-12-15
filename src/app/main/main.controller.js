@@ -1,43 +1,65 @@
-(function (angular) {
-  'use strict';
+/**
+ * @typedef {{type:string}} Item
+ * @typedef {{items: Item[]}} FormConfig
+ */
 
-  angular
-    .module('angularMaterialFormBuilder')
-    .controller('MainController', MainController);
-
-  var vm;
-  /** @ngInject */
-  function MainController() {
-    vm = this;
-    vm.form = {
-      items: []
-    };
+class MainController {
+  /**
+   * @ngInject
+   */
+  constructor() {
+    /**
+     * @type {FormConfig}
+     */
+    this.form = {
+      items: [],
+    }
   }
 
-  MainController.prototype.addItem = function (type) {
+  /**
+   * Add new Item
+   * @param {string} type
+   */
+  addItem(type) {
     this.form.items.push({
-      type: type
-    });
-  };
+      type,
+    })
+  }
 
-  MainController.prototype.delete = function(item, index) {
-    vm.form.items.splice(index, 1);
-  };
+  /**
+   * Remove item at index
+   * @param {Item} item
+   * @param {number} index
+   */
+  delete(item, index) {
+    this.form.items.splice(index, 1)
+  }
 
-  MainController.prototype.up = function(item, index) {
-    if(index !== 0) {
-      var prevItem = vm.form.items[index - 1];
-      vm.form.items[index] = prevItem;
-      vm.form.items[index - 1] = item;
+  /**
+   * Move up (bounded)
+   * @param {Item} item
+   * @param {number} index
+   */
+  up(item, index) {
+    if (index !== 0) {
+      const prevItem = this.form.items[index - 1]
+      this.form.items[index] = prevItem
+      this.form.items[index - 1] = item
     }
-  };
+  }
 
-  MainController.prototype.down = function(item, index) {
-    if(index !== vm.form.items.length - 1) {
-      var nextItem = vm.form.items[index + 1];
-      vm.form.items[index] = nextItem;
-      vm.form.items[index + 1] = item;
+  /**
+   * Move down (bounded)
+   * @param {Item} item
+   * @param {number} index
+   */
+  down(item, index) {
+    if (index !== this.form.items.length - 1) {
+      const nextItem = this.form.items[index + 1]
+      this.form.items[index] = nextItem
+      this.form.items[index + 1] = item
     }
-  };
+  }
+}
 
-})(angular);
+export { MainController }
