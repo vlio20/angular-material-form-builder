@@ -31,6 +31,9 @@
   "engines": {
     "node": ">=14"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xcally/angular-material-form-builder/issues"
