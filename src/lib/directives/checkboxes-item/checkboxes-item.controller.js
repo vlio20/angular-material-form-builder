@@ -24,7 +24,7 @@ class CheckboxesItemCtrl {
     this.item.options.splice(index, 1)
   }
 
-  addedOption() {
+  addOption() {
     this.item.options.push({
       value: '',
       selected: false,

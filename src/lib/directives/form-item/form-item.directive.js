@@ -35,9 +35,12 @@ class FormItem {
    */
   link(scope, element, attrs, ctrl) {
     const template = ctrl._getItemTemplate(attrs.type)
-    const el = this.$compile(template)(scope)
-    element.append(el)
+    // const el = this.$compile(template)(scope)
+    // element.append(el)
+    // if done like above adds twice
+    element.replaceWith(this.$compile(template)(scope))
     ctrl.init()
+    return element
   }
 }
 export { FormItem }

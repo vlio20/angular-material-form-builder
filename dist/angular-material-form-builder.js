@@ -535,7 +535,7 @@ class CheckboxesItemCtrl {
     this.item.options.splice(index, 1)
   }
 
-  addedOption() {
+  addOption() {
     this.item.options.push({
       value: '',
       selected: false,
@@ -881,9 +881,12 @@ class FormItem {
    */
   link(scope, element, attrs, ctrl) {
     const template = ctrl._getItemTemplate(attrs.type)
-    const el = this.$compile(template)(scope)
-    element.append(el)
+    // const el = this.$compile(template)(scope)
+    // element.append(el)
+    // if done like above adds twice
+    element.replaceWith(this.$compile(template)(scope))
     ctrl.init()
+    return element
   }
 }
 
