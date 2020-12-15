@@ -23,7 +23,7 @@
   function CheckboxesItemCtrl(Utils, $element) {
     this.Element = $element;
 
-    Utils.extend(this.item, {
+    Utils.extend(this.item || {}, {
       config: {
         maxSelections: null
       },

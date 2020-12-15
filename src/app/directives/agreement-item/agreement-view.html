@@ -1,0 +1,12 @@
+<md-input-container>
+  <div layout="{{AgreementView.formItem.config.direction == 'horizontal' ? 'column' : 'row'}}">
+    <md-checkbox ng-model="AgreementView.formItem.options[0].selected"
+                 ng-change="AgreementView.toggleSelectedOption(option)"
+                 ng-disabled="AgreementView.disableOptions && !option.selected"
+                 aria-label="...">{{AgreementView.formItem.options[0].value}}</md-checkbox>
+  </div>
+
+  <div ng-messages="AgreementView.form.$error">
+    <div ng-message="minSelections">Must select {{AgreementView.formItem.maxSelections || 1}} items</div>
+  </div>
+</md-input-container>

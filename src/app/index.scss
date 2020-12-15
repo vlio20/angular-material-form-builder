@@ -4,9 +4,10 @@ $button-dim: 36px;
 
 .main-view {
   .content {
-
-    .builder, .view, .json {
-      border-right: 1px solid #CCCCCC;
+    .builder,
+    .view,
+    .json {
+      border-right: 1px solid #cccccc;
       height: 800px;
       overflow: auto;
     }
@@ -30,7 +31,8 @@ form-item {
       line-height: 0;
       margin-top: 20px;
 
-      &.handle:active, &.handle:hover {
+      &.handle:active,
+      &.handle:hover {
         cursor: move;
       }
     }
@@ -57,11 +59,14 @@ form-view {
     font-size: 18px;
   }
 
+  .formItem-content {
+    font-size: 18px;
+  }
+
   .formItem-help-text {
     font-size: 14px;
     color: #6c6c6c;
   }
-
 
   .matrix-container {
     overflow: auto;
@@ -83,7 +88,8 @@ form-view {
         }
       }
 
-      md-radio-button, .md-switch-thumb {
+      md-radio-button,
+      .md-switch-thumb {
         margin: 15px 0;
       }
     }
