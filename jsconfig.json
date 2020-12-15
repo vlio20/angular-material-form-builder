@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "classic",
+    "lib": ["dom", "es2020", "webworker"]
+  },
+  "include": ["src"]
+}

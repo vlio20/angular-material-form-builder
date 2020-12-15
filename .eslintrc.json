@@ -1,0 +1,42 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": ["node"],
+  "root": true,
+  "ignorePatterns": [
+    "chat/app",
+    "public",
+    "*.html",
+    "*.scss",
+    "*.css",
+    "*.json"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  // root env (node scripts, including webpack)
+  "env": {
+    "es6": true,
+    "browser": false,
+    "node": true,
+    "commonjs": true,
+    "jquery": false
+  },
+  // rules for syntax errors
+  "rules": {
+    "no-var": "error",
+    "prefer-const": [
+      "error",
+      { "destructuring": "any", "ignoreReadBeforeAssign": false }
+    ],
+    "no-multi-assign": "error",
+    "one-var": ["error", "never"],
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    // console is OK for node/webpack so far
+    "no-console": "off"
+  }
+}

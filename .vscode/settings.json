@@ -1,0 +1,80 @@
+{
+  "eslint.workingDirectories": ["src"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    "[Community Material Theme Darker High Contrast]": {
+      "comments": "#5b9c78"
+    }
+  },
+  "files.associations": {
+    "*.pgsql": "sql",
+    "*.ejs": "html"
+  },
+  "debug.javascript.terminalOptions": {
+    "cwd": "${workspaceFolder}"
+  },
+  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editor.selectionHighlightBackground": "#ffffff00",
+    "editor.findMatchHighlightBackground": "#ffffff00",
+    "editor.findMatchBorder": "#00ffd5",
+    "editor.findMatchHighlightBorder": "#ff0000",
+    "editor.selectionHighlightBorder": "#ffffff",
+    "editor.lineHighlightBorder": "#272727",
+    "editor.selectionBackground": "#eeff0044",
+    "editor.wordHighlightBackground": "#eeff0044",
+    "editorCursor.foreground": "#ffd900",
+    "editor.lineHighlightBackground": "#181818",
+    "editor.findMatchBackground": "#000000",
+    "activityBar.activeBackground": "#daa9e9",
+    "activityBar.activeBorder": "#987e27",
+    "activityBar.background": "#daa9e9",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#987e27",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#c980df",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#b857d5",
+    "titleBar.activeBackground": "#c980df",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#c980df99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.remoteColor": "#c980df"
+}

@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "mikestead.dotenv",
+    "dawhite.mustache",
+    "DigitalBrainstem.javascript-ejs-support",
+    "george-alisson.html-preview-vscode",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "msjsdiag.debugger-for-chrome",
+    "fabiospampinato.vscode-todo-plus",
+    "PKief.material-icon-theme",
+    "Equinusocio.vsc-community-material-theme",
+    "gizak.shortcuts",
+    "naumovs.color-highlight",
+    "DotJoshJohnson.xml",
+    "redhat.vscode-yaml",
+    "ryu1kn.partial-diff",
+    "2gua.rainbow-brackets",
+    "christian-kohler.npm-intellisense"
+  ]
+}
