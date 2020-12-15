@@ -39,7 +39,15 @@ async function webpackConfig() {
     optimization: {
       minimize: true,
       minimizer: [
-        new TerserPlugin({ include: /\.min\.js$/ }),
+        new TerserPlugin({
+          include: /\.min\.js$/,
+          terserOptions: {
+            format: {
+              comments: false,
+            },
+          },
+          extractComments: false,
+        }),
         new CssMinimizerPlugin({ include: /\.min\.css$/ }),
       ],
     },

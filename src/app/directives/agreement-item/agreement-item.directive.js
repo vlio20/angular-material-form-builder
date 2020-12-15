@@ -2,21 +2,22 @@ import { AgreementItemCtrl } from './agreement-item.controller'
 // import { default as AgreementItemTemplate } from './agreement-item.tpl.html'
 
 /**
- * @ngInject
+ * @implements {ng.IDirective}
  */
-function AgreementItem() {
-  const directive = {
-    restrict: 'E',
-    // templateUrl: AgreementItemTemplate,
-    scope: {
+class AgreementItem {
+  /**
+   * @ngInject
+   */
+  constructor() {
+    this.restrict = 'E'
+    // this.templateUrl= AgreementItemTemplate,
+    this.scope = {
       item: '=',
-    },
-    controller: AgreementItemCtrl,
-    controllerAs: 'Agreement',
-    bindToController: true,
+    }
+    this.controller = AgreementItemCtrl
+    this.controllerAs = 'Agreement'
+    this.bindToController = true
   }
-
-  return directive
 }
 
 export { AgreementItem }

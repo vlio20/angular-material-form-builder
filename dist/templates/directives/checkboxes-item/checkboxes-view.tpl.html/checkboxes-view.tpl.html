@@ -1,0 +1,13 @@
+<md-input-container>
+  <div layout="{{CheckboxesView.formItem.config.direction == 'horizontal' ? 'column' : 'row'}}">
+    <md-checkbox ng-repeat="option in CheckboxesView.formItem.options track by $index"
+                 ng-model="option.selected"
+                 ng-change="CheckboxesView.toggleSelectedOption(option)"
+                 ng-disabled="CheckboxesView.disableOptions && !option.selected"
+                 aria-label="...">{{option.value}}</md-checkbox>
+  </div>
+
+  <div ng-messages="CheckboxesView.form.$error">
+    <div ng-message="minSelections">Must select {{CheckboxesView.formItem.maxSelections || 1}} items</div>
+  </div>
+</md-input-container>
