@@ -1,0 +1,46 @@
+<div class="sortable-container columnContainer" layout="column" sv-root sv-part="Matrix.item.config.columns">
+  <div class="option-item" layout="row" ng-repeat="column in Matrix.item.config.columns track by $index" sv-element>
+
+    <md-button class="md-button handle" md-no-ink aria-label="reorder option item" sv-handle>
+      <i class="material-icons">reorder</i>
+    </md-button>
+
+    <md-input-container class="input-container">
+      <label>Column {{$index + 1}}</label>
+      <input ng-model="column.value" />
+    </md-input-container>
+
+    <md-button class="md-button" md-no-ink aria-label="delete column item" ng-click="Matrix.deleteColumn($index)">
+      <i class="material-icons">delete</i>
+      <md-tooltip md-autohide="true">Delete</md-tooltip>
+    </md-button>
+
+  </div>
+  <div layout="row" layout-align="start">
+    <md-button class="md-primary add-option-button" md-no-ink aria-label="add option item" ng-click="Matrix.addColumn()">Add Column</md-button>
+  </div>
+</div>
+
+
+<div class="sortable-container rowContainer" layout="column" sv-root sv-part="Matrix.item.config.rows">
+  <div class="option-item" layout="row" ng-repeat="row in Matrix.item.config.rows track by $index" sv-element>
+
+    <md-button class="md-button handle" md-no-ink aria-label="reorder row item" sv-handle>
+      <i class="material-icons">reorder</i>
+    </md-button>
+
+    <md-input-container class="input-container">
+      <label>Row {{$index + 1}}</label>
+      <input ng-model="row.value" />
+    </md-input-container>
+
+    <md-button class="md-button" md-no-ink aria-label="delete row item" ng-click="Matrix.deleteRow($index)">
+      <i class="material-icons">delete</i>
+      <md-tooltip md-autohide="true">Delete</md-tooltip>
+    </md-button>
+
+  </div>
+  <div layout="row" layout-align="start">
+    <md-button class="md-primary add-option-button" md-no-ink aria-label="add row item" ng-click="Matrix.addRow()">Add row</md-button>
+  </div>
+</div>

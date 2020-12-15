@@ -1,0 +1,10 @@
+<md-input-container class="md-block">
+    <md-select name="formItemInput"
+               ng-required="SelectView.formItem.config.required"
+               ng-model="SelectView.formItem.value">
+        <md-option ng-repeat="option in SelectView.formItem.options track by $index" ng-value="option.value">{{ option.value }}</md-option>
+    </md-select>
+  <div ng-messages="SelectView.form.$error">
+    <div ng-message="required">This field is required</div>
+  </div>
+</md-input-container>

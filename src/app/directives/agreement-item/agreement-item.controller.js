@@ -6,8 +6,7 @@
  */
 function AgreementItemCtrl(Utils, $element) {
   this.Element = $element
-
-  Utils.extend(this.item || {}, {
+  this.item = Utils.extend(this.item || {}, {
     config: {
       maxSelections: null,
     },

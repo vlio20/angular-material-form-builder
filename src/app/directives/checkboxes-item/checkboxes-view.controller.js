@@ -1,4 +1,4 @@
-class AgreementViewCtrl {
+class CheckboxesViewCtrl {
   /**
    *
    * @param {ng.IScope} $scope
@@ -13,12 +13,7 @@ class AgreementViewCtrl {
   init() {
     this.formItem = this.Utils.extend(this.formItem || {}, {
       config: {},
-      options: [
-        {
-          value: '',
-          selected: false,
-        },
-      ],
+      options: [],
     })
 
     this.selectedOptions = this._getSelectedOptions()
@@ -67,7 +62,7 @@ class AgreementViewCtrl {
   }
 
   _enableWatchers() {
-    this.Scope.$watch('AgreementView.formItem.config.required', (newVal) => {
+    this.Scope.$watch('CheckboxesView.formItem.config.required', (newVal) => {
       if (newVal !== undefined) {
         this._updateView()
         this._updateValidity()
@@ -76,4 +71,4 @@ class AgreementViewCtrl {
   }
 }
 
-export { AgreementViewCtrl }
+export { CheckboxesViewCtrl }
