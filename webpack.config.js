@@ -89,6 +89,11 @@ async function webpackConfig() {
           ],
         },
         {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: ['babel-loader'],
+        },
+        {
           test: /\.tpl.html$/,
           use: [
             {
