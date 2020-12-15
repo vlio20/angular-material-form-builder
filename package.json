@@ -9,6 +9,7 @@
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
     "prettify": "prettier --write src/",
+    "serve-demo": "superstatic . --port 5000 --host localhost",
     "test": "jest"
   },
   "repository": {
@@ -72,6 +73,7 @@
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "superstatic": "^7.1.0",
     "terser-webpack-plugin": "^5.0.3",
     "url-loader": "^4.1.1",
     "webpack": "^5.10.2",
