@@ -1,9 +1,22 @@
-<div class="sortable-container" layout="column" sv-root sv-part="Select.item.options">
-
-  <div class="option-item" layout="row" ng-repeat="option in Select.item.options track by $index" sv-element>
-
-    <md-button class="md-button handle" md-no-ink aria-label="reorder option item" sv-handle>
-      <i class="material-icons">reorder</i>
+<div
+  class="sortable-container"
+  layout="column"
+  sv-root
+  sv-part="Select.item.options"
+>
+  <div
+    class="option-item"
+    layout="row"
+    ng-repeat="option in Select.item.options track by $index"
+    sv-element
+  >
+    <md-button
+      class="md-button handle"
+      md-no-ink
+      aria-label="reorder option item"
+      sv-handle
+    >
+      <md-icon class="material-icons">reorder</md-icon>
     </md-button>
 
     <md-input-container class="md-block">
@@ -12,10 +25,11 @@
     </md-input-container>
 
     <md-button class="md-button md-warn" ng-click="Select.deleteOption($index)">
-      <i class="material-icons">delete</i>
+      <md-icon class="material-icons">delete</md-icon>
     </md-button>
-
   </div>
 
-  <md-button class="md-raised md-accent" ng-click="Select.addOption()">Add Option</md-button>
+  <md-button class="md-raised md-accent" ng-click="Select.addOption()"
+    >Add Option</md-button
+  >
 </div>

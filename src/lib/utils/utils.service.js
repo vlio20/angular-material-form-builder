@@ -11,7 +11,7 @@ class Utils {
         if (typeof result[key] === 'undefined') {
           result[key] = src[key]
         } else if (typeof src[key] === 'object') {
-          result = this.extend(result[key], src[key])
+          result[key] = this.extend(result[key], src[key])
         }
         return result
       },

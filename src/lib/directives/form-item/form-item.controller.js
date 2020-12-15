@@ -47,13 +47,13 @@ class FormItemCtrl {
       '<div class="form-item-container">' +
       '<div class="form-item-actions">' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onDelete" ng-click="FormItem.deleteClicked()"> ' +
-      '<i class="material-icons small">delete</i>' +
+      '<md-icon class="material-icons small">delete</md-icon>' +
       '</md-button>' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onUp" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})"> ' +
-      '<i class="material-icons small">arrow_drop_up</i>' +
+      '<md-icon class="material-icons small">arrow_drop_up</md-icon>' +
       '</md-button>' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onDown" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})"> ' +
-      '<i class="material-icons small">arrow_drop_down</i>' +
+      '<md-icon class="material-icons small">arrow_drop_down</md-icon>' +
       '</md-button>' +
       '</div>' +
       '<md-input-container>' +

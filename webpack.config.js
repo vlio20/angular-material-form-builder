@@ -9,7 +9,7 @@ const path = require('path')
  * @returns {import('webpack').Configuration}
  */
 async function webpackConfig() {
-  const main = path.resolve(__dirname, 'src/app/index.module.js')
+  const main = path.resolve(__dirname, 'src/lib/index.module.js')
   return {
     entry: {
       'angular-material-form-builder': main,
@@ -104,7 +104,7 @@ async function webpackConfig() {
 
                   // put all in dist/templates/<path>
                   return `${relativePath.replace(
-                    path.join('src', 'app'),
+                    path.join('src', 'lib'),
                     'templates'
                   )}/${url}`
                 },

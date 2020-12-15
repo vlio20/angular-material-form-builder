@@ -12,9 +12,9 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app/directives/agreement-item/agreement-view.tpl.html":
+/***/ "./src/lib/directives/agreement-item/agreement-view.tpl.html":
 /*!*******************************************************************!*\
-  !*** ./src/app/directives/agreement-item/agreement-view.tpl.html ***!
+  !*** ./src/lib/directives/agreement-item/agreement-view.tpl.html ***!
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -26,9 +26,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-item.tpl.html":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-item.tpl.html":
 /*!*********************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-item.tpl.html ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-item.tpl.html ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -40,9 +40,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-view.tpl.html":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-view.tpl.html":
 /*!*********************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-view.tpl.html ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-view.tpl.html ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -54,9 +54,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/form-item/form-item.tpl.html":
+/***/ "./src/lib/directives/form-item/form-item.tpl.html":
 /*!*********************************************************!*\
-  !*** ./src/app/directives/form-item/form-item.tpl.html ***!
+  !*** ./src/lib/directives/form-item/form-item.tpl.html ***!
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -68,9 +68,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/form-items-container/form-items-container.tpl.html":
+/***/ "./src/lib/directives/form-items-container/form-items-container.tpl.html":
 /*!*******************************************************************************!*\
-  !*** ./src/app/directives/form-items-container/form-items-container.tpl.html ***!
+  !*** ./src/lib/directives/form-items-container/form-items-container.tpl.html ***!
   \*******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -82,9 +82,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/form-view/form-view.tpl.html":
+/***/ "./src/lib/directives/form-view/form-view.tpl.html":
 /*!*********************************************************!*\
-  !*** ./src/app/directives/form-view/form-view.tpl.html ***!
+  !*** ./src/lib/directives/form-view/form-view.tpl.html ***!
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -96,9 +96,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-item.tpl.html":
+/***/ "./src/lib/directives/input-item/input-item.tpl.html":
 /*!***********************************************************!*\
-  !*** ./src/app/directives/input-item/input-item.tpl.html ***!
+  !*** ./src/lib/directives/input-item/input-item.tpl.html ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -110,9 +110,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-view.tpl.html":
+/***/ "./src/lib/directives/input-item/input-view.tpl.html":
 /*!***********************************************************!*\
-  !*** ./src/app/directives/input-item/input-view.tpl.html ***!
+  !*** ./src/lib/directives/input-item/input-view.tpl.html ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -124,9 +124,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-item.tpl.html":
+/***/ "./src/lib/directives/label-item/label-item.tpl.html":
 /*!***********************************************************!*\
-  !*** ./src/app/directives/label-item/label-item.tpl.html ***!
+  !*** ./src/lib/directives/label-item/label-item.tpl.html ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -138,9 +138,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-view.tpl.html":
+/***/ "./src/lib/directives/label-item/label-view.tpl.html":
 /*!***********************************************************!*\
-  !*** ./src/app/directives/label-item/label-view.tpl.html ***!
+  !*** ./src/lib/directives/label-item/label-view.tpl.html ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -152,9 +152,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-item.tpl.html":
+/***/ "./src/lib/directives/matrix-item/matrix-item.tpl.html":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-item.tpl.html ***!
+  !*** ./src/lib/directives/matrix-item/matrix-item.tpl.html ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -166,9 +166,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-view.tpl.html":
+/***/ "./src/lib/directives/matrix-item/matrix-view.tpl.html":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-view.tpl.html ***!
+  !*** ./src/lib/directives/matrix-item/matrix-view.tpl.html ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -180,9 +180,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-item.tpl.html":
+/***/ "./src/lib/directives/radio-button-item/radio-button-item.tpl.html":
 /*!*************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-item.tpl.html ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-item.tpl.html ***!
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -194,9 +194,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-view.tpl.html":
+/***/ "./src/lib/directives/radio-button-item/radio-button-view.tpl.html":
 /*!*************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-view.tpl.html ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-view.tpl.html ***!
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -208,9 +208,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-item.tpl.html":
+/***/ "./src/lib/directives/select-item/select-item.tpl.html":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/select-item/select-item.tpl.html ***!
+  !*** ./src/lib/directives/select-item/select-item.tpl.html ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -222,9 +222,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-view.tpl.html":
+/***/ "./src/lib/directives/select-item/select-view.tpl.html":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/select-item/select-view.tpl.html ***!
+  !*** ./src/lib/directives/select-item/select-view.tpl.html ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -236,9 +236,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-item.tpl.html":
+/***/ "./src/lib/directives/textarea-item/textarea-item.tpl.html":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-item.tpl.html ***!
+  !*** ./src/lib/directives/textarea-item/textarea-item.tpl.html ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -250,9 +250,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-view.tpl.html":
+/***/ "./src/lib/directives/textarea-item/textarea-view.tpl.html":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-view.tpl.html ***!
+  !*** ./src/lib/directives/textarea-item/textarea-view.tpl.html ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -264,9 +264,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/index.scss":
+/***/ "./src/lib/index.scss":
 /*!****************************!*\
-  !*** ./src/app/index.scss ***!
+  !*** ./src/lib/index.scss ***!
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -276,9 +276,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/app/directives/agreement-item/agreement-item.controller.js":
+/***/ "./src/lib/directives/agreement-item/agreement-item.controller.js":
 /*!************************************************************************!*\
-  !*** ./src/app/directives/agreement-item/agreement-item.controller.js ***!
+  !*** ./src/lib/directives/agreement-item/agreement-item.controller.js ***!
   \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -312,9 +312,9 @@ function AgreementItemCtrl(Utils, $element) {
 
 /***/ }),
 
-/***/ "./src/app/directives/agreement-item/agreement-item.directive.js":
+/***/ "./src/lib/directives/agreement-item/agreement-item.directive.js":
 /*!***********************************************************************!*\
-  !*** ./src/app/directives/agreement-item/agreement-item.directive.js ***!
+  !*** ./src/lib/directives/agreement-item/agreement-item.directive.js ***!
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -322,7 +322,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AgreementItem": () => /* binding */ AgreementItem
 /* harmony export */ });
-/* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/app/directives/agreement-item/agreement-item.controller.js");
+/* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/lib/directives/agreement-item/agreement-item.controller.js");
 
 // import { default as AgreementItemTemplate } from './agreement-item.tpl.html'
 
@@ -350,9 +350,9 @@ class AgreementItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/agreement-item/agreement-view.controller.js":
+/***/ "./src/lib/directives/agreement-item/agreement-view.controller.js":
 /*!************************************************************************!*\
-  !*** ./src/app/directives/agreement-item/agreement-view.controller.js ***!
+  !*** ./src/lib/directives/agreement-item/agreement-view.controller.js ***!
   \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -443,9 +443,9 @@ class AgreementViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/agreement-item/agreement-view.directive.js":
+/***/ "./src/lib/directives/agreement-item/agreement-view.directive.js":
 /*!***********************************************************************!*\
-  !*** ./src/app/directives/agreement-item/agreement-view.directive.js ***!
+  !*** ./src/lib/directives/agreement-item/agreement-view.directive.js ***!
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -453,8 +453,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AgreementView": () => /* binding */ AgreementView
 /* harmony export */ });
-/* harmony import */ var _agreement_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-view.controller */ "./src/app/directives/agreement-item/agreement-view.controller.js");
-/* harmony import */ var _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./agreement-view.tpl.html */ "./src/app/directives/agreement-item/agreement-view.tpl.html");
+/* harmony import */ var _agreement_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-view.controller */ "./src/lib/directives/agreement-item/agreement-view.controller.js");
+/* harmony import */ var _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./agreement-view.tpl.html */ "./src/lib/directives/agreement-item/agreement-view.tpl.html");
 
 
 
@@ -499,9 +499,9 @@ class AgreementView {
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-item.controller.js":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-item.controller.js":
 /*!**************************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-item.controller.js ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-item.controller.js ***!
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -554,9 +554,9 @@ class CheckboxesItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-item.directive.js":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-item.directive.js":
 /*!*************************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-item.directive.js ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-item.directive.js ***!
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -564,8 +564,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CheckboxesItem": () => /* binding */ CheckboxesItem
 /* harmony export */ });
-/* harmony import */ var _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-item.tpl.html */ "./src/app/directives/checkboxes-item/checkboxes-item.tpl.html");
-/* harmony import */ var _checkboxes_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-item.controller */ "./src/app/directives/checkboxes-item/checkboxes-item.controller.js");
+/* harmony import */ var _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-item.tpl.html */ "./src/lib/directives/checkboxes-item/checkboxes-item.tpl.html");
+/* harmony import */ var _checkboxes_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-item.controller */ "./src/lib/directives/checkboxes-item/checkboxes-item.controller.js");
 
 
 
@@ -592,9 +592,9 @@ function CheckboxesItem() {
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-view.controller.js":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-view.controller.js":
 /*!**************************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-view.controller.js ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-view.controller.js ***!
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -680,9 +680,9 @@ class CheckboxesViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/checkboxes-item/checkboxes-view.directive.js":
+/***/ "./src/lib/directives/checkboxes-item/checkboxes-view.directive.js":
 /*!*************************************************************************!*\
-  !*** ./src/app/directives/checkboxes-item/checkboxes-view.directive.js ***!
+  !*** ./src/lib/directives/checkboxes-item/checkboxes-view.directive.js ***!
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -690,8 +690,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CheckboxesView": () => /* binding */ CheckboxesView
 /* harmony export */ });
-/* harmony import */ var _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-view.tpl.html */ "./src/app/directives/checkboxes-item/checkboxes-view.tpl.html");
-/* harmony import */ var _checkboxes_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-view.controller */ "./src/app/directives/checkboxes-item/checkboxes-view.controller.js");
+/* harmony import */ var _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-view.tpl.html */ "./src/lib/directives/checkboxes-item/checkboxes-view.tpl.html");
+/* harmony import */ var _checkboxes_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-view.controller */ "./src/lib/directives/checkboxes-item/checkboxes-view.controller.js");
 
 
 
@@ -739,9 +739,9 @@ class CheckboxesView {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-item/form-item.controller.js":
+/***/ "./src/lib/directives/form-item/form-item.controller.js":
 /*!**************************************************************!*\
-  !*** ./src/app/directives/form-item/form-item.controller.js ***!
+  !*** ./src/lib/directives/form-item/form-item.controller.js ***!
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -798,13 +798,13 @@ class FormItemCtrl {
       '<div class="form-item-container">' +
       '<div class="form-item-actions">' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onDelete" ng-click="FormItem.deleteClicked()"> ' +
-      '<i class="material-icons small">delete</i>' +
+      '<md-icon class="material-icons small">delete</md-icon>' +
       '</md-button>' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onUp" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})"> ' +
-      '<i class="material-icons small">arrow_drop_up</i>' +
+      '<md-icon class="material-icons small">arrow_drop_up</md-icon>' +
       '</md-button>' +
       '<md-button class="md-button" ng-if="FormItem.Attrs.onDown" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})"> ' +
-      '<i class="material-icons small">arrow_drop_down</i>' +
+      '<md-icon class="material-icons small">arrow_drop_down</md-icon>' +
       '</md-button>' +
       '</div>' +
       '<md-input-container>' +
@@ -832,9 +832,9 @@ class FormItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-item/form-item.directive.js":
+/***/ "./src/lib/directives/form-item/form-item.directive.js":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/form-item/form-item.directive.js ***!
+  !*** ./src/lib/directives/form-item/form-item.directive.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -842,8 +842,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormItem": () => /* binding */ FormItem
 /* harmony export */ });
-/* harmony import */ var _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-item.tpl.html */ "./src/app/directives/form-item/form-item.tpl.html");
-/* harmony import */ var _form_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-item.controller */ "./src/app/directives/form-item/form-item.controller.js");
+/* harmony import */ var _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-item.tpl.html */ "./src/lib/directives/form-item/form-item.tpl.html");
+/* harmony import */ var _form_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-item.controller */ "./src/lib/directives/form-item/form-item.controller.js");
 
 
 
@@ -891,9 +891,9 @@ class FormItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-items-container/form-items-container.controller.js":
+/***/ "./src/lib/directives/form-items-container/form-items-container.controller.js":
 /*!************************************************************************************!*\
-  !*** ./src/app/directives/form-items-container/form-items-container.controller.js ***!
+  !*** ./src/lib/directives/form-items-container/form-items-container.controller.js ***!
   \************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -952,9 +952,9 @@ class FormItemsContainerCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-items-container/form-items-container.directive.js":
+/***/ "./src/lib/directives/form-items-container/form-items-container.directive.js":
 /*!***********************************************************************************!*\
-  !*** ./src/app/directives/form-items-container/form-items-container.directive.js ***!
+  !*** ./src/lib/directives/form-items-container/form-items-container.directive.js ***!
   \***********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -962,8 +962,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormItemsContainer": () => /* binding */ FormItemsContainer
 /* harmony export */ });
-/* harmony import */ var _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-items-container.controller */ "./src/app/directives/form-items-container/form-items-container.controller.js");
-/* harmony import */ var _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-items-container.tpl.html */ "./src/app/directives/form-items-container/form-items-container.tpl.html");
+/* harmony import */ var _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-items-container.controller */ "./src/lib/directives/form-items-container/form-items-container.controller.js");
+/* harmony import */ var _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-items-container.tpl.html */ "./src/lib/directives/form-items-container/form-items-container.tpl.html");
 
 
 
@@ -988,9 +988,9 @@ class FormItemsContainer {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-view/form-view.controller.js":
+/***/ "./src/lib/directives/form-view/form-view.controller.js":
 /*!**************************************************************!*\
-  !*** ./src/app/directives/form-view/form-view.controller.js ***!
+  !*** ./src/lib/directives/form-view/form-view.controller.js ***!
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1015,9 +1015,9 @@ class FormViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/form-view/form-view.directive.js":
+/***/ "./src/lib/directives/form-view/form-view.directive.js":
 /*!*************************************************************!*\
-  !*** ./src/app/directives/form-view/form-view.directive.js ***!
+  !*** ./src/lib/directives/form-view/form-view.directive.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1025,8 +1025,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormView": () => /* binding */ FormView
 /* harmony export */ });
-/* harmony import */ var _form_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-view.controller */ "./src/app/directives/form-view/form-view.controller.js");
-/* harmony import */ var _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-view.tpl.html */ "./src/app/directives/form-view/form-view.tpl.html");
+/* harmony import */ var _form_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-view.controller */ "./src/lib/directives/form-view/form-view.controller.js");
+/* harmony import */ var _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-view.tpl.html */ "./src/lib/directives/form-view/form-view.tpl.html");
 
 
 
@@ -1063,9 +1063,9 @@ class FormView {
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-item.controller.js":
+/***/ "./src/lib/directives/input-item/input-item.controller.js":
 /*!****************************************************************!*\
-  !*** ./src/app/directives/input-item/input-item.controller.js ***!
+  !*** ./src/lib/directives/input-item/input-item.controller.js ***!
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1095,9 +1095,9 @@ class InputItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-item.directive.js":
+/***/ "./src/lib/directives/input-item/input-item.directive.js":
 /*!***************************************************************!*\
-  !*** ./src/app/directives/input-item/input-item.directive.js ***!
+  !*** ./src/lib/directives/input-item/input-item.directive.js ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1105,8 +1105,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InputItem": () => /* binding */ InputItem
 /* harmony export */ });
-/* harmony import */ var _input_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-item.controller */ "./src/app/directives/input-item/input-item.controller.js");
-/* harmony import */ var _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-item.tpl.html */ "./src/app/directives/input-item/input-item.tpl.html");
+/* harmony import */ var _input_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-item.controller */ "./src/lib/directives/input-item/input-item.controller.js");
+/* harmony import */ var _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-item.tpl.html */ "./src/lib/directives/input-item/input-item.tpl.html");
 
 
 
@@ -1131,9 +1131,9 @@ class InputItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-view.controller.js":
+/***/ "./src/lib/directives/input-item/input-view.controller.js":
 /*!****************************************************************!*\
-  !*** ./src/app/directives/input-item/input-view.controller.js ***!
+  !*** ./src/lib/directives/input-item/input-view.controller.js ***!
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1163,9 +1163,9 @@ class InputViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/input-item/input-view.directive.js":
+/***/ "./src/lib/directives/input-item/input-view.directive.js":
 /*!***************************************************************!*\
-  !*** ./src/app/directives/input-item/input-view.directive.js ***!
+  !*** ./src/lib/directives/input-item/input-view.directive.js ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1173,8 +1173,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InputView": () => /* binding */ InputView
 /* harmony export */ });
-/* harmony import */ var _input_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-view.controller */ "./src/app/directives/input-item/input-view.controller.js");
-/* harmony import */ var _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-view.tpl.html */ "./src/app/directives/input-item/input-view.tpl.html");
+/* harmony import */ var _input_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-view.controller */ "./src/lib/directives/input-item/input-view.controller.js");
+/* harmony import */ var _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-view.tpl.html */ "./src/lib/directives/input-item/input-view.tpl.html");
 
 
 
@@ -1220,9 +1220,9 @@ class InputView {
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-item.controller.js":
+/***/ "./src/lib/directives/label-item/label-item.controller.js":
 /*!****************************************************************!*\
-  !*** ./src/app/directives/label-item/label-item.controller.js ***!
+  !*** ./src/lib/directives/label-item/label-item.controller.js ***!
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1245,9 +1245,9 @@ class LabelItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-item.directive.js":
+/***/ "./src/lib/directives/label-item/label-item.directive.js":
 /*!***************************************************************!*\
-  !*** ./src/app/directives/label-item/label-item.directive.js ***!
+  !*** ./src/lib/directives/label-item/label-item.directive.js ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1255,8 +1255,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LabelItem": () => /* binding */ LabelItem
 /* harmony export */ });
-/* harmony import */ var _label_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-item.controller */ "./src/app/directives/label-item/label-item.controller.js");
-/* harmony import */ var _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-item.tpl.html */ "./src/app/directives/label-item/label-item.tpl.html");
+/* harmony import */ var _label_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-item.controller */ "./src/lib/directives/label-item/label-item.controller.js");
+/* harmony import */ var _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-item.tpl.html */ "./src/lib/directives/label-item/label-item.tpl.html");
 
 
 
@@ -1281,9 +1281,9 @@ class LabelItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-view.controller.js":
+/***/ "./src/lib/directives/label-item/label-view.controller.js":
 /*!****************************************************************!*\
-  !*** ./src/app/directives/label-item/label-view.controller.js ***!
+  !*** ./src/lib/directives/label-item/label-view.controller.js ***!
   \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1310,9 +1310,9 @@ class LabelViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/label-item/label-view.directive.js":
+/***/ "./src/lib/directives/label-item/label-view.directive.js":
 /*!***************************************************************!*\
-  !*** ./src/app/directives/label-item/label-view.directive.js ***!
+  !*** ./src/lib/directives/label-item/label-view.directive.js ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1320,8 +1320,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LabelView": () => /* binding */ LabelView
 /* harmony export */ });
-/* harmony import */ var _label_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-view.controller */ "./src/app/directives/label-item/label-view.controller.js");
-/* harmony import */ var _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-view.tpl.html */ "./src/app/directives/label-item/label-view.tpl.html");
+/* harmony import */ var _label_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-view.controller */ "./src/lib/directives/label-item/label-view.controller.js");
+/* harmony import */ var _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-view.tpl.html */ "./src/lib/directives/label-item/label-view.tpl.html");
 
 
 
@@ -1367,9 +1367,9 @@ class LabelView {
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-item.controller.js":
+/***/ "./src/lib/directives/matrix-item/matrix-item.controller.js":
 /*!******************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-item.controller.js ***!
+  !*** ./src/lib/directives/matrix-item/matrix-item.controller.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1456,9 +1456,9 @@ class MatrixItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-item.directive.js":
+/***/ "./src/lib/directives/matrix-item/matrix-item.directive.js":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-item.directive.js ***!
+  !*** ./src/lib/directives/matrix-item/matrix-item.directive.js ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1466,8 +1466,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MatrixItem": () => /* binding */ MatrixItem
 /* harmony export */ });
-/* harmony import */ var _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-item.controller */ "./src/app/directives/matrix-item/matrix-item.controller.js");
-/* harmony import */ var _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-item.tpl.html */ "./src/app/directives/matrix-item/matrix-item.tpl.html");
+/* harmony import */ var _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-item.controller */ "./src/lib/directives/matrix-item/matrix-item.controller.js");
+/* harmony import */ var _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-item.tpl.html */ "./src/lib/directives/matrix-item/matrix-item.tpl.html");
 
 
 
@@ -1491,9 +1491,9 @@ class MatrixItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-view.controller.js":
+/***/ "./src/lib/directives/matrix-item/matrix-view.controller.js":
 /*!******************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-view.controller.js ***!
+  !*** ./src/lib/directives/matrix-item/matrix-view.controller.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1565,9 +1565,9 @@ class MatrixViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/matrix-item/matrix-view.directive.js":
+/***/ "./src/lib/directives/matrix-item/matrix-view.directive.js":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/matrix-item/matrix-view.directive.js ***!
+  !*** ./src/lib/directives/matrix-item/matrix-view.directive.js ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1575,8 +1575,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MatrixView": () => /* binding */ MatrixView
 /* harmony export */ });
-/* harmony import */ var _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-view.tpl.html */ "./src/app/directives/matrix-item/matrix-view.tpl.html");
-/* harmony import */ var _matrix_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-view.controller */ "./src/app/directives/matrix-item/matrix-view.controller.js");
+/* harmony import */ var _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-view.tpl.html */ "./src/lib/directives/matrix-item/matrix-view.tpl.html");
+/* harmony import */ var _matrix_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-view.controller */ "./src/lib/directives/matrix-item/matrix-view.controller.js");
 
 
 
@@ -1624,9 +1624,9 @@ class MatrixView {
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-item.controller.js":
+/***/ "./src/lib/directives/radio-button-item/radio-button-item.controller.js":
 /*!******************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-item.controller.js ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-item.controller.js ***!
   \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1674,9 +1674,9 @@ class RadioButtonCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-item.directive.js":
+/***/ "./src/lib/directives/radio-button-item/radio-button-item.directive.js":
 /*!*****************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-item.directive.js ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-item.directive.js ***!
   \*****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1684,8 +1684,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RadioButton": () => /* binding */ RadioButton
 /* harmony export */ });
-/* harmony import */ var _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-item.controller */ "./src/app/directives/radio-button-item/radio-button-item.controller.js");
-/* harmony import */ var _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-item.tpl.html */ "./src/app/directives/radio-button-item/radio-button-item.tpl.html");
+/* harmony import */ var _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-item.controller */ "./src/lib/directives/radio-button-item/radio-button-item.controller.js");
+/* harmony import */ var _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-item.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-item.tpl.html");
 
 
 
@@ -1711,9 +1711,9 @@ class RadioButton {
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-view.controller.js":
+/***/ "./src/lib/directives/radio-button-item/radio-button-view.controller.js":
 /*!******************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-view.controller.js ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-view.controller.js ***!
   \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1744,9 +1744,9 @@ class RadioButtonViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/radio-button-item/radio-button-view.directive.js":
+/***/ "./src/lib/directives/radio-button-item/radio-button-view.directive.js":
 /*!*****************************************************************************!*\
-  !*** ./src/app/directives/radio-button-item/radio-button-view.directive.js ***!
+  !*** ./src/lib/directives/radio-button-item/radio-button-view.directive.js ***!
   \*****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1754,8 +1754,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RadioButtonView": () => /* binding */ RadioButtonView
 /* harmony export */ });
-/* harmony import */ var _radio_button_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-view.controller */ "./src/app/directives/radio-button-item/radio-button-view.controller.js");
-/* harmony import */ var _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-view.tpl.html */ "./src/app/directives/radio-button-item/radio-button-view.tpl.html");
+/* harmony import */ var _radio_button_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-view.controller */ "./src/lib/directives/radio-button-item/radio-button-view.controller.js");
+/* harmony import */ var _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-view.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-view.tpl.html");
 
 
 
@@ -1799,9 +1799,9 @@ class RadioButtonView {
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-item.controller.js":
+/***/ "./src/lib/directives/select-item/select-item.controller.js":
 /*!******************************************************************!*\
-  !*** ./src/app/directives/select-item/select-item.controller.js ***!
+  !*** ./src/lib/directives/select-item/select-item.controller.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1853,9 +1853,9 @@ class SelectCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-item.directive.js":
+/***/ "./src/lib/directives/select-item/select-item.directive.js":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/select-item/select-item.directive.js ***!
+  !*** ./src/lib/directives/select-item/select-item.directive.js ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1863,8 +1863,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Select": () => /* binding */ Select
 /* harmony export */ });
-/* harmony import */ var _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-item.tpl.html */ "./src/app/directives/select-item/select-item.tpl.html");
-/* harmony import */ var _select_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-item.controller */ "./src/app/directives/select-item/select-item.controller.js");
+/* harmony import */ var _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-item.tpl.html */ "./src/lib/directives/select-item/select-item.tpl.html");
+/* harmony import */ var _select_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-item.controller */ "./src/lib/directives/select-item/select-item.controller.js");
 
 
 
@@ -1889,9 +1889,9 @@ class Select {
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-view.controller.js":
+/***/ "./src/lib/directives/select-item/select-view.controller.js":
 /*!******************************************************************!*\
-  !*** ./src/app/directives/select-item/select-view.controller.js ***!
+  !*** ./src/lib/directives/select-item/select-view.controller.js ***!
   \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1922,9 +1922,9 @@ class SelectViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/select-item/select-view.directive.js":
+/***/ "./src/lib/directives/select-item/select-view.directive.js":
 /*!*****************************************************************!*\
-  !*** ./src/app/directives/select-item/select-view.directive.js ***!
+  !*** ./src/lib/directives/select-item/select-view.directive.js ***!
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1932,8 +1932,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SelectView": () => /* binding */ SelectView
 /* harmony export */ });
-/* harmony import */ var _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-view.tpl.html */ "./src/app/directives/select-item/select-view.tpl.html");
-/* harmony import */ var _select_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-view.controller */ "./src/app/directives/select-item/select-view.controller.js");
+/* harmony import */ var _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-view.tpl.html */ "./src/lib/directives/select-item/select-view.tpl.html");
+/* harmony import */ var _select_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-view.controller */ "./src/lib/directives/select-item/select-view.controller.js");
 
 
 
@@ -1981,9 +1981,9 @@ class SelectView {
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-item.controller.js":
+/***/ "./src/lib/directives/textarea-item/textarea-item.controller.js":
 /*!**********************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-item.controller.js ***!
+  !*** ./src/lib/directives/textarea-item/textarea-item.controller.js ***!
   \**********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2011,9 +2011,9 @@ class TextareaItemCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-item.directive.js":
+/***/ "./src/lib/directives/textarea-item/textarea-item.directive.js":
 /*!*********************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-item.directive.js ***!
+  !*** ./src/lib/directives/textarea-item/textarea-item.directive.js ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2021,8 +2021,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TextareaItem": () => /* binding */ TextareaItem
 /* harmony export */ });
-/* harmony import */ var _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-item.controller */ "./src/app/directives/textarea-item/textarea-item.controller.js");
-/* harmony import */ var _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-item.tpl.html */ "./src/app/directives/textarea-item/textarea-item.tpl.html");
+/* harmony import */ var _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-item.controller */ "./src/lib/directives/textarea-item/textarea-item.controller.js");
+/* harmony import */ var _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-item.tpl.html */ "./src/lib/directives/textarea-item/textarea-item.tpl.html");
 
 
 
@@ -2047,9 +2047,9 @@ class TextareaItem {
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-view.controller.js":
+/***/ "./src/lib/directives/textarea-item/textarea-view.controller.js":
 /*!**********************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-view.controller.js ***!
+  !*** ./src/lib/directives/textarea-item/textarea-view.controller.js ***!
   \**********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2079,9 +2079,9 @@ class TextareaViewCtrl {
 
 /***/ }),
 
-/***/ "./src/app/directives/textarea-item/textarea-view.directive.js":
+/***/ "./src/lib/directives/textarea-item/textarea-view.directive.js":
 /*!*********************************************************************!*\
-  !*** ./src/app/directives/textarea-item/textarea-view.directive.js ***!
+  !*** ./src/lib/directives/textarea-item/textarea-view.directive.js ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2089,8 +2089,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TextareaView": () => /* binding */ TextareaView
 /* harmony export */ });
-/* harmony import */ var _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-view.controller */ "./src/app/directives/textarea-item/textarea-view.controller.js");
-/* harmony import */ var _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-view.tpl.html */ "./src/app/directives/textarea-item/textarea-view.tpl.html");
+/* harmony import */ var _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-view.controller */ "./src/lib/directives/textarea-item/textarea-view.controller.js");
+/* harmony import */ var _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-view.tpl.html */ "./src/lib/directives/textarea-item/textarea-view.tpl.html");
 
 
 
@@ -2138,35 +2138,35 @@ class TextareaView {
 
 /***/ }),
 
-/***/ "./src/app/index.module.js":
+/***/ "./src/lib/index.module.js":
 /*!*********************************!*\
-  !*** ./src/app/index.module.js ***!
+  !*** ./src/lib/index.module.js ***!
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/app/index.scss");
-/* harmony import */ var _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./directives/agreement-item/agreement-item.directive */ "./src/app/directives/agreement-item/agreement-item.directive.js");
-/* harmony import */ var _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/agreement-item/agreement-view.directive */ "./src/app/directives/agreement-item/agreement-view.directive.js");
-/* harmony import */ var _main_main_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main/main.controller */ "./src/app/main/main.controller.js");
-/* harmony import */ var _utils_utils_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/utils.service */ "./src/app/utils/utils.service.js");
-/* harmony import */ var _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-item.directive */ "./src/app/directives/checkboxes-item/checkboxes-item.directive.js");
-/* harmony import */ var _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-view.directive */ "./src/app/directives/checkboxes-item/checkboxes-view.directive.js");
-/* harmony import */ var _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/form-item/form-item.directive */ "./src/app/directives/form-item/form-item.directive.js");
-/* harmony import */ var _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directives/form-items-container/form-items-container.directive */ "./src/app/directives/form-items-container/form-items-container.directive.js");
-/* harmony import */ var _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directives/form-view/form-view.directive */ "./src/app/directives/form-view/form-view.directive.js");
-/* harmony import */ var _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directives/input-item/input-item.directive */ "./src/app/directives/input-item/input-item.directive.js");
-/* harmony import */ var _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directives/input-item/input-view.directive */ "./src/app/directives/input-item/input-view.directive.js");
-/* harmony import */ var _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/label-item/label-item.directive */ "./src/app/directives/label-item/label-item.directive.js");
-/* harmony import */ var _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directives/label-item/label-view.directive */ "./src/app/directives/label-item/label-view.directive.js");
-/* harmony import */ var _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directives/matrix-item/matrix-item.directive */ "./src/app/directives/matrix-item/matrix-item.directive.js");
-/* harmony import */ var _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directives/matrix-item/matrix-view.directive */ "./src/app/directives/matrix-item/matrix-view.directive.js");
-/* harmony import */ var _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-item.directive */ "./src/app/directives/radio-button-item/radio-button-item.directive.js");
-/* harmony import */ var _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-view.directive */ "./src/app/directives/radio-button-item/radio-button-view.directive.js");
-/* harmony import */ var _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directives/select-item/select-view.directive */ "./src/app/directives/select-item/select-view.directive.js");
-/* harmony import */ var _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/select-item/select-item.directive */ "./src/app/directives/select-item/select-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/app/directives/textarea-item/textarea-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/app/directives/textarea-item/textarea-view.directive.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/lib/index.scss");
+/* harmony import */ var _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./directives/agreement-item/agreement-item.directive */ "./src/lib/directives/agreement-item/agreement-item.directive.js");
+/* harmony import */ var _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/agreement-item/agreement-view.directive */ "./src/lib/directives/agreement-item/agreement-view.directive.js");
+/* harmony import */ var _main_main_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main/main.controller */ "./src/lib/main/main.controller.js");
+/* harmony import */ var _utils_utils_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/utils.service */ "./src/lib/utils/utils.service.js");
+/* harmony import */ var _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-item.directive */ "./src/lib/directives/checkboxes-item/checkboxes-item.directive.js");
+/* harmony import */ var _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-view.directive */ "./src/lib/directives/checkboxes-item/checkboxes-view.directive.js");
+/* harmony import */ var _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/form-item/form-item.directive */ "./src/lib/directives/form-item/form-item.directive.js");
+/* harmony import */ var _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directives/form-items-container/form-items-container.directive */ "./src/lib/directives/form-items-container/form-items-container.directive.js");
+/* harmony import */ var _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directives/form-view/form-view.directive */ "./src/lib/directives/form-view/form-view.directive.js");
+/* harmony import */ var _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directives/input-item/input-item.directive */ "./src/lib/directives/input-item/input-item.directive.js");
+/* harmony import */ var _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directives/input-item/input-view.directive */ "./src/lib/directives/input-item/input-view.directive.js");
+/* harmony import */ var _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/label-item/label-item.directive */ "./src/lib/directives/label-item/label-item.directive.js");
+/* harmony import */ var _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directives/label-item/label-view.directive */ "./src/lib/directives/label-item/label-view.directive.js");
+/* harmony import */ var _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directives/matrix-item/matrix-item.directive */ "./src/lib/directives/matrix-item/matrix-item.directive.js");
+/* harmony import */ var _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directives/matrix-item/matrix-view.directive */ "./src/lib/directives/matrix-item/matrix-view.directive.js");
+/* harmony import */ var _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-item.directive */ "./src/lib/directives/radio-button-item/radio-button-item.directive.js");
+/* harmony import */ var _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-view.directive */ "./src/lib/directives/radio-button-item/radio-button-view.directive.js");
+/* harmony import */ var _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directives/select-item/select-view.directive */ "./src/lib/directives/select-item/select-view.directive.js");
+/* harmony import */ var _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/select-item/select-item.directive */ "./src/lib/directives/select-item/select-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/lib/directives/textarea-item/textarea-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/lib/directives/textarea-item/textarea-view.directive.js");
 
 
 
@@ -2221,9 +2221,9 @@ angular
 
 /***/ }),
 
-/***/ "./src/app/main/main.controller.js":
+/***/ "./src/lib/main/main.controller.js":
 /*!*****************************************!*\
-  !*** ./src/app/main/main.controller.js ***!
+  !*** ./src/lib/main/main.controller.js ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2300,9 +2300,9 @@ class MainController {
 
 /***/ }),
 
-/***/ "./src/app/utils/utils.service.js":
+/***/ "./src/lib/utils/utils.service.js":
 /*!****************************************!*\
-  !*** ./src/app/utils/utils.service.js ***!
+  !*** ./src/lib/utils/utils.service.js ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2323,7 +2323,7 @@ class Utils {
         if (typeof result[key] === 'undefined') {
           result[key] = src[key]
         } else if (typeof src[key] === 'object') {
-          result = this.extend(result[key], src[key])
+          result[key] = this.extend(result[key], src[key])
         }
         return result
       },
@@ -2427,7 +2427,7 @@ class Utils {
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__("./src/app/index.module.js");
+/******/ 	return __webpack_require__("./src/lib/index.module.js");
 /******/ })()
 ;
 });

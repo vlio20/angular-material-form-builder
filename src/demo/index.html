@@ -12,8 +12,21 @@
       content="angular, angularjs, google material, material design, form builder, form generator"
     />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link rel="stylesheet" href="../../node_modules/angular/angular-csp.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/angular-material/angular-material.min.css"
+    />
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
@@ -73,7 +86,7 @@
     >
       <md-fab-trigger>
         <md-button aria-label="..." class="md-fab md-warn">
-          <i class="material-icons medium">add</i>
+          <md-icon class="material-icons medium">add</md-icon>
         </md-button>
       </md-fab-trigger>
       <md-fab-actions>
@@ -82,7 +95,7 @@
           class="md-fab md-raised md-mini"
           ng-click="main.addItem('matrix')"
         >
-          <i class="material-icons">grid_on</i>
+          <md-icon class="material-icons">grid_on</md-icon>
           <md-tooltip md-direction="left" md-autohide>Matrix</md-tooltip>
         </md-button>
         <md-button
@@ -90,7 +103,7 @@
           class="md-fab md-raised md-mini"
           ng-click="main.addItem('textarea')"
         >
-          <i class="material-icons">keyboard</i>
+          <md-icon class="material-icons">keyboard</md-icon>
           <md-tooltip md-direction="left" md-autohide>Text-Area</md-tooltip>
         </md-button>
         <md-button
@@ -98,7 +111,7 @@
           class="md-fab md-raised md-mini"
           ng-click="main.addItem('input')"
         >
-          <i class="material-icons">text_format</i>
+          <md-icon class="material-icons">text_format</md-icon>
           <md-tooltip md-direction="left" md-autohide>Text-Input</md-tooltip>
         </md-button>
         <md-button
@@ -106,7 +119,7 @@
           class="md-fab md-raised md-mini"
           ng-click="main.addItem('multipleChoices')"
         >
-          <i class="material-icons">radio_button_checked</i>
+          <md-icon class="material-icons">radio_button_checked</md-icon>
           <md-tooltip md-direction="left" md-autohide>Radio-Buttons</md-tooltip>
         </md-button>
         <md-button
@@ -114,20 +127,28 @@
           class="md-fab md-raised md-mini"
           ng-click="main.addItem('checkboxes')"
         >
-          <i class="material-icons">check_box</i>
+          <md-icon class="material-icons">check_box</md-icon>
           <md-tooltip md-direction="left" md-autohide>Checkboxes</md-tooltip>
         </md-button>
       </md-fab-actions>
     </md-fab-speed-dial>
 
     <a href="https://github.com/vlio20/angular-material-form-builder"
-      ><img
+      ><md-icon
+        mg
         style="position: absolute; top: 0; right: 0; border: 0"
         src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
         alt="Fork me on GitHub"
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
     /></a>
 
+    <script src="../../node_modules/angular/angular.js"></script>
+    <script src="../../node_modules/angular-animate/angular-animate.js"></script>
+    <script src="../../node_modules/angular-aria/angular-aria.js"></script>
+    <script src="../../node_modules/angular-material/angular-material.js"></script>
+    <script src="../../node_modules/angular-messages/angular-messages.js"></script>
+    <script src="../../node_modules/angular-sortable-view/src/angular-sortable-view.js"></script>
+    <script src="../../dist/angular-material-form-builder.js"></script>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
