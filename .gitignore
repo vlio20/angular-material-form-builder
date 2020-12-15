@@ -4,3 +4,4 @@ bower_components/
 .idea/
 .tmp/
 .DS_Store
+*_OLD_*
