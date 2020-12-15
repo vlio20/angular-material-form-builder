@@ -10,7 +10,9 @@ The Module has two directives, one to create the form and the second to preview 
 
 ## DEMO
 
-Run `npm run start:demo`
+Run `npm run serve-demo`
+
+Then follow the instruction (open http://localhost:5000)
 
 ## Supported Form Items
 
