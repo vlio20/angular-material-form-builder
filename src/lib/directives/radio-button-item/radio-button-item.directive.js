@@ -6,6 +6,9 @@ import { default as RadioButtonTemplate } from './radio-button-item.tpl.html'
  */
 
 class RadioButton {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.templateUrl = RadioButtonTemplate

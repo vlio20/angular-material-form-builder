@@ -1,4 +1,7 @@
 class FormItemsContainerCtrl {
+  /**
+   * @ngInject
+   */
   constructor() {
     /**
      * @type {import('../../main/main.controller').FormConfig}
