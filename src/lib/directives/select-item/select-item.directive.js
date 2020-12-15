@@ -5,6 +5,9 @@ import { SelectCtrl } from './select-item.controller'
  * @implements {ng.IDirective}
  */
 class Select {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.templateUrl = SelectTemplate

@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class AgreementViewCtrl {
   /**
-   *
+   * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */
@@ -175,6 +175,7 @@ class AgreementViewCtrl {
 
 }
 
+AgreementViewCtrl.$inject = ["$scope", "Utils"];
 
 
 /***/ }),
@@ -338,7 +339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class CheckboxesViewCtrl {
   /**
-   *
+   * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */
@@ -412,6 +413,7 @@ class CheckboxesViewCtrl {
 
 }
 
+CheckboxesViewCtrl.$inject = ["$scope", "Utils"];
 
 
 /***/ }),
@@ -621,6 +623,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "FormItemsContainerCtrl": () => /* binding */ FormItemsContainerCtrl
 /* harmony export */ });
 class FormItemsContainerCtrl {
+  /**
+   * @ngInject
+   */
   constructor() {
     /**
      * @type {import('../../main/main.controller').FormConfig}
@@ -670,6 +675,7 @@ class FormItemsContainerCtrl {
 
 }
 
+FormItemsContainerCtrl.$inject = [];
 
 
 /***/ }),
@@ -693,6 +699,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class FormItemsContainer {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.scope = {
@@ -706,6 +715,7 @@ class FormItemsContainer {
 
 }
 
+FormItemsContainer.$inject = [];
 
 
 /***/ }),
@@ -757,6 +767,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class FormView {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
@@ -783,6 +796,7 @@ class FormView {
 
 }
 
+FormView.$inject = [];
 
 
 /***/ }),
@@ -838,6 +852,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class InputItem {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
@@ -851,6 +868,7 @@ class InputItem {
 
 }
 
+InputItem.$inject = [];
 
 
 /***/ }),
@@ -1195,6 +1213,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class MatrixItem {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
@@ -1208,6 +1229,7 @@ class MatrixItem {
 
 }
 
+MatrixItem.$inject = [];
 
 
 /***/ }),
@@ -1408,6 +1430,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class RadioButton {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
@@ -1421,6 +1446,7 @@ class RadioButton {
 
 }
 
+RadioButton.$inject = [];
 
 
 /***/ }),
@@ -1588,6 +1614,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class Select {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
@@ -1601,6 +1630,7 @@ class Select {
 
 }
 
+Select.$inject = [];
 
 
 /***/ }),
@@ -1748,6 +1778,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 class TextareaItem {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E';
     this.templateUrl = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
@@ -1761,6 +1794,7 @@ class TextareaItem {
 
 }
 
+TextareaItem.$inject = [];
 
 
 /***/ }),

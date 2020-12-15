@@ -5,6 +5,9 @@ import { default as FormItemsContainerTemplate } from './form-items-container.tp
  * @implements {ng.IDirective}
  */
 class FormItemsContainer {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.scope = {

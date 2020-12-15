@@ -5,6 +5,9 @@ import { default as MatrixItemTemplate } from './matrix-item.tpl.html'
  * @implements {ng.IDirective}
  */
 class MatrixItem {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.templateUrl = MatrixItemTemplate

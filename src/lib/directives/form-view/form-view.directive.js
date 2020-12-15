@@ -5,6 +5,9 @@ import { default as FormViewTemplate } from './form-view.tpl.html'
  * @implements {ng.IDirective}
  */
 class FormView {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.templateUrl = FormViewTemplate

@@ -1,6 +1,6 @@
 class AgreementViewCtrl {
   /**
-   *
+   * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */

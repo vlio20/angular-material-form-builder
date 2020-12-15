@@ -5,6 +5,9 @@ import { default as InputItemTemplate } from './input-item.tpl.html'
  * @implements {ng.IDirective}
  */
 class InputItem {
+  /**
+   * @ngInject
+   */
   constructor() {
     this.restrict = 'E'
     this.templateUrl = InputItemTemplate
