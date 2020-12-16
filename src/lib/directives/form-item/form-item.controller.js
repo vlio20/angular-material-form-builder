@@ -8,9 +8,11 @@ class FormItemCtrl {
     this.Attrs = $attrs
     this.Utils = Utils
     this.templates = {
+      agreement: '<agreement-item item="FormItem.item"></agreement-item>',
       input: '<input-item item="FormItem.item"></input-item>',
       chooseFromList:
         '<bet-form-choose-from-list item="FormItem.item"></bet-form-choose-from-list>',
+      label: '<label-item item="FormItem.item"></label-item>',
       multipleChoices:
         '<radio-button-item item="FormItem.item"></radio-button-item>',
       matrix: '<matrix-item item="FormItem.item"></matrix-item>',
