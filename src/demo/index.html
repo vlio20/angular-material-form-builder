@@ -13,6 +13,7 @@
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="./favicon.ico" />
+    <!-- Dependencies -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -27,17 +28,6 @@
       rel="stylesheet"
       href="../../node_modules/angular-material/angular-material.min.css"
     />
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
   </head>
   <body ng-controller="MainController as main" class="main-view">
     <!--[if lt IE 10]>
@@ -89,6 +79,24 @@
         </md-button>
       </md-fab-trigger>
       <md-fab-actions>
+        <!-- 8 agreement -->
+        <md-button
+          aria-label="..."
+          class="md-fab md-raised md-mini"
+          ng-click="main.addItem('agreement')"
+        >
+          <md-icon class="material-icons">pan_tool</md-icon>
+          <md-tooltip md-direction="left" md-autohide>Agree Box</md-tooltip>
+        </md-button>
+        <!-- 7 Label -->
+        <md-button
+          aria-label="..."
+          class="md-fab md-raised md-mini"
+          ng-click="main.addItem('label')"
+        >
+          <md-icon class="material-icons">label</md-icon>
+          <md-tooltip md-direction="left" md-autohide>Label</md-tooltip>
+        </md-button>
         <!-- 6 Select -->
         <md-button
           aria-label="..."
@@ -154,6 +162,7 @@
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
     /></a>
 
+    <!-- Dependencies -->
     <script src="../../node_modules/angular/angular.js"></script>
     <script src="../../node_modules/angular-animate/angular-animate.js"></script>
     <script src="../../node_modules/angular-aria/angular-aria.js"></script>
@@ -161,20 +170,5 @@
     <script src="../../node_modules/angular-messages/angular-messages.js"></script>
     <script src="../../node_modules/angular-sortable-view/src/angular-sortable-view.js"></script>
     <script src="../../dist/angular-material-form-builder.js"></script>
-    <!-- build:js(src) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- run `gulp inject` to automatically populate bower script dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
-    <!-- inject:js -->
-    <!-- js files will be automatically insert here -->
-    <!-- endinject -->
-
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
-    <!-- endinject -->
-    <!-- endbuild -->
   </body>
 </html>
