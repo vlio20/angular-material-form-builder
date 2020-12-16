@@ -1,5 +1,5 @@
 import { AgreementItemCtrl } from './agreement-item.controller'
-// import { default as AgreementItemTemplate } from './agreement-item.tpl.html'
+// import AgreementItemTemplate from './agreement-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -10,7 +10,6 @@ class AgreementItem {
    */
   constructor() {
     this.restrict = 'E'
-    // this.templateUrl= AgreementItemTemplate,
     this.scope = {
       item: '=',
     }

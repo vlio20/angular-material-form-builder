@@ -1,5 +1,5 @@
 import { LabelItemCtrl } from './label-item.controller'
-import { default as LabelItemTemplate } from './label-item.tpl.html'
+import LabelItemTemplate from './label-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -7,7 +7,7 @@ import { default as LabelItemTemplate } from './label-item.tpl.html'
 class LabelItem {
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = LabelItemTemplate
+    this.template = LabelItemTemplate
     this.scope = {
       item: '=',
     }

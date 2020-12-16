@@ -1,4 +1,4 @@
-import { default as SelectTemplate } from './select-item.tpl.html'
+import SelectTemplate from './select-item.tpl.html'
 import { SelectCtrl } from './select-item.controller'
 
 /**
@@ -10,7 +10,7 @@ class Select {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = SelectTemplate
+    this.template = SelectTemplate
     this.scope = {
       item: '=',
     }

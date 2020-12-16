@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AgreementItem": () => /* binding */ AgreementItem
 /* harmony export */ });
 /* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/lib/directives/agreement-item/agreement-item.controller.js");
- // import { default as AgreementItemTemplate } from './agreement-item.tpl.html'
+ // import AgreementItemTemplate from './agreement-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -69,8 +69,7 @@ class AgreementItem {
    * @ngInject
    */
   constructor() {
-    this.restrict = 'E'; // this.templateUrl= AgreementItemTemplate,
-
+    this.restrict = 'E';
     this.scope = {
       item: '='
     };
@@ -202,7 +201,7 @@ class AgreementView {
    */
   constructor($timeout) {
     this.$timeout = $timeout;
-    this.templateUrl = _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.restrict = 'E';
     this.scope = {
       formItem: '=',
@@ -312,7 +311,7 @@ __webpack_require__.r(__webpack_exports__);
 function CheckboxesItem() {
   const directive = {
     restrict: 'E',
-    templateUrl: _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default,
+    template: _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default,
     scope: {
       item: '='
     },
@@ -444,7 +443,7 @@ class CheckboxesView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -582,7 +581,7 @@ class FormItem {
     this.controller = _form_item_controller__WEBPACK_IMPORTED_MODULE_1__.FormItemCtrl;
     this.controllerAs = 'FormItem';
     this.bindToController = true;
-    this.templateUrl = _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
   }
   /**
    * @see https://docs.angularjs.org/api/ng/service/$compile#-link-
@@ -707,7 +706,7 @@ class FormItemsContainer {
     this.scope = {
       form: '='
     };
-    this.templateUrl = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
     this.controllerAs = 'container';
     this.bindToController = true;
@@ -772,7 +771,7 @@ class FormView {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       form: '='
     };
@@ -857,7 +856,7 @@ class InputItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       item: '='
     };
@@ -932,7 +931,7 @@ class InputView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       formItem: '=',
       form: '='
@@ -1012,7 +1011,7 @@ __webpack_require__.r(__webpack_exports__);
 class LabelItem {
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       item: '='
     };
@@ -1083,7 +1082,7 @@ class LabelView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       formItem: '=',
       form: '='
@@ -1218,7 +1217,7 @@ class MatrixItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       item: '='
     };
@@ -1329,7 +1328,7 @@ class MatrixView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1435,7 +1434,7 @@ class RadioButton {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       item: '='
     };
@@ -1508,7 +1507,7 @@ class RadioButtonView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1619,7 +1618,7 @@ class Select {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
     this.scope = {
       item: '='
     };
@@ -1695,7 +1694,7 @@ class SelectView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.templateUrl = _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1783,7 +1782,7 @@ class TextareaItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.templateUrl = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.scope = {
       item: '='
     };
@@ -1862,7 +1861,7 @@ class TextareaView {
       form: '='
     };
     this.restrict = 'E';
-    this.templateUrl = _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.controller = _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaViewCtrl;
     this.controllerAs = 'TextareaView';
     this.bindToController = true;
@@ -2064,6 +2063,18 @@ class Utils {
 
 /***/ }),
 
+/***/ "./src/lib/index.scss":
+/*!****************************!*\
+  !*** ./src/lib/index.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/lib/directives/agreement-item/agreement-view.tpl.html":
 /*!*******************************************************************!*\
   !*** ./src/lib/directives/agreement-item/agreement-view.tpl.html ***!
@@ -2074,7 +2085,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/agreement-item/agreement-view.tpl.html/agreement-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container>\n  <div\n    layout=\"{{AgreementView.formItem.config.direction == 'horizontal' ? 'row' : 'columb'}}\"\n  >\n    <md-checkbox\n      ng-model=\"AgreementView.formItem.options[0].selected\"\n      ng-change=\"AgreementView.toggleSelectedOption(option)\"\n      ng-disabled=\"AgreementView.disableOptions && !option.selected\"\n      aria-label=\"...\"\n      >{{AgreementView.formItem.options[0].value}}</md-checkbox\n    >\n  </div>\n\n  <div ng-messages=\"AgreementView.form.$error\">\n    <div ng-message=\"minSelections\">\n      Must select {{AgreementView.formItem.maxSelections || 1}} items\n    </div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2088,7 +2099,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/checkboxes-item/checkboxes-item.tpl.html/checkboxes-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Checkboxes.item.options\"\n>\n  <md-input-container class=\"md-block\">\n    <label>Max Selections</label>\n    <input type=\"number\" ng-model=\"Checkboxes.item.config.maxSelections\" />\n  </md-input-container>\n\n  <md-switch\n    ng-model=\"Checkboxes.item.config.direction\"\n    ng-true-value=\"'horizontal'\"\n    ng-false-value=\"'vertical'\"\n  >\n    Layout direction ({{Checkboxes.item.config.direction == 'horizontal' ?\n    'Horizontal' : 'Vertical'}})\n  </md-switch>\n\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in Checkboxes.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button class=\"md-button\" ng-click=\"Checkboxes.deleteOption($index)\">\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      ng-click=\"Checkboxes.addOption()\"\n    >\n      <md-icon class=\"material-icons\">add</md-icon>\n    </md-button>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -2102,7 +2113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/checkboxes-item/checkboxes-view.tpl.html/checkboxes-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container>\n  <div\n    layout=\"{{CheckboxesView.formItem.config.direction == 'horizontal' ? 'row' : 'column'}}\"\n  >\n    <md-checkbox\n      ng-repeat=\"option in CheckboxesView.formItem.options track by $index\"\n      ng-model=\"option.selected\"\n      ng-change=\"CheckboxesView.toggleSelectedOption(option)\"\n      ng-disabled=\"CheckboxesView.disableOptions && !option.selected\"\n      aria-label=\"...\"\n      >{{option.value}}</md-checkbox\n    >\n  </div>\n\n  <div ng-messages=\"CheckboxesView.form.$error\">\n    <div ng-message=\"minSelections\">\n      Must select {{CheckboxesView.formItem.maxSelections || 1}} items\n    </div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2116,7 +2127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/form-item/form-item.tpl.html/form-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"form-item-container md-inline-form\">\n  <div class=\"form-item-actions\">\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDelete\"\n      ng-click=\"FormItem.deleteClicked()\"\n    >\n      <md-icon class=\"material-icons small\">delete</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onUp\"\n      ng-click=\"FormItem.onUp({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_up</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDown\"\n      ng-click=\"FormItem.onDown({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_down</md-icon>\n    </md-button>\n  </div>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Field Title</label>\n    <input ng-model=\"FormItem.item.props.title\" />\n  </md-input-container>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Help Text</label>\n    <input ng-model=\"FormItem.item.props.helpText\" />\n  </md-input-container>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type === 'agreement'\"\n    class=\"md-block\"\n  >\n    <label>Option Text</label>\n    <input ng-model=\"FormItem.item.options[0].value\" />\n  </md-input-container>\n\n  <div ng-switch=\"FormItem.item.type\">\n    <agreement-item\n      ng-switch-when=\"agreement\"\n      item=\"FormItem.item\"\n    ></agreement-item>\n    <label-item ng-switch-when=\"label\" item=\"FormItem.item\"></label-item>\n    <input-item ng-switch-when=\"input\" item=\"FormItem.item\"></input-item>\n    <radio-button-item\n      ng-switch-when=\"multipleChoices\"\n      item=\"FormItem.item\"\n    ></radio-button-item>\n    <matrix-item ng-switch-when=\"matrix\" item=\"FormItem.item\"></matrix-item>\n    <checkboxes-item\n      ng-switch-when=\"checkboxes\"\n      item=\"FormItem.item\"\n    ></checkboxes-item>\n    <textarea-item\n      ng-switch-when=\"textarea\"\n      item=\"FormItem.item\"\n    ></textarea-item>\n    <select-item\n      ng-switch-when=\"chooseFromList\"\n      item=\"FormItem.item\"\n    ></select-item>\n    <p ng-switch-default>UNKNOWN TYPE</p>\n  </div>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <md-checkbox ng-model=\"FormItem.item.config.required\"\n      >Required field</md-checkbox\n    >\n  </md-input-container>\n</div>\n");
 
 /***/ }),
 
@@ -2130,7 +2141,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/form-items-container/form-items-container.tpl.html/form-items-container.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\n  <form-item\n    ng-repeat=\"item in container.form.items track by $index\"\n    type=\"{{item.type}}\"\n    item=\"item\"\n    index=\"$index\"\n    on-delete=\"container.delete(item, index)\"\n    on-up=\"container.up(item, index)\"\n    on-down=\"container.down(item, index)\"\n  >\n  </form-item>\n</div>\n");
 
 /***/ }),
 
@@ -2144,7 +2155,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/form-view/form-view.tpl.html/form-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"md-inline-form\">\n  <div\n    class=\"formItem\"\n    ng-repeat=\"formItem in FormView.form.items track by $index\"\n    ng-switch=\"formItem.type\"\n    layout=\"column\"\n  >\n    <ng-form name=\"formItemForm\">\n      <div>\n        <div class=\"formItem-title\">{{formItem.props.title}}</div>\n        <div class=\"formItem-help-text\">{{formItem.props.helpText}}</div>\n\n        <agreement-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"agreement\"\n        ></agreement-view>\n        <checkboxes-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"checkboxes\"\n        ></checkboxes-view>\n        <radio-button-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"multipleChoices\"\n        ></radio-button-view>\n        <input-view\n          form-item=\"formItem\"\n          form=\"formItemForm\"\n          ng-switch-when=\"input\"\n        ></input-view>\n        <textarea-view\n          form-item=\"formItem\"\n          form=\"formItemForm\"\n          ng-switch-when=\"textarea\"\n        ></textarea-view>\n        <matrix-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"matrix\"\n        ></matrix-view>\n        <select-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"chooseFromList\"\n        ></select-view>\n        <label-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"label\"\n        ></label-view>\n      </div>\n    </ng-form>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -2158,7 +2169,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/input-item/input-item.tpl.html/input-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Placeholder</label>\n  <input type=\"text\" ng-model=\"Input.item.config.placeholder\" />\n</md-input-container>\n<md-input-container class=\"md-block\">\n  <label>Type</label>\n  <md-select ng-model=\"Input.item.config.type\">\n    <md-option value=\"text\">Text</md-option>\n    <md-option value=\"number\">Number</md-option>\n    <md-option value=\"email\">Email</md-option>\n  </md-select>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2172,7 +2183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/input-item/input-view.tpl.html/input-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <input\n    ng-model=\"InputView.formItem.value\"\n    type=\"{{InputView.formItem.config.type}}\"\n    placeholder=\"{{InputView.formItem.config.placeholder}}\"\n    ng-required=\"InputView.formItem.config.required\"\n  />\n  <div ng-messages=\"InputView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2186,7 +2197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/label-item/label-item.tpl.html/label-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Text</label>\n  <textarea ng-model=\"Label.item.value\" md-maxlength=\"150\" rows=\"5\"></textarea>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2200,7 +2211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/label-item/label-view.tpl.html/label-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-content flex layout-padding layout=\"row\" layout-align=\"center center\">\n    <pre>\n      <span class=\"formItem-content\">{{LabelView.formItem.value}}</span>\n    </pre>\n  </md-content>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2214,7 +2225,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/matrix-item/matrix-item.tpl.html/matrix-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container columnContainer\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Matrix.item.config.columns\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"column in Matrix.item.config.columns track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"input-container\">\n      <label>Column {{$index + 1}}</label>\n      <input ng-model=\"column.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button\"\n      md-no-ink\n      aria-label=\"delete column item\"\n      ng-click=\"Matrix.deleteColumn($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n      <md-tooltip md-autohide=\"true\">Delete</md-tooltip>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      md-no-ink\n      aria-label=\"add option item\"\n      ng-click=\"Matrix.addColumn()\"\n      >Add Column</md-button\n    >\n  </div>\n</div>\n\n<div\n  class=\"sortable-container rowContainer\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Matrix.item.config.rows\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"row in Matrix.item.config.rows track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder row item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"input-container\">\n      <label>Row {{$index + 1}}</label>\n      <input ng-model=\"row.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button\"\n      md-no-ink\n      aria-label=\"delete row item\"\n      ng-click=\"Matrix.deleteRow($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n      <md-tooltip md-autohide=\"true\">Delete</md-tooltip>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      md-no-ink\n      aria-label=\"add row item\"\n      ng-click=\"Matrix.addRow()\"\n      >Add row</md-button\n    >\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -2228,7 +2239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/matrix-item/matrix-view.tpl.html/matrix-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"matrix-container md-block\" layout=\"column\">\n  <div class=\"matrix\">\n    <div class=\"matrix-row\" flex layout=\"row\">\n      <span class=\"matrix-cell\" flex=\"20\"></span>\n      <span\n        class=\"matrix-cell matrix-cell-header\"\n        flex\n        ng-repeat=\"column in MatrixView.formItem.config.columns track by $index\"\n        >{{column.value}}</span\n      >\n    </div>\n    <div\n      class=\"matrix-row\"\n      ng-repeat=\"row in MatrixView.formItem.config.rows track by $index\"\n      layout=\"row\"\n    >\n      <span class=\"matrix-cell\" flex=\"20\" layout=\"column\" layout-align=\"center\"\n        >{{row.value}}</span\n      >\n      <md-radio-group\n        ng-model=\"row.selected\"\n        ng-change=\"MatrixView._updateValidity()\"\n        flex\n        layout=\"row\"\n      >\n        <span\n          class=\"matrix-cell radio-button-cell\"\n          flex\n          ng-repeat=\"column in MatrixView.formItem.config.columns track by $index\"\n        >\n          <md-radio-button\n            value=\"{{column.value}}\"\n            aria-label=\"...\"\n          ></md-radio-button>\n        </span>\n      </md-radio-group>\n    </div>\n  </div>\n\n  <div ng-messages=\"MatrixView.form.$error\">\n    <div ng-message=\"required\">This is required</div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2242,7 +2253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/radio-button-item/radio-button-item.tpl.html/radio-button-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"RadioButton.item.options\"\n>\n  <md-switch\n    ng-model=\"RadioButton.item.config.direction\"\n    ng-true-value=\"'horizontal'\"\n    ng-false-value=\"'vertical'\"\n  >\n    Layout direction ({{RadioButton.item.config.direction == 'horizontal' ?\n    'Horizontal' : 'Vertical'}})\n  </md-switch>\n\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in RadioButton.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button md-warn\"\n      ng-click=\"RadioButton.deleteOption($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n\n  <md-button class=\"md-raised md-accent\" ng-click=\"RadioButton.addOption()\"\n    >Add Option</md-button\n  >\n</div>\n");
 
 /***/ }),
 
@@ -2256,7 +2267,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/radio-button-item/radio-button-view.tpl.html/radio-button-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-radio-group\n    name=\"formItemInput\"\n    ng-required=\"RadioButtonView.formItem.config.required\"\n    ng-model=\"RadioButtonView.formItem.value\"\n    layout=\"{{RadioButtonView.formItem.config.direction == 'horizontal' ? 'row' : 'column'}}\"\n    required\n  >\n    <md-radio-button\n      ng-repeat=\"option in RadioButtonView.formItem.options track by $index\"\n      value=\"{{option.value}}\"\n      aria-label=\"...\"\n    >\n      {{option.value}}\n    </md-radio-button>\n  </md-radio-group>\n\n  <div ng-messages=\"RadioButtonView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2270,7 +2281,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/select-item/select-item.tpl.html/select-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Select.item.options\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in Select.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button class=\"md-button md-warn\" ng-click=\"Select.deleteOption($index)\">\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n\n  <md-button class=\"md-raised md-accent\" ng-click=\"Select.addOption()\"\n    >Add Option</md-button\n  >\n</div>\n");
 
 /***/ }),
 
@@ -2284,7 +2295,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/select-item/select-view.tpl.html/select-view.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-select\n    name=\"formItemInput\"\n    ng-required=\"SelectView.formItem.config.required\"\n    ng-model=\"SelectView.formItem.value\"\n  >\n    <md-option\n      ng-repeat=\"option in SelectView.formItem.options track by $index\"\n      ng-value=\"option.value\"\n      >{{ option.value }}</md-option\n    >\n  </md-select>\n  <div ng-messages=\"SelectView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2298,7 +2309,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/textarea-item/textarea-item.tpl.html/textarea-item.tpl.html");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Placeholder</label>\n  <input type=\"text\" ng-model=\"Textarea.item.config.placeholder\" />\n</md-input-container>\n");
 
 /***/ }),
 
@@ -2312,19 +2323,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "templates/directives/textarea-item/textarea-view.tpl.html/textarea-view.tpl.html");
-
-/***/ }),
-
-/***/ "./src/lib/index.scss":
-/*!****************************!*\
-  !*** ./src/lib/index.scss ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <textarea\n    ng-model=\"TextareaView.formItem.value\"\n    placeholder=\"{{TextareaView.formItem.config.placeholder}}\"\n    ng-required=\"TextareaView.formItem.config.required\"\n  ></textarea>\n  <div ng-messages=\"TextareaView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
 /***/ })
 
@@ -2366,18 +2365,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
@@ -2392,26 +2379,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

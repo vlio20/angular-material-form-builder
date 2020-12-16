@@ -1,5 +1,5 @@
 import { RadioButtonCtrl } from './radio-button-item.controller'
-import { default as RadioButtonTemplate } from './radio-button-item.tpl.html'
+import RadioButtonTemplate from './radio-button-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -11,7 +11,7 @@ class RadioButton {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = RadioButtonTemplate
+    this.template = RadioButtonTemplate
     this.scope = {
       item: '=',
     }

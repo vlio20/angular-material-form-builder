@@ -1,4 +1,4 @@
-import { default as CheckboxesItemTemplate } from './checkboxes-item.tpl.html'
+import CheckboxesItemTemplate from './checkboxes-item.tpl.html'
 import { CheckboxesItemCtrl } from './checkboxes-item.controller'
 
 /**
@@ -7,7 +7,7 @@ import { CheckboxesItemCtrl } from './checkboxes-item.controller'
 function CheckboxesItem() {
   const directive = {
     restrict: 'E',
-    templateUrl: CheckboxesItemTemplate,
+    template: CheckboxesItemTemplate,
     scope: {
       item: '=',
     },

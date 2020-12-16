@@ -1,4 +1,4 @@
-import { default as CheckboxesViewTemplate } from './checkboxes-view.tpl.html'
+import CheckboxesViewTemplate from './checkboxes-view.tpl.html'
 import { CheckboxesViewCtrl } from './checkboxes-view.controller'
 
 /**
@@ -11,9 +11,8 @@ class CheckboxesView {
    */
   constructor($timeout) {
     this.$timeout = $timeout
-
     this.restrict = 'E'
-    this.templateUrl = CheckboxesViewTemplate
+    this.template = CheckboxesViewTemplate
     this.scope = {
       formItem: '=',
       isPreview: '&',

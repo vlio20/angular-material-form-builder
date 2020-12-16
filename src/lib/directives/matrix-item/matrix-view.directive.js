@@ -1,4 +1,4 @@
-import { default as MatrixViewTemplate } from './matrix-view.tpl.html'
+import MatrixViewTemplate from './matrix-view.tpl.html'
 import { MatrixViewCtrl } from './matrix-view.controller'
 
 /**
@@ -13,7 +13,7 @@ class MatrixView {
   constructor($timeout) {
     this.$timeout = $timeout
     this.restrict = 'E'
-    this.templateUrl = MatrixViewTemplate
+    this.template = MatrixViewTemplate
     this.scope = {
       formItem: '=',
       isPreview: '&',

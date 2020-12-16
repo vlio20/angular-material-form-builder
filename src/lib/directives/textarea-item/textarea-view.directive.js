@@ -1,5 +1,5 @@
 import { TextareaViewCtrl } from './textarea-view.controller'
-import { default as TextareaViewTemplate } from './textarea-view.tpl.html'
+import TextareaViewTemplate from './textarea-view.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -17,8 +17,7 @@ class TextareaView {
       form: '=',
     }
     this.restrict = 'E'
-    this.templateUrl = TextareaViewTemplate
-
+    this.template = TextareaViewTemplate
     this.controller = TextareaViewCtrl
     this.controllerAs = 'TextareaView'
     this.bindToController = true

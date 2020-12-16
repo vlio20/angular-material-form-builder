@@ -1,5 +1,5 @@
 import { MatrixItemCtrl } from './matrix-item.controller'
-import { default as MatrixItemTemplate } from './matrix-item.tpl.html'
+import MatrixItemTemplate from './matrix-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -10,7 +10,7 @@ class MatrixItem {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = MatrixItemTemplate
+    this.template = MatrixItemTemplate
     this.scope = {
       item: '=',
     }

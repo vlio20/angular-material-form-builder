@@ -1,4 +1,4 @@
-import { default as FormItemTemplate } from './form-item.tpl.html'
+import FormItemTemplate from './form-item.tpl.html'
 import { FormItemCtrl } from './form-item.controller'
 
 /**
@@ -22,7 +22,7 @@ class FormItem {
     this.controller = FormItemCtrl
     this.controllerAs = 'FormItem'
     this.bindToController = true
-    this.templateUrl = FormItemTemplate
+    this.template = FormItemTemplate
   }
 
   /**
