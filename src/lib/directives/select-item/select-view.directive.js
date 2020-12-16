@@ -1,4 +1,4 @@
-import { default as SelectViewTemplate } from './select-view.tpl.html'
+import SelectViewTemplate from './select-view.tpl.html'
 import { SelectViewCtrl } from './select-view.controller'
 
 /**
@@ -13,7 +13,7 @@ class SelectView {
     this.$timeout = $timeout
 
     this.restrict = 'E'
-    this.templateUrl = SelectViewTemplate
+    this.template = SelectViewTemplate
     this.scope = {
       formItem: '=',
       isPreview: '&',

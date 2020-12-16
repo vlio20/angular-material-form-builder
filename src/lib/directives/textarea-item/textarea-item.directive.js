@@ -1,5 +1,5 @@
 import { TextareaItemCtrl } from './textarea-item.controller'
-import { default as TextareaItemTemplate } from './textarea-item.tpl.html'
+import TextareaItemTemplate from './textarea-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -10,7 +10,7 @@ class TextareaItem {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = TextareaItemTemplate
+    this.template = TextareaItemTemplate
     this.scope = {
       item: '=',
     }

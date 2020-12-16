@@ -1,5 +1,5 @@
 import { FormItemsContainerCtrl } from './form-items-container.controller'
-import { default as FormItemsContainerTemplate } from './form-items-container.tpl.html'
+import FormItemsContainerTemplate from './form-items-container.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -13,7 +13,7 @@ class FormItemsContainer {
     this.scope = {
       form: '=',
     }
-    this.templateUrl = FormItemsContainerTemplate
+    this.template = FormItemsContainerTemplate
     this.controller = FormItemsContainerCtrl
     this.controllerAs = 'container'
     this.bindToController = true

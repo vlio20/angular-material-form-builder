@@ -1,5 +1,5 @@
 import { LabelViewCtrl } from './label-view.controller'
-import { default as LabelViewTemplate } from './label-view.tpl.html'
+import LabelViewTemplate from './label-view.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -12,7 +12,7 @@ class LabelView {
   constructor($timeout) {
     this.$timeout = $timeout
     this.restrict = 'E'
-    this.templateUrl = LabelViewTemplate
+    this.template = LabelViewTemplate
     this.scope = {
       formItem: '=',
       form: '=',

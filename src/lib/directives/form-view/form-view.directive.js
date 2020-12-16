@@ -1,5 +1,5 @@
 import { FormViewCtrl } from './form-view.controller'
-import { default as FormViewTemplate } from './form-view.tpl.html'
+import FormViewTemplate from './form-view.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -10,7 +10,7 @@ class FormView {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = FormViewTemplate
+    this.template = FormViewTemplate
     this.scope = {
       form: '=',
     }

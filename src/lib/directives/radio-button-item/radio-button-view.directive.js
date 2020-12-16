@@ -1,5 +1,5 @@
 import { RadioButtonViewCtrl } from './radio-button-view.controller'
-import { default as RadioButtonViewTemplate } from './radio-button-view.tpl.html'
+import RadioButtonViewTemplate from './radio-button-view.tpl.html'
 
 class RadioButtonView {
   /**
@@ -9,7 +9,7 @@ class RadioButtonView {
   constructor($timeout) {
     this.$timeout = $timeout
     this.restrict = 'E'
-    this.templateUrl = RadioButtonViewTemplate
+    this.template = RadioButtonViewTemplate
     this.scope = {
       formItem: '=',
       isPreview: '&',

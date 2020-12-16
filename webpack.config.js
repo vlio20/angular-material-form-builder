@@ -91,31 +91,11 @@ async function webpackConfig() {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: ['babel-loader'],
+          use: ['babel-loader', 'eslint-loader'],
         },
         {
-          test: /\.tpl.html$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: (url, resourcePath, context) => {
-                  // `resourcePath` is original absolute path to asset
-                  // `context` is directory where stored asset (`rootContext`) or `context` option
-
-                  // To get relative path you can use
-                  const relativePath = path.relative(context, resourcePath)
-
-                  // put all in dist/templates/<path>
-                  return `${relativePath.replace(
-                    path.join('src', 'lib'),
-                    'templates'
-                  )}/${url}`
-                },
-              },
-            },
-          ],
+          test: /\.tpl.html$/i,
+          loader: 'raw-loader',
         },
       ],
     },

@@ -1,5 +1,5 @@
 import { InputViewCtrl } from './input-view.controller'
-import { default as InputViewTemplate } from './input-view.tpl.html'
+import InputViewTemplate from './input-view.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -12,7 +12,7 @@ class InputView {
   constructor($timeout) {
     this.$timeout = $timeout
     this.restrict = 'E'
-    this.templateUrl = InputViewTemplate
+    this.template = InputViewTemplate
     this.scope = {
       formItem: '=',
       form: '=',

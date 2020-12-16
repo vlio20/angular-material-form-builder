@@ -1,5 +1,5 @@
 import { InputItemCtrl } from './input-item.controller'
-import { default as InputItemTemplate } from './input-item.tpl.html'
+import InputItemTemplate from './input-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
@@ -10,7 +10,7 @@ class InputItem {
    */
   constructor() {
     this.restrict = 'E'
-    this.templateUrl = InputItemTemplate
+    this.template = InputItemTemplate
     this.scope = {
       item: '=',
     }

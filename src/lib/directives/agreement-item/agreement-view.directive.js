@@ -1,5 +1,5 @@
 import { AgreementViewCtrl } from './agreement-view.controller'
-import { default as AgreementViewTemplate } from './agreement-view.tpl.html'
+import AgreementViewTemplate from './agreement-view.tpl.html'
 
 class AgreementView {
   /**
@@ -8,8 +8,7 @@ class AgreementView {
    */
   constructor($timeout) {
     this.$timeout = $timeout
-
-    this.templateUrl = AgreementViewTemplate
+    this.template = AgreementViewTemplate
     this.restrict = 'E'
     this.scope = {
       formItem: '=',
