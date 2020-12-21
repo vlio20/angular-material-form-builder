@@ -5,5 +5,9 @@
     "moduleResolution": "classic",
     "lib": ["dom", "es2020", "webworker"]
   },
-  "include": ["src"]
+  "lib": ["es2020", "node", "jest"],
+  "include": ["src", "test", "build-scripts", "test", "__mocks__"],
+  "typeAcquisition": {
+    "include": ["jest"]
+  }
 }

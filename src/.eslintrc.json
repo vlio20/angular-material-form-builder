@@ -25,7 +25,19 @@
   },
   "rules": {
     "no-use-before-define": ["error", { "functions": true, "classes": true }],
-    // Let's consider using a logger
-    "no-console": "off"
-  }
+    "no-console": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "env": { "jest": true },
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended", "../.eslintrc.json"],
+      "settings": {
+        "jest": {
+          "version": 26
+        }
+      }
+    }
+  ]
 }

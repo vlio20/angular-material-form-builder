@@ -1,0 +1,12 @@
+{
+  "extends": ["plugin:jest/recommended", "../.eslintrc.json"],
+  "plugins": ["jest"],
+  "env": {
+    "jest": true
+  },
+  "settings": {
+    "jest": {
+      "version": 26
+    }
+  }
+}
