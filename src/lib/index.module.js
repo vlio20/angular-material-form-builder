@@ -21,7 +21,7 @@ import { Select } from './directives/select-item/select-item.directive'
 import { TextareaItem } from './directives/textarea-item/textarea-item.directive'
 import { TextareaView } from './directives/textarea-item/textarea-view.directive'
 
-angular
+export default angular
   .module('angularMaterialFormBuilder', [
     'ngMaterial',
     'angular-sortable-view',

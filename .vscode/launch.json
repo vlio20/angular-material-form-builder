@@ -1,0 +1,24 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    // Debug Jest tests
+    {
+      "name": "🧪 Debug Jest",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "args": [
+        "node_modules/.bin/jest",
+        "test",
+        "--runInBand",
+        "--detectOpenHandles",
+        "--forceExit",
+        "--testTimeout=6000000"
+      ],
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
