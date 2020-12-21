@@ -23,12 +23,12 @@ const config = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',
     '^.+\\.(css|less|scss)$': 'babel-jest',
-    '^.+\\.html?$': 'html-loader-jest',
+    // '^.+\\.html?$': 'html-loader-jest',
   },
   modulePathIgnorePatterns: ['<rootDir>/dist'],
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '^.+\\.html$': '<rootDir>/test/rawLoader.js',
+    '^.+\\.html$': 'jest-raw-loader',
   },
 }
 module.exports = config
