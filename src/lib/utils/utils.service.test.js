@@ -11,7 +11,7 @@ describe('Utils Service test', () => {
     })
 
   it('Utils constructor', () => {
-    const u = new Utils(1, 2)
+    const u = new Utils()
     expect(u).toBeDefined()
   })
 
