@@ -16,12 +16,16 @@ describe('fucking test', () => {
   })
 
   it('Utils extend', () => {
+    /**
+     * @type {{Utils:  import('./utils.service').Utils}}
+     */
     const testApp = createTestAppWithUtils(() => new Utils())
     expect(testApp.Utils).toBeDefined()
 
-    expect(testApp.Utils.extend({ a: 1 }, { b: 2 })).toStrictEqual({
-      a: 1,
-      b: 2,
+    expect(testApp.Utils.extend(undefined, { a: 1 })).toStrictEqual({ a: 1 })
+
+    expect(testApp.Utils.extend({ a: { b: 2 } }, { a: 1 })).toStrictEqual({
+      a: { b: 2 },
     })
 
     expect(
