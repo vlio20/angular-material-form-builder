@@ -11,7 +11,7 @@
 const config = {
   testEnvironment: 'jsdom',
   collectCoverage: false,
-  coverageDirectory: '/coverage',
+  coverageDirectory: './coverage',
   collectCoverageFrom: [
     'src/lib/**/*.js',
     '!**/node_modules/**',
