@@ -36,7 +36,8 @@ class MainController {
   }
 
   /**
-   * Move up (bounded)
+   * insert before (bounded)
+   * Pops out latest element (wanted?)
    * @param {Item} item
    * @param {number} index
    */
@@ -49,7 +50,8 @@ class MainController {
   }
 
   /**
-   * Move down (bounded)
+   * insert after (bounded)
+   * Pops out latest element (wanted?)
    * @param {Item} item
    * @param {number} index
    */
