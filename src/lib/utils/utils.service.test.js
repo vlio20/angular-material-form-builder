@@ -2,7 +2,7 @@ import { createTestApp } from 'angularjs-jest'
 import angularMaterialFormBuilder from '../index.module'
 import { Utils } from './utils.service'
 
-describe('fucking test', () => {
+describe('Utils Service test', () => {
   const createTestAppWithUtils = (Utils) =>
     createTestApp({
       modules: [angularMaterialFormBuilder],
