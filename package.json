@@ -4,6 +4,7 @@
   "description": "Form builder for Angular Material (AngularJS version)",
   "main": "dist/angular-material-form-builder.min.js",
   "scripts": {
+    "prebuild": "npm test",
     "build": "cross-env NODE_ENV=build webpack --config webpack.config.js --env development --mode development",
     "start": "webpack serve --mode development --env local",
     "lint": "eslint src/",
