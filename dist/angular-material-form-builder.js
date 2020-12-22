@@ -1899,6 +1899,9 @@ TextareaView.$inject = ["$timeout"];
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/lib/index.scss");
 /* harmony import */ var _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./directives/agreement-item/agreement-item.directive */ "./src/lib/directives/agreement-item/agreement-item.directive.js");
 /* harmony import */ var _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/agreement-item/agreement-view.directive */ "./src/lib/directives/agreement-item/agreement-view.directive.js");
@@ -1943,7 +1946,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_4__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_3__.MainController).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_1__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_2__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_5__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_6__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_7__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_8__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_9__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_10__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_11__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_12__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_13__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_14__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_15__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_16__.RadioButton).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_17__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_19__.Select).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_18__.SelectView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_20__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_21__.TextareaView);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_4__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_3__.MainController).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_1__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_2__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_5__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_6__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_7__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_8__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_9__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_10__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_11__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_12__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_13__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_14__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_15__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_16__.RadioButton).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_17__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_19__.Select).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_18__.SelectView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_20__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_21__.TextareaView));
 
 /***/ }),
 
@@ -1995,7 +1998,8 @@ class MainController {
     this.form.items.splice(index, 1);
   }
   /**
-   * Move up (bounded)
+   * insert before (bounded)
+   * Pops out latest element (wanted?)
    * @param {Item} item
    * @param {number} index
    */
@@ -2009,7 +2013,8 @@ class MainController {
     }
   }
   /**
-   * Move down (bounded)
+   * insert after (bounded)
+   * Pops out latest element (wanted?)
    * @param {Item} item
    * @param {number} index
    */
