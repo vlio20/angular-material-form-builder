@@ -29,7 +29,9 @@ Here is the list of form items which are supported by the module:
 
 ## Installation
 
-`npm install git+https://github.com/xcally/angular-material-form-builder.git#v1.0.0`
+`npm install @xenialab/angular-material-form-builder`
+
+`npm install git+https://github.com/vlio20/angular-material-form-builder.git#v1.0.0`
 
 Add the following styles and scripts to your `index.html`:
 

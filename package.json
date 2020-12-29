@@ -1,5 +1,5 @@
 {
-  "name": "angular-material-form-builder",
+  "name": "@xenialab/angular-material-form-builder",
   "version": "1.0.0",
   "description": "Form builder for Angular Material (AngularJS version)",
   "main": "dist/angular-material-form-builder.min.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xcally/angular-material-form-builder.git"
+    "url": "git+https://github.com/vlio20/angular-material-form-builder.git"
   },
   "keywords": [
     "AngularJS",
@@ -37,9 +37,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xcally/angular-material-form-builder/issues"
+    "url": "https://github.com/vlio20/angular-material-form-builder/issues"
   },
-  "homepage": "https://github.com/xcally/angular-material-form-builder#readme",
+  "homepage": "https://github.com/vlio20/angular-material-form-builder#readme",
   "peerDependencies": {
     "angular": "^1.8.2",
     "angular-animate": "^1.8.2",
