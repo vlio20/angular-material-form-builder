@@ -40,6 +40,7 @@ async function webpackConfig() {
       angular: 'angular',
       'angular-material': 'angular-material',
       'angular-messages': 'angular-messages',
+      Flow: '@flowjs/flow.js',
     },
     plugins: [
       new CleanWebpackPlugin(),
