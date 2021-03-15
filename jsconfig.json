@@ -4,6 +4,10 @@
     "module": "es2020",
     "moduleResolution": "classic",
     "lib": ["dom", "es2020", "webworker"],
+    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "baseUrl": "."
   },
   "lib": ["es2020", "node", "jest"],
