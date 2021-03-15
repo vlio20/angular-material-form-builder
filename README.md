@@ -119,3 +119,14 @@ JS example:
 
 1. Fork the repo, run `npm install` then `bower install` and then `gulp server` in order to run the server locally. When ready run `gulp build` commit your changes and make a pull request.
 2. Report bugs and suggest enhancements.
+
+### Building
+
+`npm run build` will build a new release of the library.
+
+### Testing
+
+`npm test` will launch jest-based tests.
+
+**Help wanted**
+The tests coverage is currently quite low.

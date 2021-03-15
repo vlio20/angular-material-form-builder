@@ -5,7 +5,8 @@
   "main": "dist/angular-material-form-builder.min.js",
   "scripts": {
     "prebuild": "npm test",
-    "build": "cross-env NODE_ENV=build webpack --config webpack.config.js --env development --mode development",
+    "build:dev": "cross-env NODE_ENV=build webpack --config webpack.config.js --env development --mode development",
+    "build": "cross-env NODE_ENV=build webpack --config webpack.config.js --env production --mode production",
     "start": "webpack serve --mode development --env local",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
