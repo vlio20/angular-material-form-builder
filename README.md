@@ -10,9 +10,14 @@ The Module has two directives, one to create the form and the second to preview 
 
 ## DEMO
 
-Run `npm run serve-demo`
+Run `npm start`
 
-Then follow the instruction (open http://localhost:5000)
+It should open the browser on http://127.0.0.1:8080
+
+You can change host and port by setting the following env variables
+
+- `DEV_HOST` defaults to `127.0.0.1`
+- `DEV_PORT` defaults to `8080`
 
 ## Supported Form Items
 

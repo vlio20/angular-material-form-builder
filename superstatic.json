@@ -1,8 +1,0 @@
-{
-  "port": 5000,
-  "host": "localhost",
-  "redirects": [
-    { "source": "/index.html", "destination": "/src/demo/index.html" },
-    { "source": "/", "destination": "/src/demo/index.html" }
-  ]
-}

@@ -3,7 +3,8 @@
     "target": "es2020",
     "module": "es2020",
     "moduleResolution": "classic",
-    "lib": ["dom", "es2020", "webworker"]
+    "lib": ["dom", "es2020", "webworker"],
+    "baseUrl": "."
   },
   "lib": ["es2020", "node", "jest"],
   "include": ["src", "test", "build-scripts", "test", "__mocks__"],

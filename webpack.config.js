@@ -4,6 +4,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const path = require('path')
 
+// Dev Server variables
+const DEV_SERVER_HOST = process.env.DEV_HOST || '127.0.0.1'
+const DEV_SERVER_PORT = process.env.DEV_PORT || 8080
+
 /**
  * Webpack config factory
  * @returns {import('webpack').Configuration}
@@ -20,6 +24,13 @@ async function webpackConfig() {
       filename: '[name].js',
       library: 'angular-material-form-builder',
       libraryTarget: 'umd',
+    },
+    devServer: {
+      open: true,
+      host: DEV_SERVER_HOST,
+      port: DEV_SERVER_PORT,
+      historyApiFallback: true,
+      writeToDisk: true,
     },
     devtool: 'source-map',
     externals: {
