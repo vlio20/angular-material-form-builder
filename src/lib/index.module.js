@@ -1,5 +1,6 @@
 import './index.scss'
-import '@flowjs/ng-flow'
+import { UploadItem } from './directives/upload-item/upload-item.directive'
+import { UploadView } from './directives/upload-item/upload-view.directive'
 import { AgreementItem } from './directives/agreement-item/agreement-item.directive'
 import { AgreementView } from './directives/agreement-item/agreement-view.directive'
 import { MainController } from './main/main.controller'
@@ -27,10 +28,11 @@ export default angular
     'ngMaterial',
     'angular-sortable-view',
     'ngMessages',
-    'flow',
   ])
   .service('Utils', Utils)
   .controller('MainController', MainController)
+  .directive('uploadItem', UploadItem)
+  .directive('uploadView', UploadView)
   .directive('agreementItem', AgreementItem)
   .directive('agreementView', AgreementView)
   .directive('checkboxesItem', CheckboxesItem)

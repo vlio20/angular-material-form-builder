@@ -42,6 +42,7 @@
   </md-input-container>
 
   <div ng-switch="FormItem.item.type">
+    <upload-item ng-switch-when="upload" item="FormItem.item"></upload-item>
     <agreement-item
       ng-switch-when="agreement"
       item="FormItem.item"
@@ -68,7 +69,10 @@
     <p ng-switch-default>UNKNOWN TYPE</p>
   </div>
 
-  <md-input-container ng-if="FormItem.item.type != 'label'" class="md-block">
+  <md-input-container
+    ng-if="FormItem.item.type != 'label' && FormItem.item.type != 'upload'"
+    class="md-block"
+  >
     <md-checkbox ng-model="FormItem.item.config.required"
       >Required field</md-checkbox
     >
