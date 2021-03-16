@@ -28,6 +28,7 @@ class UploadViewCtrl {
       this.Element[0].querySelector('input[type=file]')
     )
     if (input) {
+      this.formItem.options = []
       if (this.isMultiple) {
         input.attr('multiple', 'multiple')
       } else {
@@ -43,9 +44,10 @@ class UploadViewCtrl {
     )
     if (input) {
       if (this.showAllowed) {
-        input.attr('accept', this.formItem.config.accept)
+        input[0].setAttribute('accept', this.formItem.config.accept)
       } else {
-        input.removeAttr('accept')
+        input[0].removeAttribute('accept')
+        delete this.formItem.config.accept
       }
     }
   }
@@ -58,6 +60,12 @@ class UploadViewCtrl {
     })
 
     this.Scope.$watch('UploadView.formItem.config.showAccept', (newVal) => {
+      if (newVal !== undefined) {
+        this._updateAccept()
+      }
+    })
+
+    this.Scope.$watch('UploadView.formItem.config.accept', (newVal) => {
       if (newVal !== undefined) {
         this._updateAccept()
       }
