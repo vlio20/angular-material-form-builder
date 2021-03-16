@@ -4,11 +4,51 @@
   sv-root
   sv-part="Upload.item.options"
 >
-  <!-- <md-switch
-    ng-model="Upload.item.config.isMultiple"
+  <md-switch
+    ng-model="Upload.item.config.multipleUpload"
     ng-true-value="true"
     ng-false-value="false"
   >
     Multiple
-  </md-switch> -->
+  </md-switch>
+
+  <md-input-container class="md-block">
+    <span>File size: {{Upload.item.config.size}}</span>
+    <input
+      type="range"
+      id="size"
+      name="size"
+      min="1"
+      max="10"
+      step="1"
+      aria-label="size"
+      ng-model="Upload.item.config.size"
+    />
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>Size error message</label>
+    <textarea
+      ng-model="Upload.item.config.sizeErrMessage"
+      md-maxlength="150"
+      rows="2"
+    ></textarea>
+  </md-input-container>
+
+  <md-switch
+    ng-model="Upload.item.config.showAccept"
+    ng-true-value="true"
+    ng-false-value="false"
+  >
+    Show Types allowed
+  </md-switch>
+
+  <md-input-container class="md-block" ng-if="Upload.item.config.showAccept">
+    <label>Types allowed</label>
+    <textarea
+      ng-model="Upload.item.config.accept"
+      md-maxlength="150"
+      rows="2"
+    ></textarea>
+  </md-input-container>
 </div>

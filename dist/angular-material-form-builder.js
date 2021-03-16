@@ -2128,24 +2128,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UploadItemCtrl": () => /* binding */ UploadItemCtrl
 /* harmony export */ });
-UploadItemCtrl.$inject = ["$scope", "Utils", "$element"];
+class UploadItemCtrl {
+  /**
+   * @ngInject
+   *
+   * @param {import('../../utils/utils.service').Utils} Utils
+   * @param {JQLite} $element
+   */
+  constructor(Utils, $element) {
+    this.Element = $element;
+    this.item = Utils.extend(this.item || {}, {
+      config: {},
+      options: []
+    });
+  }
 
-/**
- * @ngInject
- *
- * @param {import('../../utils/utils.service').Utils} Utils
- * @param {ng.IScope} $scope
- * @param {JQLite} $element
- */
-function UploadItemCtrl($scope, Utils, $element) {
-  this.Scope = $scope;
-  this.Element = $element;
-  this.item = Utils.extend(this.item || {}, {
-    config: {},
-    options: []
-  });
 }
 
+UploadItemCtrl.$inject = ["Utils", "$element"];
 
 
 /***/ }),
@@ -2203,23 +2203,74 @@ class UploadViewCtrl {
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
+   * @param {JQLite} $element
    */
-  constructor($scope, Utils) {
+  constructor($scope, Utils, $element) {
     this.Scope = $scope;
+    this.Element = $element;
     this.Utils = Utils;
     this.formItem = {};
   }
 
   init() {
+    this.isMultiple = false;
+    this.showAllowed = false;
     this.formItem = this.Utils.extend(this.formItem || {}, {
       config: {},
       options: []
     });
+
+    if (this.isPreview()) {
+      this._enableWatchers();
+    }
+  }
+
+  _updateMultiple() {
+    this.isMultiple = !!this.formItem.config.multipleUpload;
+    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
+
+    if (input) {
+      if (this.isMultiple) {
+        input.attr('multiple', 'multiple');
+      } else {
+        input.removeAttr('multiple');
+      }
+    }
+  }
+
+  _updateAccept() {
+    this.showAllowed = !!this.formItem.config.showAccept;
+    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
+
+    if (input) {
+      if (this.showAllowed) {
+        input.attr('accept', this.formItem.config.accept);
+      } else {
+        input.removeAttr('accept');
+      }
+    }
+  }
+
+  _enableWatchers() {
+    this.Scope.$watch('UploadView.formItem.config.multipleUpload', newVal => {
+      if (newVal !== undefined) {
+        this._updateMultiple();
+      }
+    });
+    this.Scope.$watch('UploadView.formItem.config.showAccept', newVal => {
+      if (newVal !== undefined) {
+        this._updateAccept();
+      }
+    });
+  }
+
+  removeItem(index) {
+    this.formItem.options.splice(index, 1);
   }
 
 }
 
-UploadViewCtrl.$inject = ["$scope", "Utils"];
+UploadViewCtrl.$inject = ["$scope", "Utils", "$element"];
 
 
 /***/ }),
@@ -2250,7 +2301,9 @@ class UploadView {
     this.template = _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
     this.restrict = 'E';
     this.scope = {
-      formItem: '='
+      formItem: '=',
+      isPreview: '&',
+      form: '='
     };
     this.controller = _upload_view_controller__WEBPACK_IMPORTED_MODULE_0__.UploadViewCtrl;
     this.controllerAs = 'UploadView';
@@ -2285,8 +2338,9 @@ class UploadView {
 
         if (files.length > 0) {
           for (let i = 0; i < files.length; i += 1) {
-            if (files[i].size > 10485760) {
+            if (files[i].size >= parseInt(ctrl.formItem.config.size) * 1048576) {
               label[0].style.display = 'block';
+              label[0].textContent = ctrl.formItem.config.sizeErrMessage;
               return;
             }
 
@@ -4245,7 +4299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Upload.item.options\"\n>\n  <!-- <md-switch\n    ng-model=\"Upload.item.config.isMultiple\"\n    ng-true-value=\"true\"\n    ng-false-value=\"false\"\n  >\n    Multiple\n  </md-switch> -->\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Upload.item.options\"\n>\n  <md-switch\n    ng-model=\"Upload.item.config.multipleUpload\"\n    ng-true-value=\"true\"\n    ng-false-value=\"false\"\n  >\n    Multiple\n  </md-switch>\n\n  <md-input-container class=\"md-block\">\n    <span>File size: {{Upload.item.config.size}}</span>\n    <input\n      type=\"range\"\n      id=\"size\"\n      name=\"size\"\n      min=\"1\"\n      max=\"10\"\n      step=\"1\"\n      aria-label=\"size\"\n      ng-model=\"Upload.item.config.size\"\n    />\n  </md-input-container>\n\n  <md-input-container class=\"md-block\">\n    <label>Size error message</label>\n    <textarea\n      ng-model=\"Upload.item.config.sizeErrMessage\"\n      md-maxlength=\"150\"\n      rows=\"2\"\n    ></textarea>\n  </md-input-container>\n\n  <md-switch\n    ng-model=\"Upload.item.config.showAccept\"\n    ng-true-value=\"true\"\n    ng-false-value=\"false\"\n  >\n    Show Types allowed\n  </md-switch>\n\n  <md-input-container class=\"md-block\" ng-if=\"Upload.item.config.showAccept\">\n    <label>Types allowed</label>\n    <textarea\n      ng-model=\"Upload.item.config.accept\"\n      md-maxlength=\"150\"\n      rows=\"2\"\n    ></textarea>\n  </md-input-container>\n</div>\n");
 
 /***/ }),
 
@@ -4260,7 +4314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<label>File size must under 10MB!</label>\n<div layout=\"row\" class=\"option-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" multiple />\n    <md-input-container flex class=\"md-block\">\n      <input type=\"text\" ng-model=\"fileName\" disabled />\n      <div class=\"hint\">Select your file</div>\n    </md-input-container>\n  </md-input-container>\n\n  <md-button id=\"uploadButton\" class=\"md-fab md-mini\">\n    <md-icon class=\"material-icons\">attach_file</md-icon>\n  </md-button>\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button id=\"uploadButton\" class=\"md-fab md-mini\">\n    <md-icon class=\"material-icons\">attach_file</md-icon>\n  </md-button>\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 5em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
 
 /***/ }),
 
