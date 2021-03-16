@@ -1,6 +1,6 @@
 <div layout="row" class="option-item">
   <md-input-container class="md-block" style="margin: 0">
-    <input type="file" class="ng-hide" />
+    <input type="file" class="ng-hide" aria-label="file" />
     <md-input-container flex class="md-block">
       <input
         type="text"
@@ -20,7 +20,7 @@
 <div>
   <label></label>
   <div
-    style="display: grid; grid-template-columns: 5em auto; align-items: center"
+    style="display: grid; grid-template-columns: 8em auto; align-items: center"
     layout="row"
     ng-repeat="option in UploadView.formItem.options track by $index"
   >

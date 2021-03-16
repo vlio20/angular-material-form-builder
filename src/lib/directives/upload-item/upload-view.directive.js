@@ -50,14 +50,13 @@ class UploadView {
 
         if (files.length > 0) {
           for (let i = 0; i < files.length; i += 1) {
-            if (
-              files[i].size >=
-              parseInt(ctrl.formItem.config.size) * 1048576
-            ) {
+            if (files[i].size >= ctrl.formItem.config.size * 1048576) {
               label[0].style.display = 'block'
               label[0].textContent = ctrl.formItem.config.sizeErrMessage
               return
             }
+
+            if (!ctrl.formItem.config.multipleUpload) ctrl.formItem.options = []
 
             ctrl.formItem.options.push({
               name: files[i].name,
