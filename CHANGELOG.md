@@ -1,3 +1,7 @@
+# 1.1.0
+
+Add support for the `upload` component that allows to upload files
+
 # 1.0.0
 
 ### ⚠️ Breaking changes

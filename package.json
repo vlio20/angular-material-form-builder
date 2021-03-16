@@ -1,6 +1,6 @@
 {
   "name": "@xenialab/angular-material-form-builder",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Form builder for Angular Material (AngularJS version)",
   "main": "dist/angular-material-form-builder.min.js",
   "scripts": {
@@ -24,10 +24,11 @@
   ],
   "author": "Vlad Ioffe",
   "contributors": [
-    "Giuseppe Careri <giuseppe.careri@xcally.com>",
-    "Daniele Cinti <daniele.cinti@xcally.com>",
-    "Andrea Bianco <andrea.bianco@xcally.com>",
-    "Vito Macchia <vito.macchia@xcally.com>"
+    "Giuseppe Careri <giuseppe.careri@xenialab.it>",
+    "Daniele Cinti <daniele.cinti@xenialab.it>",
+    "Andrea Bianco <andrea.bianco@xenialab.it>",
+    "Vito Macchia <vito.macchia@xenialab.it>",
+    "Marco Messina <marco.messina@xenialab.it>"
   ],
   "engines": {
     "node": ">=14"

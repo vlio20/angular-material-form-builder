@@ -24,13 +24,14 @@ You can change host and port by setting the following env variables
 Here is the list of form items which are supported by the module:
 
 1.  Checkboxes (Group)
-2.  Radio Button (Group)
-3.  Plain input (Text, Number)
-4.  Textarea
-5.  Matrix
-6.  Select
-7.  Agreement Item
-8.  Label Item
+1.  Radio Button (Group)
+1.  Plain input (Text, Number)
+1.  Textarea
+1.  Matrix
+1.  Select
+1.  Agreement Item
+1.  Label Item
+1.  Upload (manages input of type file)
 
 ## Installation
 
