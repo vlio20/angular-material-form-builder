@@ -31,7 +31,8 @@
     "Marco Messina <marco.messina@xenialab.it>"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=14",
+    "npm": ">=7"
   },
   "files": [
     "dist"
