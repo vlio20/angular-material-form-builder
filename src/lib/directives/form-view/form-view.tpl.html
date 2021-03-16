@@ -10,6 +10,12 @@
         <div class="formItem-title">{{formItem.props.title}}</div>
         <div class="formItem-help-text">{{formItem.props.helpText}}</div>
 
+        <upload-view
+          form-item="formItem"
+          is-preview="true"
+          form="formItemForm"
+          ng-switch-when="upload"
+        ></upload-view>
         <agreement-view
           form-item="formItem"
           is-preview="true"

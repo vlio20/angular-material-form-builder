@@ -79,6 +79,15 @@
         </md-button>
       </md-fab-trigger>
       <md-fab-actions>
+        <!-- 9 upload -->
+        <md-button
+          aria-label="..."
+          class="md-fab md-raised md-mini"
+          ng-click="main.addItem('upload')"
+        >
+          <md-icon class="material-icons">upload</md-icon>
+          <md-tooltip md-direction="left" md-autohide>Upload</md-tooltip>
+        </md-button>
         <!-- 8 agreement -->
         <md-button
           aria-label="..."
@@ -169,8 +178,6 @@
     <script src="./node_modules/angular-material/angular-material.js"></script>
     <script src="./node_modules/angular-messages/angular-messages.js"></script>
     <script src="./node_modules/angular-sortable-view/src/angular-sortable-view.js"></script>
-    <script src="./node_modules/@flowjs/flow.js/dist/flow.min.js"></script>
-    <script src="./node_modules/@flowjs/ng-flow/dist/ng-flow.min.js"></script>
     <script src="./dist/angular-material-form-builder.js"></script>
   </body>
 </html>

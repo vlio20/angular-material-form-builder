@@ -8,6 +8,7 @@ class FormItemCtrl {
     this.Attrs = $attrs
     this.Utils = Utils
     this.templates = {
+      upload: '<upload-item item="FormItem.item"></upload-item>',
       agreement: '<agreement-item item="FormItem.item"></agreement-item>',
       input: '<input-item item="FormItem.item"></input-item>',
       chooseFromList:
