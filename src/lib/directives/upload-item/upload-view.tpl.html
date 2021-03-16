@@ -1,14 +1,32 @@
-<label>File size must under 10MB!</label>
 <div layout="row" class="option-item">
   <md-input-container class="md-block" style="margin: 0">
-    <input type="file" class="ng-hide" multiple />
+    <input type="file" class="ng-hide" />
     <md-input-container flex class="md-block">
-      <input type="text" ng-model="fileName" disabled />
-      <div class="hint">Select your file</div>
+      <input
+        type="text"
+        ng-model="fileName"
+        class="ng-hide"
+        disabled
+        aria-label="fileName"
+      />
     </md-input-container>
   </md-input-container>
 
   <md-button id="uploadButton" class="md-fab md-mini">
     <md-icon class="material-icons">attach_file</md-icon>
   </md-button>
+</div>
+
+<div>
+  <label></label>
+  <div
+    style="display: grid; grid-template-columns: 5em auto; align-items: center"
+    layout="row"
+    ng-repeat="option in UploadView.formItem.options track by $index"
+  >
+    <md-button ng-click="UploadView.removeItem($index)" class="md-button">
+      <md-icon class="material-icons">close</md-icon>
+    </md-button>
+    <span>{{option.name}}</span>
+  </div>
 </div>
