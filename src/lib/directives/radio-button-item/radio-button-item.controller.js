@@ -1,4 +1,4 @@
-class RadioButtonCtrl {
+class RadioButtonItemCtrl {
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
@@ -33,4 +33,4 @@ class RadioButtonCtrl {
   }
 }
 
-export { RadioButtonCtrl }
+export { RadioButtonItemCtrl }

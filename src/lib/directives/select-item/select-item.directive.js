@@ -1,10 +1,10 @@
 import SelectTemplate from './select-item.tpl.html'
-import { SelectCtrl } from './select-item.controller'
+import { SelectItemCtrl } from './select-item.controller'
 
 /**
  * @implements {ng.IDirective}
  */
-class Select {
+class SelectItem {
   /**
    * @ngInject
    */
@@ -14,10 +14,10 @@ class Select {
     this.scope = {
       item: '=',
     }
-    this.controller = SelectCtrl
+    this.controller = SelectItemCtrl
     this.controllerAs = 'Select'
     this.bindToController = true
   }
 }
 
-export { Select }
+export { SelectItem }

@@ -1,4 +1,4 @@
-class SelectCtrl {
+class SelectItemCtrl {
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
@@ -37,4 +37,4 @@ class SelectCtrl {
   }
 }
 
-export { SelectCtrl }
+export { SelectItemCtrl }

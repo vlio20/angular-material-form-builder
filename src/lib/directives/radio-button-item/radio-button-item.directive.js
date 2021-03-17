@@ -1,11 +1,11 @@
-import { RadioButtonCtrl } from './radio-button-item.controller'
+import { RadioButtonItemCtrl } from './radio-button-item.controller'
 import RadioButtonTemplate from './radio-button-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
  */
 
-class RadioButton {
+class RadioButtonItem {
   /**
    * @ngInject
    */
@@ -15,10 +15,10 @@ class RadioButton {
     this.scope = {
       item: '=',
     }
-    this.controller = RadioButtonCtrl
+    this.controller = RadioButtonItemCtrl
     this.controllerAs = 'RadioButton'
     this.bindToController = true
   }
 }
 
-export { RadioButton }
+export { RadioButtonItem }

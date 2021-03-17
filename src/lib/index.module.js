@@ -16,10 +16,10 @@ import { LabelItem } from './directives/label-item/label-item.directive'
 import { LabelView } from './directives/label-item/label-view.directive'
 import { MatrixItem } from './directives/matrix-item/matrix-item.directive'
 import { MatrixView } from './directives/matrix-item/matrix-view.directive'
-import { RadioButton } from './directives/radio-button-item/radio-button-item.directive'
+import { RadioButtonItem } from './directives/radio-button-item/radio-button-item.directive'
 import { RadioButtonView } from './directives/radio-button-item/radio-button-view.directive'
 import { SelectView } from './directives/select-item/select-view.directive'
-import { Select } from './directives/select-item/select-item.directive'
+import { SelectItem } from './directives/select-item/select-item.directive'
 import { TextareaItem } from './directives/textarea-item/textarea-item.directive'
 import { TextareaView } from './directives/textarea-item/textarea-view.directive'
 
@@ -46,9 +46,9 @@ export default angular
   .directive('labelView', LabelView)
   .directive('matrixItem', MatrixItem)
   .directive('matrixView', MatrixView)
-  .directive('radioButtonItem', RadioButton)
+  .directive('radioButtonItem', RadioButtonItem)
   .directive('radioButtonView', RadioButtonView)
-  .directive('selectItem', Select)
+  .directive('selectItem', SelectItem)
   .directive('selectView', SelectView)
   .directive('textareaItem', TextareaItem)
   .directive('textareaView', TextareaView)
