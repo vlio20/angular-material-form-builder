@@ -15,7 +15,9 @@ class UploadViewCtrl {
     this.isMultiple = false
     this.showAllowed = false
     this.formItem = this.Utils.extend(this.formItem || {}, {
-      config: {},
+      config: {
+        size: 10,
+      },
       options: [],
     })
     if (this.isPreview()) {

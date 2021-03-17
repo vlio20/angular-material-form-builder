@@ -2138,9 +2138,7 @@ class UploadItemCtrl {
   constructor(Utils, $element) {
     this.Element = $element;
     this.item = Utils.extend(this.item || {}, {
-      config: {
-        size: 10
-      },
+      config: {},
       options: []
     });
   }
@@ -2171,20 +2169,24 @@ __webpack_require__.r(__webpack_exports__);
  * @implements {ng.IDirective}
  */
 
-function UploadItem() {
-  const directive = {
-    restrict: 'E',
-    template: _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default,
-    scope: {
+class UploadItem {
+  /**
+   * @ngInject
+   */
+  constructor() {
+    this.restrict = 'E';
+    this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.scope = {
       item: '='
-    },
-    controller: _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl,
-    controllerAs: 'Upload',
-    bindToController: true
-  };
-  return directive;
+    };
+    this.controller = _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl;
+    this.controllerAs = 'Upload';
+    this.bindToController = true;
+  }
+
 }
 
+UploadItem.$inject = [];
 
 
 /***/ }),
@@ -2218,7 +2220,9 @@ class UploadViewCtrl {
     this.isMultiple = false;
     this.showAllowed = false;
     this.formItem = this.Utils.extend(this.formItem || {}, {
-      config: {},
+      config: {
+        size: 10
+      },
       options: []
     });
 

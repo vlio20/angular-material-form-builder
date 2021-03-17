@@ -8,9 +8,7 @@ class UploadItemCtrl {
   constructor(Utils, $element) {
     this.Element = $element
     this.item = Utils.extend(this.item || {}, {
-      config: {
-        size: 10,
-      },
+      config: {},
       options: [],
     })
   }
