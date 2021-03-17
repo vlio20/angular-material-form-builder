@@ -2006,7 +2006,7 @@ class UploadViewCtrl {
 
   _updateMultiple() {
     this.isMultiple = !!this.formItem.config.multipleUpload;
-    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
+    const input = this.Element.find('input[type=file]');
 
     if (input) {
       this.formItem.options = [];
@@ -2021,7 +2021,7 @@ class UploadViewCtrl {
 
   _updateAccept() {
     this.showAllowed = !!this.formItem.config.showAccept;
-    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
+    const input = this.Element.find('input[type=file]');
 
     if (input) {
       if (this.showAllowed) {
@@ -2076,6 +2076,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-view.tpl.html */ "./src/lib/directives/upload-item/upload-view.tpl.html");
 
 
+const MB = 1024 * 1024;
 
 class UploadView {
   /**
@@ -2110,33 +2111,46 @@ class UploadView {
     this.$timeout(function () {
       ctrl.init();
     }, 50);
-    const button = element.find('button');
+    const button = angular.element(element[0].querySelector('.upload-button'));
     const input = angular.element(element[0].querySelector('input[type=file]'));
-    const label = element.find('label');
-    label[0].style.display = 'none';
-    button.bind('click', function () {
-      label[0].style.display = 'none';
-      input[0].click();
+    const label = angular.element(element[0].querySelector('label'));
+
+    if (label.length) {
+      label.css('display', 'none');
+    }
+
+    button.on('click', () => {
+      label.css('display', 'none');
+      typeof input.trigger === 'function' ? input.trigger('click') : input[0].click();
     });
-    input.bind('change', function (e) {
+    input.on('change', e => {
       scope.$apply(function () {
-        const files = e.target.files;
+        /**
+         * @type {File[]}
+         */
+        const files = Array.from(e.target.files); // Max allowed size in MB
 
-        if (files.length > 0) {
-          for (let i = 0; i < files.length; i += 1) {
-            if (files[i].size >= ctrl.formItem.config.size * 1048576) {
-              label[0].style.display = 'block';
-              label[0].textContent = ctrl.formItem.config.sizeErrMessage;
-              return;
-            }
+        const maxSizeMB = ctrl.formItem.config.size * MB;
+        const exceedsSize = files.some(file => file.size >= maxSizeMB);
 
-            if (!ctrl.formItem.config.multipleUpload) ctrl.formItem.options = [];
-            ctrl.formItem.options.push({
-              name: files[i].name,
-              size: files[i].size,
-              type: files[i].type
-            });
-          }
+        if (exceedsSize) {
+          label.css('display', 'block');
+          label.text(ctrl.formItem.config.sizeErrMessage);
+          ctrl.formItem.options = [];
+        } else {
+          ctrl.formItem.options = files.map(file => {
+            const {
+              name,
+              size,
+              type
+            } = file;
+            return {
+              name,
+              size,
+              type,
+              file
+            };
+          });
         }
       });
     });
@@ -2619,7 +2633,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" aria-label=\"file\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button id=\"uploadButton\" class=\"md-fab md-mini\">\n    <md-icon class=\"material-icons\">attach_file</md-icon>\n  </md-button>\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 8em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item upload-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" aria-label=\"file\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button class=\"md-fab md-mini upload-button\">\n    <md-icon class=\"material-icons\">attach_file</md-icon>\n  </md-button>\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 8em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
 
 /***/ })
 

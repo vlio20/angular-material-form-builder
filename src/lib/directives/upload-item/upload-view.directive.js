@@ -1,6 +1,8 @@
 import { UploadViewCtrl } from './upload-view.controller'
 import UploadViewTemplate from './upload-view.tpl.html'
 
+const MB = 1024 * 1024
+
 class UploadView {
   /**
    * @ngInject
@@ -34,36 +36,39 @@ class UploadView {
       ctrl.init()
     }, 50)
 
-    const button = element.find('button')
+    const button = angular.element(element[0].querySelector('.upload-button'))
     const input = angular.element(element[0].querySelector('input[type=file]'))
+    const label = angular.element(element[0].querySelector('label'))
 
-    const label = element.find('label')
-    label[0].style.display = 'none'
-    button.bind('click', function () {
-      label[0].style.display = 'none'
-      input[0].click()
+    if (label.length) {
+      label.css('display', 'none')
+    }
+
+    button.on('click', () => {
+      label.css('display', 'none')
+      typeof input.trigger === 'function'
+        ? input.trigger('click')
+        : input[0].click()
     })
 
-    input.bind('change', function (e) {
+    input.on('change', (e) => {
       scope.$apply(function () {
-        const files = e.target.files
-
-        if (files.length > 0) {
-          for (let i = 0; i < files.length; i += 1) {
-            if (files[i].size >= ctrl.formItem.config.size * 1048576) {
-              label[0].style.display = 'block'
-              label[0].textContent = ctrl.formItem.config.sizeErrMessage
-              return
-            }
-
-            if (!ctrl.formItem.config.multipleUpload) ctrl.formItem.options = []
-
-            ctrl.formItem.options.push({
-              name: files[i].name,
-              size: files[i].size,
-              type: files[i].type,
-            })
-          }
+        /**
+         * @type {File[]}
+         */
+        const files = Array.from(e.target.files)
+        // Max allowed size in MB
+        const maxSizeMB = ctrl.formItem.config.size * MB
+        const exceedsSize = files.some((file) => file.size >= maxSizeMB)
+        if (exceedsSize) {
+          label.css('display', 'block')
+          label.text(ctrl.formItem.config.sizeErrMessage)
+          ctrl.formItem.options = []
+        } else {
+          ctrl.formItem.options = files.map((file) => {
+            const { name, size, type } = file
+            return { name, size, type, file }
+          })
         }
       })
     })
