@@ -1,6 +1,6 @@
 # Angular Material Form Builder!
 
-Add support for angular 1.8.2
+Now supporting Angular >= 1.8.2!
 
 This module enables you to easily build forms, just the way you do it in Google forms.  
 The Module has two directives, one to create the form and the second to preview it:
