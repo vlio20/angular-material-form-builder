@@ -118,16 +118,16 @@ JS example:
 
 ## Contribution
 
-1. Fork the repo, run `npm install` then `bower install` and then `gulp server` in order to run the server locally. When ready run `gulp build` commit your changes and make a pull request.
-2. Report bugs and suggest enhancements.
+1. Fork the repo
+1. Run `npm i` to install all dependencies (including dev deps)
+1. Run `npm start` in order to launch the live-reloading dev server
+1. Ensure tests pass, then commit your changes to a new branch with a meaningful name and make a pull request
+1. Report bugs and suggest enhancements.
 
 ### Building
 
-`npm run build` will build a new release of the library.
+`npm run build` will make a new build (in the dist folder).
 
 ### Testing
 
-`npm test` will launch jest-based tests.
-
-**Help wanted**
-The tests coverage is currently quite low.
+`npm test` will launch jest-based tests. They are run also automatically in VSCode but current coverage is modest (**Help wanted**).
