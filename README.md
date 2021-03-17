@@ -31,7 +31,7 @@ Here is the list of form items which are supported by the module:
 1.  Select
 1.  Agreement Item
 1.  Label Item
-1.  Upload (manages input of type file)
+1.  Upload (manages input of type "file")
 
 ## Installation
 
@@ -41,8 +41,13 @@ Here is the list of form items which are supported by the module:
 
 Add the following styles and scripts to your `index.html`:
 
-    <link rel="stylesheet" href="angular-material-form-builder/dist/styles/app.css">
-    <script src="angular-material-form-builder/dist/scripts/app.js"></script>
+```html
+<link
+  rel="stylesheet"
+  href="angular-material-form-builder/dist/styles/angular-material-form-builder.min.css"
+/>
+<script src="angular-material-form-builder/dist/scripts/angular-material-form-builder.min.js"></script>
+```
 
 If you are using [wiredep](https://github.com/taptapship/wiredep) then just run in order to inject the module dependencies.
 
@@ -50,7 +55,9 @@ If you are using [wiredep](https://github.com/taptapship/wiredep) then just run 
 
 In the form building step you need to use the `form-item` directive. Here is an example:
 
-    <form-item type="multipleChoices" item="vm.item"></form-item>
+```html
+<form-item type="multipleChoices" item="vm.item"></form-item>
+```
 
 This will produce the following form item:  
 ![example2](http://i.imgur.com/6jOnwmu.png)
@@ -58,13 +65,17 @@ This will produce the following form item:
 
 In order to preview the form you will need to use the `form-view` directive:
 
-    <form-view form="main.form"></form-view>
+```html
+<form-view form="main.form"></form-view>
+```
 
 **Note:** the _form_ attribute should receive the following object:
 
+```js
     {
     	items: [{...}, {...}, ..., {...}]
     }
+```
 
 Each object in the `items` array should be the product of the `form-item` provided _item_ object.
 
@@ -72,7 +83,7 @@ Each object in the `items` array should be the product of the `form-item` provid
 
 You can also use `form-items-container` directive. This directives adds the option to handle movement and deletion of items in the list. You just need to pass it the form and it will make the rest for you. Here is a code example:
 
-```
+```html
 <form-items-container form="main.form"></form-items-container>
 ```
 
@@ -80,41 +91,48 @@ _Action Attributes:_
 there are also the following attributes: `on-delete`, `on-up`, `on-down`, if provided then the action will appear at the top right left corner of the item. This attribute expects callback function which will be executed after clicking on the action. If you will provide the index of the item (like in the example below) you will also receive it in your callback.
 Here is HTML example:
 
-```
-<form-item ng-repeat="item in main.form.items track by $index"
-             type="{{item.type}}"
-             item="item"
-             index="$index"
-             on-delete="main.delete(item, index)"
-             on-up="main.up(item, index)"
-             on-down="main.down(item, index)">
-
-        </form-item>
+```html
+<form-item
+  ng-repeat="item in main.form.items track by $index"
+  type="{{item.type}}"
+  item="item"
+  index="$index"
+  on-delete="main.delete(item, index)"
+  on-up="main.up(item, index)"
+  on-down="main.down(item, index)"
+>
+</form-item>
 ```
 
 JS example:
 
-```
-  MainController.prototype.delete = function(item, index) {
-    vm.form.items.splice(index, 1);
-  };
+```js
+class MainController{
+  ...
+  delete(item, index) {
+    vm.form.items.splice(index, 1)
+  }
 
-  MainController.prototype.up = function(item, index) {
-    if(index !== 0) {
-      var prevItem = vm.form.items[index - 1];
-      vm.form.items[index] = prevItem;
-      vm.form.items[index - 1] = item;
+  up(item, index) {
+    if (index !== 0) {
+      const prevItem = vm.form.items[index - 1]
+      vm.form.items[index] = prevItem
+      vm.form.items[index - 1] = item
     }
-  };
+  }
 
-  MainController.prototype.down = function(item, index) {
-    if(index !== vm.form.items.length + 1) {
-      var nextItem = vm.form.items[index + 1];
-      vm.form.items[index] = nextItem;
-      vm.form.items[index + 1] = item;
+  down(item, index) {
+    if (index !== vm.form.items.length + 1) {
+      const nextItem = vm.form.items[index + 1]
+      vm.form.items[index] = nextItem
+      vm.form.items[index + 1] = item
     }
-  };
+  }
+  ...
+}
 ```
+
+Check the [MainController](src/lib/main/main.controller.js) implementation for full code.
 
 ## Contribution
 
