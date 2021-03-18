@@ -2006,7 +2006,7 @@ class UploadViewCtrl {
 
   _updateMultiple() {
     this.isMultiple = !!this.formItem.config.multipleUpload;
-    const input = this.Element.find('input[type=file]');
+    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
 
     if (input) {
       this.formItem.options = [];
@@ -2021,7 +2021,7 @@ class UploadViewCtrl {
 
   _updateAccept() {
     this.showAllowed = !!this.formItem.config.showAccept;
-    const input = this.Element.find('input[type=file]');
+    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
 
     if (input) {
       if (this.showAllowed) {
@@ -2633,7 +2633,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item upload-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" aria-label=\"file\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button class=\"md-fab md-mini upload-button\">\n    <md-icon class=\"material-icons\">attach_file</md-icon>\n  </md-button>\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 8em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item upload-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" aria-label=\"file\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button class=\"md-raised md-accent upload-button\"\n    ><md-icon class=\"material-icons\">attach_file</md-icon\n    ><span>Add files</span></md-button\n  >\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 8em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-icon-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
 
 /***/ })
 

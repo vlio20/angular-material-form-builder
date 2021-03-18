@@ -73,4 +73,12 @@ i.material-icons.medium {
   font-size: 36px;
 }
 
+.md-button.upload-button {
+  padding: 0 16px;
+  height: 36px;
+}
+.md-button.upload-button md-icon {
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=angular-material-form-builder.css.map*/
