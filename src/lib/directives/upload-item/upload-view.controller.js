@@ -17,6 +17,7 @@ class UploadViewCtrl {
     this.formItem = this.Utils.extend(this.formItem || {}, {
       config: {
         size: 10,
+        uploadFileButtonLabel: 'Add files',
       },
       options: [],
     })

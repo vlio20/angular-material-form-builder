@@ -4,6 +4,11 @@
   sv-root
   sv-part="Upload.item.options"
 >
+  <md-input-container class="md-block">
+    <label>Upload Button label</label>
+    <input ng-model="Upload.item.config.uploadFileButtonLabel" />
+  </md-input-container>
+
   <md-switch
     ng-model="Upload.item.config.multipleUpload"
     ng-true-value="true"
