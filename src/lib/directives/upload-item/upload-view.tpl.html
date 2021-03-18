@@ -12,9 +12,10 @@
     </md-input-container>
   </md-input-container>
 
-  <md-button class="md-fab md-mini upload-button">
-    <md-icon class="material-icons">attach_file</md-icon>
-  </md-button>
+  <md-button class="md-raised md-accent upload-button"
+    ><md-icon class="material-icons">attach_file</md-icon
+    ><span>Add files</span></md-button
+  >
 </div>
 
 <div>
@@ -24,7 +25,7 @@
     layout="row"
     ng-repeat="option in UploadView.formItem.options track by $index"
   >
-    <md-button ng-click="UploadView.removeItem($index)" class="md-button">
+    <md-button ng-click="UploadView.removeItem($index)" class="md-icon-button">
       <md-icon class="material-icons">close</md-icon>
     </md-button>
     <span>{{option.name}}</span>
