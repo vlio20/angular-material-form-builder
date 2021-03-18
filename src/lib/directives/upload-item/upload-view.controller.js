@@ -26,7 +26,9 @@ class UploadViewCtrl {
   }
   _updateMultiple() {
     this.isMultiple = !!this.formItem.config.multipleUpload
-    const input = this.Element.find('input[type=file]')
+    const input = angular.element(
+      this.Element[0].querySelector('input[type=file]')
+    )
     if (input) {
       this.formItem.options = []
       if (this.isMultiple) {
@@ -39,7 +41,9 @@ class UploadViewCtrl {
 
   _updateAccept() {
     this.showAllowed = !!this.formItem.config.showAccept
-    const input = this.Element.find('input[type=file]')
+    const input = angular.element(
+      this.Element[0].querySelector('input[type=file]')
+    )
     if (input) {
       if (this.showAllowed) {
         input[0].setAttribute('accept', this.formItem.config.accept)
