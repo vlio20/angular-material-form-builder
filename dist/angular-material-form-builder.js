@@ -487,13 +487,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormItemCtrl": () => /* binding */ FormItemCtrl
 /* harmony export */ });
+const DEFAULT_TITLE = {
+  upload: 'Attachment',
+  agreement: 'Agreement',
+  input: 'Field',
+  chooseFromList: 'Select',
+  label: 'Label',
+  multipleChoices: 'Choice',
+  matrix: 'Matrix',
+  checkboxes: 'Options',
+  textarea: 'Text'
+};
+
 class FormItemCtrl {
   /**
    * @ngInject
+   * @param {ng.IScope} $scope
    * @param {ng.IAttributes} $attrs
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor($attrs, Utils) {
+  constructor($scope, $attrs, Utils) {
     this.Attrs = $attrs;
     this.Utils = Utils;
     this.templates = {
@@ -508,13 +521,14 @@ class FormItemCtrl {
       textarea: '<textarea-item item="FormItem.item"></textarea-item>'
     };
     this.item = {};
+    this.scope = $scope;
   }
 
   init() {
     this.item = this.Utils.extend(this.item || {}, {
       type: this.Attrs.type,
       props: {
-        title: '',
+        title: DEFAULT_TITLE[this.Attrs.type],
         helpText: ''
       },
       config: {
@@ -543,7 +557,7 @@ class FormItemCtrl {
 
 }
 
-FormItemCtrl.$inject = ["$attrs", "Utils"];
+FormItemCtrl.$inject = ["$scope", "$attrs", "Utils"];
 
 
 /***/ }),
