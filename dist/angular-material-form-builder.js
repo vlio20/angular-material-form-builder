@@ -20,7 +20,7 @@ return /******/ (() => { // webpackBootstrap
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AgreementItemCtrl": () => /* binding */ AgreementItemCtrl
+/* harmony export */   "AgreementItemCtrl": () => (/* binding */ AgreementItemCtrl)
 /* harmony export */ });
 AgreementItemCtrl.$inject = ["Utils", "$element"];
 
@@ -55,7 +55,7 @@ function AgreementItemCtrl(Utils, $element) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AgreementItem": () => /* binding */ AgreementItem
+/* harmony export */   "AgreementItem": () => (/* binding */ AgreementItem)
 /* harmony export */ });
 /* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/lib/directives/agreement-item/agreement-item.controller.js");
  // import AgreementItemTemplate from './agreement-item.tpl.html'
@@ -93,7 +93,7 @@ AgreementItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AgreementViewCtrl": () => /* binding */ AgreementViewCtrl
+/* harmony export */   "AgreementViewCtrl": () => (/* binding */ AgreementViewCtrl)
 /* harmony export */ });
 class AgreementViewCtrl {
   /**
@@ -187,7 +187,7 @@ AgreementViewCtrl.$inject = ["$scope", "Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AgreementView": () => /* binding */ AgreementView
+/* harmony export */   "AgreementView": () => (/* binding */ AgreementView)
 /* harmony export */ });
 /* harmony import */ var _agreement_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-view.controller */ "./src/lib/directives/agreement-item/agreement-view.controller.js");
 /* harmony import */ var _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./agreement-view.tpl.html */ "./src/lib/directives/agreement-item/agreement-view.tpl.html");
@@ -201,7 +201,7 @@ class AgreementView {
    */
   constructor($timeout) {
     this.$timeout = $timeout;
-    this.template = _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.restrict = 'E';
     this.scope = {
       formItem: '=',
@@ -244,7 +244,7 @@ AgreementView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CheckboxesItemCtrl": () => /* binding */ CheckboxesItemCtrl
+/* harmony export */   "CheckboxesItemCtrl": () => (/* binding */ CheckboxesItemCtrl)
 /* harmony export */ });
 class CheckboxesItemCtrl {
   /**
@@ -298,7 +298,7 @@ CheckboxesItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CheckboxesItem": () => /* binding */ CheckboxesItem
+/* harmony export */   "CheckboxesItem": () => (/* binding */ CheckboxesItem)
 /* harmony export */ });
 /* harmony import */ var _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-item.tpl.html */ "./src/lib/directives/checkboxes-item/checkboxes-item.tpl.html");
 /* harmony import */ var _checkboxes_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-item.controller */ "./src/lib/directives/checkboxes-item/checkboxes-item.controller.js");
@@ -311,7 +311,7 @@ __webpack_require__.r(__webpack_exports__);
 function CheckboxesItem() {
   const directive = {
     restrict: 'E',
-    template: _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default,
+    template: _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"],
     scope: {
       item: '='
     },
@@ -334,7 +334,7 @@ function CheckboxesItem() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CheckboxesViewCtrl": () => /* binding */ CheckboxesViewCtrl
+/* harmony export */   "CheckboxesViewCtrl": () => (/* binding */ CheckboxesViewCtrl)
 /* harmony export */ });
 class CheckboxesViewCtrl {
   /**
@@ -425,7 +425,7 @@ CheckboxesViewCtrl.$inject = ["$scope", "Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CheckboxesView": () => /* binding */ CheckboxesView
+/* harmony export */   "CheckboxesView": () => (/* binding */ CheckboxesView)
 /* harmony export */ });
 /* harmony import */ var _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-view.tpl.html */ "./src/lib/directives/checkboxes-item/checkboxes-view.tpl.html");
 /* harmony import */ var _checkboxes_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-view.controller */ "./src/lib/directives/checkboxes-item/checkboxes-view.controller.js");
@@ -443,7 +443,7 @@ class CheckboxesView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -485,7 +485,7 @@ CheckboxesView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormItemCtrl": () => /* binding */ FormItemCtrl
+/* harmony export */   "FormItemCtrl": () => (/* binding */ FormItemCtrl)
 /* harmony export */ });
 const DEFAULT_TITLE = {
   upload: 'Attachment',
@@ -570,7 +570,7 @@ FormItemCtrl.$inject = ["$scope", "$attrs", "Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormItem": () => /* binding */ FormItem
+/* harmony export */   "FormItem": () => (/* binding */ FormItem)
 /* harmony export */ });
 /* harmony import */ var _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-item.tpl.html */ "./src/lib/directives/form-item/form-item.tpl.html");
 /* harmony import */ var _form_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-item.controller */ "./src/lib/directives/form-item/form-item.controller.js");
@@ -598,7 +598,7 @@ class FormItem {
     this.controller = _form_item_controller__WEBPACK_IMPORTED_MODULE_1__.FormItemCtrl;
     this.controllerAs = 'FormItem';
     this.bindToController = true;
-    this.template = _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
   }
   /**
    * @see https://docs.angularjs.org/api/ng/service/$compile#-link-
@@ -636,7 +636,7 @@ FormItem.$inject = ["$compile"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormItemsContainerCtrl": () => /* binding */ FormItemsContainerCtrl
+/* harmony export */   "FormItemsContainerCtrl": () => (/* binding */ FormItemsContainerCtrl)
 /* harmony export */ });
 class FormItemsContainerCtrl {
   /**
@@ -704,7 +704,7 @@ FormItemsContainerCtrl.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormItemsContainer": () => /* binding */ FormItemsContainer
+/* harmony export */   "FormItemsContainer": () => (/* binding */ FormItemsContainer)
 /* harmony export */ });
 /* harmony import */ var _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-items-container.controller */ "./src/lib/directives/form-items-container/form-items-container.controller.js");
 /* harmony import */ var _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-items-container.tpl.html */ "./src/lib/directives/form-items-container/form-items-container.tpl.html");
@@ -723,7 +723,7 @@ class FormItemsContainer {
     this.scope = {
       form: '='
     };
-    this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
     this.controllerAs = 'container';
     this.bindToController = true;
@@ -744,7 +744,7 @@ FormItemsContainer.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormViewCtrl": () => /* binding */ FormViewCtrl
+/* harmony export */   "FormViewCtrl": () => (/* binding */ FormViewCtrl)
 /* harmony export */ });
 class FormViewCtrl {
   /**
@@ -772,7 +772,7 @@ FormViewCtrl.$inject = ["$scope"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormView": () => /* binding */ FormView
+/* harmony export */   "FormView": () => (/* binding */ FormView)
 /* harmony export */ });
 /* harmony import */ var _form_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-view.controller */ "./src/lib/directives/form-view/form-view.controller.js");
 /* harmony import */ var _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-view.tpl.html */ "./src/lib/directives/form-view/form-view.tpl.html");
@@ -788,7 +788,7 @@ class FormView {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       form: '='
     };
@@ -825,7 +825,7 @@ FormView.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InputItemCtrl": () => /* binding */ InputItemCtrl
+/* harmony export */   "InputItemCtrl": () => (/* binding */ InputItemCtrl)
 /* harmony export */ });
 class InputItemCtrl {
   /**
@@ -857,7 +857,7 @@ InputItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InputItem": () => /* binding */ InputItem
+/* harmony export */   "InputItem": () => (/* binding */ InputItem)
 /* harmony export */ });
 /* harmony import */ var _input_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-item.controller */ "./src/lib/directives/input-item/input-item.controller.js");
 /* harmony import */ var _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-item.tpl.html */ "./src/lib/directives/input-item/input-item.tpl.html");
@@ -873,7 +873,7 @@ class InputItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       item: '='
     };
@@ -897,7 +897,7 @@ InputItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InputViewCtrl": () => /* binding */ InputViewCtrl
+/* harmony export */   "InputViewCtrl": () => (/* binding */ InputViewCtrl)
 /* harmony export */ });
 class InputViewCtrl {
   /**
@@ -930,7 +930,7 @@ InputViewCtrl.$inject = ["Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "InputView": () => /* binding */ InputView
+/* harmony export */   "InputView": () => (/* binding */ InputView)
 /* harmony export */ });
 /* harmony import */ var _input_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-view.controller */ "./src/lib/directives/input-item/input-view.controller.js");
 /* harmony import */ var _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-view.tpl.html */ "./src/lib/directives/input-item/input-view.tpl.html");
@@ -948,7 +948,7 @@ class InputView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       formItem: '=',
       form: '='
@@ -989,7 +989,7 @@ InputView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LabelItemCtrl": () => /* binding */ LabelItemCtrl
+/* harmony export */   "LabelItemCtrl": () => (/* binding */ LabelItemCtrl)
 /* harmony export */ });
 class LabelItemCtrl {
   /**
@@ -1015,7 +1015,7 @@ LabelItemCtrl.$inject = ["$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LabelItem": () => /* binding */ LabelItem
+/* harmony export */   "LabelItem": () => (/* binding */ LabelItem)
 /* harmony export */ });
 /* harmony import */ var _label_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-item.controller */ "./src/lib/directives/label-item/label-item.controller.js");
 /* harmony import */ var _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-item.tpl.html */ "./src/lib/directives/label-item/label-item.tpl.html");
@@ -1028,7 +1028,7 @@ __webpack_require__.r(__webpack_exports__);
 class LabelItem {
   constructor() {
     this.restrict = 'E';
-    this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       item: '='
     };
@@ -1051,7 +1051,7 @@ class LabelItem {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LabelViewCtrl": () => /* binding */ LabelViewCtrl
+/* harmony export */   "LabelViewCtrl": () => (/* binding */ LabelViewCtrl)
 /* harmony export */ });
 class LabelViewCtrl {
   /**
@@ -1087,7 +1087,7 @@ LabelViewCtrl.$inject = ["Utils", "$sce"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LabelView": () => /* binding */ LabelView
+/* harmony export */   "LabelView": () => (/* binding */ LabelView)
 /* harmony export */ });
 /* harmony import */ var _label_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-view.controller */ "./src/lib/directives/label-item/label-view.controller.js");
 /* harmony import */ var _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-view.tpl.html */ "./src/lib/directives/label-item/label-view.tpl.html");
@@ -1105,7 +1105,7 @@ class LabelView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       formItem: '=',
       form: '='
@@ -1146,7 +1146,7 @@ LabelView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MatrixItemCtrl": () => /* binding */ MatrixItemCtrl
+/* harmony export */   "MatrixItemCtrl": () => (/* binding */ MatrixItemCtrl)
 /* harmony export */ });
 class MatrixItemCtrl {
   /**
@@ -1224,7 +1224,7 @@ MatrixItemCtrl.$inject = ["Utils", "$document"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MatrixItem": () => /* binding */ MatrixItem
+/* harmony export */   "MatrixItem": () => (/* binding */ MatrixItem)
 /* harmony export */ });
 /* harmony import */ var _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-item.controller */ "./src/lib/directives/matrix-item/matrix-item.controller.js");
 /* harmony import */ var _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-item.tpl.html */ "./src/lib/directives/matrix-item/matrix-item.tpl.html");
@@ -1240,7 +1240,7 @@ class MatrixItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       item: '='
     };
@@ -1264,7 +1264,7 @@ MatrixItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MatrixViewCtrl": () => /* binding */ MatrixViewCtrl
+/* harmony export */   "MatrixViewCtrl": () => (/* binding */ MatrixViewCtrl)
 /* harmony export */ });
 class MatrixViewCtrl {
   /**
@@ -1333,7 +1333,7 @@ MatrixViewCtrl.$inject = ["$scope", "Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MatrixView": () => /* binding */ MatrixView
+/* harmony export */   "MatrixView": () => (/* binding */ MatrixView)
 /* harmony export */ });
 /* harmony import */ var _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-view.tpl.html */ "./src/lib/directives/matrix-item/matrix-view.tpl.html");
 /* harmony import */ var _matrix_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-view.controller */ "./src/lib/directives/matrix-item/matrix-view.controller.js");
@@ -1351,7 +1351,7 @@ class MatrixView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1393,7 +1393,7 @@ MatrixView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RadioButtonItemCtrl": () => /* binding */ RadioButtonItemCtrl
+/* harmony export */   "RadioButtonItemCtrl": () => (/* binding */ RadioButtonItemCtrl)
 /* harmony export */ });
 class RadioButtonItemCtrl {
   /**
@@ -1441,7 +1441,7 @@ RadioButtonItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RadioButtonItem": () => /* binding */ RadioButtonItem
+/* harmony export */   "RadioButtonItem": () => (/* binding */ RadioButtonItem)
 /* harmony export */ });
 /* harmony import */ var _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-item.controller */ "./src/lib/directives/radio-button-item/radio-button-item.controller.js");
 /* harmony import */ var _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-item.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-item.tpl.html");
@@ -1457,7 +1457,7 @@ class RadioButtonItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       item: '='
     };
@@ -1481,7 +1481,7 @@ RadioButtonItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RadioButtonViewCtrl": () => /* binding */ RadioButtonViewCtrl
+/* harmony export */   "RadioButtonViewCtrl": () => (/* binding */ RadioButtonViewCtrl)
 /* harmony export */ });
 class RadioButtonViewCtrl {
   /**
@@ -1515,7 +1515,7 @@ RadioButtonViewCtrl.$inject = ["Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RadioButtonView": () => /* binding */ RadioButtonView
+/* harmony export */   "RadioButtonView": () => (/* binding */ RadioButtonView)
 /* harmony export */ });
 /* harmony import */ var _radio_button_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-view.controller */ "./src/lib/directives/radio-button-item/radio-button-view.controller.js");
 /* harmony import */ var _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-view.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-view.tpl.html");
@@ -1530,7 +1530,7 @@ class RadioButtonView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1572,7 +1572,7 @@ RadioButtonView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SelectItemCtrl": () => /* binding */ SelectItemCtrl
+/* harmony export */   "SelectItemCtrl": () => (/* binding */ SelectItemCtrl)
 /* harmony export */ });
 class SelectItemCtrl {
   /**
@@ -1625,7 +1625,7 @@ SelectItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SelectItem": () => /* binding */ SelectItem
+/* harmony export */   "SelectItem": () => (/* binding */ SelectItem)
 /* harmony export */ });
 /* harmony import */ var _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-item.tpl.html */ "./src/lib/directives/select-item/select-item.tpl.html");
 /* harmony import */ var _select_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-item.controller */ "./src/lib/directives/select-item/select-item.controller.js");
@@ -1641,7 +1641,7 @@ class SelectItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     this.scope = {
       item: '='
     };
@@ -1665,7 +1665,7 @@ SelectItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SelectViewCtrl": () => /* binding */ SelectViewCtrl
+/* harmony export */   "SelectViewCtrl": () => (/* binding */ SelectViewCtrl)
 /* harmony export */ });
 class SelectViewCtrl {
   /**
@@ -1699,7 +1699,7 @@ SelectViewCtrl.$inject = ["Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "SelectView": () => /* binding */ SelectView
+/* harmony export */   "SelectView": () => (/* binding */ SelectView)
 /* harmony export */ });
 /* harmony import */ var _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-view.tpl.html */ "./src/lib/directives/select-item/select-view.tpl.html");
 /* harmony import */ var _select_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-view.controller */ "./src/lib/directives/select-item/select-view.controller.js");
@@ -1717,7 +1717,7 @@ class SelectView {
   constructor($timeout) {
     this.$timeout = $timeout;
     this.restrict = 'E';
-    this.template = _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     this.scope = {
       formItem: '=',
       isPreview: '&',
@@ -1759,7 +1759,7 @@ SelectView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextareaItemCtrl": () => /* binding */ TextareaItemCtrl
+/* harmony export */   "TextareaItemCtrl": () => (/* binding */ TextareaItemCtrl)
 /* harmony export */ });
 class TextareaItemCtrl {
   /**
@@ -1789,7 +1789,7 @@ TextareaItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextareaItem": () => /* binding */ TextareaItem
+/* harmony export */   "TextareaItem": () => (/* binding */ TextareaItem)
 /* harmony export */ });
 /* harmony import */ var _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-item.controller */ "./src/lib/directives/textarea-item/textarea-item.controller.js");
 /* harmony import */ var _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-item.tpl.html */ "./src/lib/directives/textarea-item/textarea-item.tpl.html");
@@ -1805,7 +1805,7 @@ class TextareaItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
       item: '='
     };
@@ -1829,7 +1829,7 @@ TextareaItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextareaViewCtrl": () => /* binding */ TextareaViewCtrl
+/* harmony export */   "TextareaViewCtrl": () => (/* binding */ TextareaViewCtrl)
 /* harmony export */ });
 class TextareaViewCtrl {
   /**
@@ -1862,7 +1862,7 @@ TextareaViewCtrl.$inject = ["Utils"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TextareaView": () => /* binding */ TextareaView
+/* harmony export */   "TextareaView": () => (/* binding */ TextareaView)
 /* harmony export */ });
 /* harmony import */ var _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-view.controller */ "./src/lib/directives/textarea-item/textarea-view.controller.js");
 /* harmony import */ var _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-view.tpl.html */ "./src/lib/directives/textarea-item/textarea-view.tpl.html");
@@ -1884,7 +1884,7 @@ class TextareaView {
       form: '='
     };
     this.restrict = 'E';
-    this.template = _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.controller = _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaViewCtrl;
     this.controllerAs = 'TextareaView';
     this.bindToController = true;
@@ -1921,7 +1921,7 @@ TextareaView.$inject = ["$timeout"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UploadItemCtrl": () => /* binding */ UploadItemCtrl
+/* harmony export */   "UploadItemCtrl": () => (/* binding */ UploadItemCtrl)
 /* harmony export */ });
 class UploadItemCtrl {
   /**
@@ -1953,7 +1953,7 @@ UploadItemCtrl.$inject = ["Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UploadItem": () => /* binding */ UploadItem
+/* harmony export */   "UploadItem": () => (/* binding */ UploadItem)
 /* harmony export */ });
 /* harmony import */ var _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-item.tpl.html */ "./src/lib/directives/upload-item/upload-item.tpl.html");
 /* harmony import */ var _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-item.controller */ "./src/lib/directives/upload-item/upload-item.controller.js");
@@ -1969,7 +1969,7 @@ class UploadItem {
    */
   constructor() {
     this.restrict = 'E';
-    this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__.default;
+    this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     this.scope = {
       item: '='
     };
@@ -1993,7 +1993,7 @@ UploadItem.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UploadViewCtrl": () => /* binding */ UploadViewCtrl
+/* harmony export */   "UploadViewCtrl": () => (/* binding */ UploadViewCtrl)
 /* harmony export */ });
 class UploadViewCtrl {
   /**
@@ -2091,7 +2091,7 @@ UploadViewCtrl.$inject = ["$scope", "Utils", "$element"];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UploadView": () => /* binding */ UploadView
+/* harmony export */   "UploadView": () => (/* binding */ UploadView)
 /* harmony export */ });
 /* harmony import */ var _upload_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-view.controller */ "./src/lib/directives/upload-item/upload-view.controller.js");
 /* harmony import */ var _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-view.tpl.html */ "./src/lib/directives/upload-item/upload-view.tpl.html");
@@ -2106,7 +2106,7 @@ class UploadView {
    */
   constructor($timeout) {
     this.$timeout = $timeout;
-    this.template = _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__.default;
+    this.template = _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.restrict = 'E';
     this.scope = {
       formItem: '=',
@@ -2184,68 +2184,6 @@ UploadView.$inject = ["$timeout"];
 
 /***/ }),
 
-/***/ "./src/lib/index.module.js":
-/*!*********************************!*\
-  !*** ./src/lib/index.module.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
-/* harmony export */ });
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/lib/index.scss");
-/* harmony import */ var _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./directives/upload-item/upload-item.directive */ "./src/lib/directives/upload-item/upload-item.directive.js");
-/* harmony import */ var _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/upload-item/upload-view.directive */ "./src/lib/directives/upload-item/upload-view.directive.js");
-/* harmony import */ var _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directives/agreement-item/agreement-item.directive */ "./src/lib/directives/agreement-item/agreement-item.directive.js");
-/* harmony import */ var _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directives/agreement-item/agreement-view.directive */ "./src/lib/directives/agreement-item/agreement-view.directive.js");
-/* harmony import */ var _main_main_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./main/main.controller */ "./src/lib/main/main.controller.js");
-/* harmony import */ var _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/utils.service */ "./src/lib/utils/utils.service.js");
-/* harmony import */ var _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-item.directive */ "./src/lib/directives/checkboxes-item/checkboxes-item.directive.js");
-/* harmony import */ var _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-view.directive */ "./src/lib/directives/checkboxes-item/checkboxes-view.directive.js");
-/* harmony import */ var _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directives/form-item/form-item.directive */ "./src/lib/directives/form-item/form-item.directive.js");
-/* harmony import */ var _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directives/form-items-container/form-items-container.directive */ "./src/lib/directives/form-items-container/form-items-container.directive.js");
-/* harmony import */ var _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directives/form-view/form-view.directive */ "./src/lib/directives/form-view/form-view.directive.js");
-/* harmony import */ var _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/input-item/input-item.directive */ "./src/lib/directives/input-item/input-item.directive.js");
-/* harmony import */ var _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directives/input-item/input-view.directive */ "./src/lib/directives/input-item/input-view.directive.js");
-/* harmony import */ var _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directives/label-item/label-item.directive */ "./src/lib/directives/label-item/label-item.directive.js");
-/* harmony import */ var _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directives/label-item/label-view.directive */ "./src/lib/directives/label-item/label-view.directive.js");
-/* harmony import */ var _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directives/matrix-item/matrix-item.directive */ "./src/lib/directives/matrix-item/matrix-item.directive.js");
-/* harmony import */ var _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directives/matrix-item/matrix-view.directive */ "./src/lib/directives/matrix-item/matrix-view.directive.js");
-/* harmony import */ var _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-item.directive */ "./src/lib/directives/radio-button-item/radio-button-item.directive.js");
-/* harmony import */ var _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-view.directive */ "./src/lib/directives/radio-button-item/radio-button-view.directive.js");
-/* harmony import */ var _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directives/select-item/select-view.directive */ "./src/lib/directives/select-item/select-view.directive.js");
-/* harmony import */ var _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directives/select-item/select-item.directive */ "./src/lib/directives/select-item/select-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/lib/directives/textarea-item/textarea-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/lib/directives/textarea-item/textarea-view.directive.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__.TextareaView));
-
-/***/ }),
-
 /***/ "./src/lib/main/main.controller.js":
 /*!*****************************************!*\
   !*** ./src/lib/main/main.controller.js ***!
@@ -2254,7 +2192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MainController": () => /* binding */ MainController
+/* harmony export */   "MainController": () => (/* binding */ MainController)
 /* harmony export */ });
 /**
  * @typedef {{type:string}} Item
@@ -2339,7 +2277,7 @@ MainController.$inject = [];
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Utils": () => /* binding */ Utils
+/* harmony export */   "Utils": () => (/* binding */ Utils)
 /* harmony export */ });
 class Utils {
   /**
@@ -2386,7 +2324,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container>\n  <div\n    layout=\"{{AgreementView.formItem.config.direction == 'horizontal' ? 'row' : 'columb'}}\"\n  >\n    <md-checkbox\n      ng-model=\"AgreementView.formItem.options[0].selected\"\n      ng-change=\"AgreementView.toggleSelectedOption(option)\"\n      ng-disabled=\"AgreementView.disableOptions && !option.selected\"\n      aria-label=\"...\"\n      >{{AgreementView.formItem.options[0].value}}</md-checkbox\n    >\n  </div>\n\n  <div ng-messages=\"AgreementView.form.$error\">\n    <div ng-message=\"minSelections\">\n      Must select {{AgreementView.formItem.maxSelections || 1}} items\n    </div>\n  </div>\n</md-input-container>\n");
 
@@ -2400,7 +2338,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Checkboxes.item.options\"\n>\n  <md-input-container class=\"md-block\">\n    <label>Max Selections</label>\n    <input type=\"number\" ng-model=\"Checkboxes.item.config.maxSelections\" />\n  </md-input-container>\n\n  <md-switch\n    ng-model=\"Checkboxes.item.config.direction\"\n    ng-true-value=\"'horizontal'\"\n    ng-false-value=\"'vertical'\"\n  >\n    Layout direction ({{Checkboxes.item.config.direction == 'horizontal' ?\n    'Horizontal' : 'Vertical'}})\n  </md-switch>\n\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in Checkboxes.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button class=\"md-button\" ng-click=\"Checkboxes.deleteOption($index)\">\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      ng-click=\"Checkboxes.addOption()\"\n    >\n      <md-icon class=\"material-icons\">add</md-icon>\n    </md-button>\n  </div>\n</div>\n");
 
@@ -2414,7 +2352,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container>\n  <div\n    layout=\"{{CheckboxesView.formItem.config.direction == 'horizontal' ? 'row' : 'column'}}\"\n  >\n    <md-checkbox\n      ng-repeat=\"option in CheckboxesView.formItem.options track by $index\"\n      ng-model=\"option.selected\"\n      ng-change=\"CheckboxesView.toggleSelectedOption(option)\"\n      ng-disabled=\"CheckboxesView.disableOptions && !option.selected\"\n      aria-label=\"...\"\n      >{{option.value}}</md-checkbox\n    >\n  </div>\n\n  <div ng-messages=\"CheckboxesView.form.$error\">\n    <div ng-message=\"minSelections\">\n      Must select {{CheckboxesView.formItem.maxSelections || 1}} items\n    </div>\n  </div>\n</md-input-container>\n");
 
@@ -2428,7 +2366,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"form-item-container md-inline-form\">\n  <div class=\"form-item-actions\">\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDelete\"\n      ng-click=\"FormItem.deleteClicked()\"\n    >\n      <md-icon class=\"material-icons small\">delete</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onUp\"\n      ng-click=\"FormItem.onUp({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_up</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDown\"\n      ng-click=\"FormItem.onDown({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_down</md-icon>\n    </md-button>\n  </div>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Field Title</label>\n    <input ng-model=\"FormItem.item.props.title\" />\n  </md-input-container>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Help Text</label>\n    <input ng-model=\"FormItem.item.props.helpText\" />\n  </md-input-container>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type === 'agreement'\"\n    class=\"md-block\"\n  >\n    <label>Option Text</label>\n    <input ng-model=\"FormItem.item.options[0].value\" />\n  </md-input-container>\n\n  <div ng-switch=\"FormItem.item.type\">\n    <upload-item ng-switch-when=\"upload\" item=\"FormItem.item\"></upload-item>\n    <agreement-item\n      ng-switch-when=\"agreement\"\n      item=\"FormItem.item\"\n    ></agreement-item>\n    <label-item ng-switch-when=\"label\" item=\"FormItem.item\"></label-item>\n    <input-item ng-switch-when=\"input\" item=\"FormItem.item\"></input-item>\n    <radio-button-item\n      ng-switch-when=\"multipleChoices\"\n      item=\"FormItem.item\"\n    ></radio-button-item>\n    <matrix-item ng-switch-when=\"matrix\" item=\"FormItem.item\"></matrix-item>\n    <checkboxes-item\n      ng-switch-when=\"checkboxes\"\n      item=\"FormItem.item\"\n    ></checkboxes-item>\n    <textarea-item\n      ng-switch-when=\"textarea\"\n      item=\"FormItem.item\"\n    ></textarea-item>\n    <select-item\n      ng-switch-when=\"chooseFromList\"\n      item=\"FormItem.item\"\n    ></select-item>\n    <p ng-switch-default>UNKNOWN TYPE</p>\n  </div>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type != 'label' && FormItem.item.type != 'upload'\"\n    class=\"md-block\"\n  >\n    <md-checkbox ng-model=\"FormItem.item.config.required\"\n      >Required field</md-checkbox\n    >\n  </md-input-container>\n</div>\n");
 
@@ -2442,7 +2380,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div>\n  <form-item\n    ng-repeat=\"item in container.form.items track by $index\"\n    type=\"{{item.type}}\"\n    item=\"item\"\n    index=\"$index\"\n    on-delete=\"container.delete(item, index)\"\n    on-up=\"container.up(item, index)\"\n    on-down=\"container.down(item, index)\"\n  >\n  </form-item>\n</div>\n");
 
@@ -2456,7 +2394,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"md-inline-form\">\n  <div\n    class=\"formItem\"\n    ng-repeat=\"formItem in FormView.form.items track by $index\"\n    ng-switch=\"formItem.type\"\n    layout=\"column\"\n  >\n    <ng-form name=\"formItemForm\">\n      <div>\n        <div class=\"formItem-title\" ng-show=\"formItem.type !== 'label'\">{{formItem.props.title}}</div>\n        <div class=\"formItem-help-text\">{{formItem.props.helpText}}</div>\n\n        <upload-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"upload\"\n        ></upload-view>\n        <agreement-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"agreement\"\n        ></agreement-view>\n        <checkboxes-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"checkboxes\"\n        ></checkboxes-view>\n        <radio-button-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"multipleChoices\"\n        ></radio-button-view>\n        <input-view\n          form-item=\"formItem\"\n          form=\"formItemForm\"\n          ng-switch-when=\"input\"\n        ></input-view>\n        <textarea-view\n          form-item=\"formItem\"\n          form=\"formItemForm\"\n          ng-switch-when=\"textarea\"\n        ></textarea-view>\n        <matrix-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"matrix\"\n        ></matrix-view>\n        <select-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"chooseFromList\"\n        ></select-view>\n        <label-view\n          form-item=\"formItem\"\n          is-preview=\"true\"\n          form=\"formItemForm\"\n          ng-switch-when=\"label\"\n        ></label-view>\n      </div>\n    </ng-form>\n  </div>\n</div>\n");
 
@@ -2470,7 +2408,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Placeholder</label>\n  <input type=\"text\" ng-model=\"Input.item.config.placeholder\" />\n</md-input-container>\n<md-input-container class=\"md-block\">\n  <label>Type</label>\n  <md-select ng-model=\"Input.item.config.type\">\n    <md-option value=\"text\">Text</md-option>\n    <md-option value=\"number\">Number</md-option>\n    <md-option value=\"email\">Email</md-option>\n  </md-select>\n</md-input-container>\n");
 
@@ -2484,7 +2422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <input\n    ng-model=\"InputView.formItem.value\"\n    type=\"{{InputView.formItem.config.type}}\"\n    placeholder=\"{{InputView.formItem.config.placeholder}}\"\n    ng-required=\"InputView.formItem.config.required\"\n  />\n  <div ng-messages=\"InputView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
@@ -2498,7 +2436,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Text</label>\n  <textarea ng-model=\"Label.item.value\" md-maxlength=\"150\" rows=\"5\"></textarea>\n</md-input-container>\n");
 
@@ -2512,7 +2450,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-content flex layout-padding layout=\"row\" layout-align=\"center center\">\n    <pre>\n      \n      <span class=\"formItem-content\" ng-bind-html=\"LabelView.sanitizedTitle\"></span>\n    </pre>\n  </md-content>\n</md-input-container>\n");
 
@@ -2526,7 +2464,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container columnContainer\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Matrix.item.config.columns\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"column in Matrix.item.config.columns track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"input-container\">\n      <label>Column {{$index + 1}}</label>\n      <input ng-model=\"column.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button\"\n      md-no-ink\n      aria-label=\"delete column item\"\n      ng-click=\"Matrix.deleteColumn($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n      <md-tooltip md-autohide=\"true\">Delete</md-tooltip>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      md-no-ink\n      aria-label=\"add option item\"\n      ng-click=\"Matrix.addColumn()\"\n      >Add Column</md-button\n    >\n  </div>\n</div>\n\n<div\n  class=\"sortable-container rowContainer\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Matrix.item.config.rows\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"row in Matrix.item.config.rows track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder row item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"input-container\">\n      <label>Row {{$index + 1}}</label>\n      <input ng-model=\"row.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button\"\n      md-no-ink\n      aria-label=\"delete row item\"\n      ng-click=\"Matrix.deleteRow($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n      <md-tooltip md-autohide=\"true\">Delete</md-tooltip>\n    </md-button>\n  </div>\n  <div layout=\"row\" layout-align=\"start\">\n    <md-button\n      class=\"md-primary add-option-button\"\n      md-no-ink\n      aria-label=\"add row item\"\n      ng-click=\"Matrix.addRow()\"\n      >Add row</md-button\n    >\n  </div>\n</div>\n");
 
@@ -2540,7 +2478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"matrix-container md-block\" layout=\"column\">\n  <div class=\"matrix\">\n    <div class=\"matrix-row\" flex layout=\"row\">\n      <span class=\"matrix-cell\" flex=\"20\"></span>\n      <span\n        class=\"matrix-cell matrix-cell-header\"\n        flex\n        ng-repeat=\"column in MatrixView.formItem.config.columns track by $index\"\n        >{{column.value}}</span\n      >\n    </div>\n    <div\n      class=\"matrix-row\"\n      ng-repeat=\"row in MatrixView.formItem.config.rows track by $index\"\n      layout=\"row\"\n    >\n      <span class=\"matrix-cell\" flex=\"20\" layout=\"column\" layout-align=\"center\"\n        >{{row.value}}</span\n      >\n      <md-radio-group\n        ng-model=\"row.selected\"\n        ng-change=\"MatrixView._updateValidity()\"\n        flex\n        layout=\"row\"\n      >\n        <span\n          class=\"matrix-cell radio-button-cell\"\n          flex\n          ng-repeat=\"column in MatrixView.formItem.config.columns track by $index\"\n        >\n          <md-radio-button\n            value=\"{{column.value}}\"\n            aria-label=\"...\"\n          ></md-radio-button>\n        </span>\n      </md-radio-group>\n    </div>\n  </div>\n\n  <div ng-messages=\"MatrixView.form.$error\">\n    <div ng-message=\"required\">This is required</div>\n  </div>\n</md-input-container>\n");
 
@@ -2554,7 +2492,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"RadioButton.item.options\"\n>\n  <md-switch\n    ng-model=\"RadioButton.item.config.direction\"\n    ng-true-value=\"'horizontal'\"\n    ng-false-value=\"'vertical'\"\n  >\n    Layout direction ({{RadioButton.item.config.direction == 'horizontal' ?\n    'Horizontal' : 'Vertical'}})\n  </md-switch>\n\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in RadioButton.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button\n      class=\"md-button md-warn\"\n      ng-click=\"RadioButton.deleteOption($index)\"\n    >\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n\n  <md-button class=\"md-raised md-accent\" ng-click=\"RadioButton.addOption()\"\n    >Add Option</md-button\n  >\n</div>\n");
 
@@ -2568,7 +2506,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-radio-group\n    name=\"formItemInput\"\n    ng-required=\"RadioButtonView.formItem.config.required\"\n    ng-model=\"RadioButtonView.formItem.value\"\n    layout=\"{{RadioButtonView.formItem.config.direction == 'horizontal' ? 'row' : 'column'}}\"\n    required\n  >\n    <md-radio-button\n      ng-repeat=\"option in RadioButtonView.formItem.options track by $index\"\n      value=\"{{option.value}}\"\n      aria-label=\"...\"\n    >\n      {{option.value}}\n    </md-radio-button>\n  </md-radio-group>\n\n  <div ng-messages=\"RadioButtonView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
@@ -2582,7 +2520,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Select.item.options\"\n>\n  <div\n    class=\"option-item\"\n    layout=\"row\"\n    ng-repeat=\"option in Select.item.options track by $index\"\n    sv-element\n  >\n    <md-button\n      class=\"md-button handle\"\n      md-no-ink\n      aria-label=\"reorder option item\"\n      sv-handle\n    >\n      <md-icon class=\"material-icons\">reorder</md-icon>\n    </md-button>\n\n    <md-input-container class=\"md-block\">\n      <label>Option {{$index + 1}}</label>\n      <input ng-model=\"option.value\" />\n    </md-input-container>\n\n    <md-button class=\"md-button md-warn\" ng-click=\"Select.deleteOption($index)\">\n      <md-icon class=\"material-icons\">delete</md-icon>\n    </md-button>\n  </div>\n\n  <md-button class=\"md-raised md-accent\" ng-click=\"Select.addOption()\"\n    >Add Option</md-button\n  >\n</div>\n");
 
@@ -2596,7 +2534,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-select\n    name=\"formItemInput\"\n    ng-required=\"SelectView.formItem.config.required\"\n    ng-model=\"SelectView.formItem.value\"\n  >\n    <md-option\n      ng-repeat=\"option in SelectView.formItem.options track by $index\"\n      ng-value=\"option.value\"\n      >{{ option.value }}</md-option\n    >\n  </md-select>\n  <div ng-messages=\"SelectView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
@@ -2610,7 +2548,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Placeholder</label>\n  <input type=\"text\" ng-model=\"Textarea.item.config.placeholder\" />\n</md-input-container>\n");
 
@@ -2624,7 +2562,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <textarea\n    ng-model=\"TextareaView.formItem.value\"\n    placeholder=\"{{TextareaView.formItem.config.placeholder}}\"\n    ng-required=\"TextareaView.formItem.config.required\"\n  ></textarea>\n  <div ng-messages=\"TextareaView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
 
@@ -2638,7 +2576,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div\n  class=\"sortable-container\"\n  layout=\"column\"\n  sv-root\n  sv-part=\"Upload.item.options\"\n>\n  <md-input-container class=\"md-block\">\n    <label>Upload Button label</label>\n    <input ng-model=\"Upload.item.config.uploadFileButtonLabel\" />\n  </md-input-container>\n\n  <md-switch\n    ng-model=\"Upload.item.config.multipleUpload\"\n    ng-true-value=\"true\"\n    ng-false-value=\"false\"\n  >\n    Multiple\n  </md-switch>\n\n  <md-input-container class=\"md-block\">\n    <span>Max File size: {{Upload.item.config.size}} Mb</span>\n    <input\n      type=\"number\"\n      id=\"size\"\n      name=\"size\"\n      min=\"0.1\"\n      max=\"999\"\n      step=\"0.1\"\n      aria-label=\"size\"\n      ng-model=\"Upload.item.config.size\"\n    />\n  </md-input-container>\n\n  <md-input-container class=\"md-block\">\n    <label>Max file size error message</label>\n    <textarea\n      ng-model=\"Upload.item.config.sizeErrMessage\"\n      md-maxlength=\"150\"\n      rows=\"2\"\n    ></textarea>\n  </md-input-container>\n\n  <md-switch\n    ng-model=\"Upload.item.config.showAccept\"\n    ng-true-value=\"true\"\n    ng-false-value=\"false\"\n  >\n    Configure allowed file types\n  </md-switch>\n\n  <md-input-container class=\"md-block\" ng-if=\"Upload.item.config.showAccept\">\n    <label>Allowed Types</label>\n    <textarea\n      ng-model=\"Upload.item.config.accept\"\n      md-maxlength=\"150\"\n      rows=\"2\"\n    ></textarea>\n  </md-input-container>\n</div>\n");
 
@@ -2652,7 +2590,7 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div layout=\"row\" class=\"option-item upload-item\">\n  <md-input-container class=\"md-block\" style=\"margin: 0\">\n    <input type=\"file\" class=\"ng-hide\" aria-label=\"file\" />\n    <md-input-container flex class=\"md-block\">\n      <input\n        type=\"text\"\n        ng-model=\"fileName\"\n        class=\"ng-hide\"\n        disabled\n        aria-label=\"fileName\"\n      />\n    </md-input-container>\n  </md-input-container>\n\n  <md-button class=\"md-raised md-accent upload-button\"\n    ><md-icon class=\"material-icons\">attach_file</md-icon\n    ><span\n      >{{UploadView.formItem.config.uploadFileButtonLabel}}</span\n    ></md-button\n  >\n</div>\n\n<div>\n  <label></label>\n  <div\n    style=\"display: grid; grid-template-columns: 8em auto; align-items: center\"\n    layout=\"row\"\n    ng-repeat=\"option in UploadView.formItem.options track by $index\"\n  >\n    <md-button ng-click=\"UploadView.removeItem($index)\" class=\"md-icon-button\">\n      <md-icon class=\"material-icons\">close</md-icon>\n    </md-button>\n    <span>{{option.name}}</span>\n  </div>\n</div>\n");
 
@@ -2666,8 +2604,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
@@ -2698,7 +2637,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -2713,10 +2652,68 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	// module exports must be returned from runtime so entry inlining is disabled
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__("./src/lib/index.module.js");
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!*********************************!*\
+  !*** ./src/lib/index.module.js ***!
+  \*********************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/lib/index.scss");
+/* harmony import */ var _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./directives/upload-item/upload-item.directive */ "./src/lib/directives/upload-item/upload-item.directive.js");
+/* harmony import */ var _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/upload-item/upload-view.directive */ "./src/lib/directives/upload-item/upload-view.directive.js");
+/* harmony import */ var _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directives/agreement-item/agreement-item.directive */ "./src/lib/directives/agreement-item/agreement-item.directive.js");
+/* harmony import */ var _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directives/agreement-item/agreement-view.directive */ "./src/lib/directives/agreement-item/agreement-view.directive.js");
+/* harmony import */ var _main_main_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./main/main.controller */ "./src/lib/main/main.controller.js");
+/* harmony import */ var _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/utils.service */ "./src/lib/utils/utils.service.js");
+/* harmony import */ var _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-item.directive */ "./src/lib/directives/checkboxes-item/checkboxes-item.directive.js");
+/* harmony import */ var _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directives/checkboxes-item/checkboxes-view.directive */ "./src/lib/directives/checkboxes-item/checkboxes-view.directive.js");
+/* harmony import */ var _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directives/form-item/form-item.directive */ "./src/lib/directives/form-item/form-item.directive.js");
+/* harmony import */ var _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directives/form-items-container/form-items-container.directive */ "./src/lib/directives/form-items-container/form-items-container.directive.js");
+/* harmony import */ var _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directives/form-view/form-view.directive */ "./src/lib/directives/form-view/form-view.directive.js");
+/* harmony import */ var _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/input-item/input-item.directive */ "./src/lib/directives/input-item/input-item.directive.js");
+/* harmony import */ var _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directives/input-item/input-view.directive */ "./src/lib/directives/input-item/input-view.directive.js");
+/* harmony import */ var _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directives/label-item/label-item.directive */ "./src/lib/directives/label-item/label-item.directive.js");
+/* harmony import */ var _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directives/label-item/label-view.directive */ "./src/lib/directives/label-item/label-view.directive.js");
+/* harmony import */ var _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directives/matrix-item/matrix-item.directive */ "./src/lib/directives/matrix-item/matrix-item.directive.js");
+/* harmony import */ var _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directives/matrix-item/matrix-view.directive */ "./src/lib/directives/matrix-item/matrix-view.directive.js");
+/* harmony import */ var _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-item.directive */ "./src/lib/directives/radio-button-item/radio-button-item.directive.js");
+/* harmony import */ var _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-view.directive */ "./src/lib/directives/radio-button-item/radio-button-view.directive.js");
+/* harmony import */ var _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directives/select-item/select-view.directive */ "./src/lib/directives/select-item/select-view.directive.js");
+/* harmony import */ var _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directives/select-item/select-item.directive */ "./src/lib/directives/select-item/select-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/lib/directives/textarea-item/textarea-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/lib/directives/textarea-item/textarea-view.directive.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__.TextareaView));
+})();
+
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });
