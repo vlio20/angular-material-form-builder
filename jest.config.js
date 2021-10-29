@@ -30,5 +30,6 @@ const config = {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.html$': 'jest-raw-loader',
   },
+  setupFiles: ['./src/setup-jest.js'],
 }
 module.exports = config

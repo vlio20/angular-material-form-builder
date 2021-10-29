@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 const path = require('path')
 
 // Dev Server variables
@@ -30,7 +31,24 @@ async function webpackConfig() {
       host: DEV_SERVER_HOST,
       port: DEV_SERVER_PORT,
       historyApiFallback: true,
-      writeToDisk: true,
+      static: {
+        directory: path.resolve(__dirname),
+        publicPath: '/',
+      },
+      devMiddleware: {
+        writeToDisk: true,
+      },
+      client: {
+        logging: 'info',
+        // Can be used only for `errors`/`warnings`
+        //
+        // overlay: {
+        //   errors: true,
+        //   warnings: true,
+        // }
+        overlay: true,
+        progress: true,
+      },
     },
     devtool: 'source-map',
     externals: {
@@ -46,6 +64,7 @@ async function webpackConfig() {
       new MiniCssExtractPlugin({
         filename: '[name].css',
       }),
+      new ESLintPlugin(),
     ],
     optimization: {
       minimize: true,
@@ -102,7 +121,7 @@ async function webpackConfig() {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: ['babel-loader', 'eslint-loader'],
+          use: ['babel-loader'],
         },
         {
           test: /\.tpl.html$/i,

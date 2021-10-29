@@ -1,5 +1,5 @@
-import { createTestApp } from 'angularjs-jest'
 // import angularMaterialFormBuilder from '../../index.module'
+import { createTestApp } from 'angularjs-jest'
 import 'angular-animate'
 import 'angular-sortable-view/src/angular-sortable-view'
 import 'angular-aria'
