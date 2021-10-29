@@ -1,3 +1,7 @@
+# 1.2.0
+
+Label item can now render HTML strings for rich text formatting
+
 # 1.1.0
 
 Add support for the `upload` component that allows to upload files
