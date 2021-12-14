@@ -2452,7 +2452,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-content flex layout-padding layout=\"row\" layout-align=\"center center\">\n    <span\n      class=\"formItem-content\"\n      ng-bind-html=\"LabelView.sanitizedTitle\"\n    ></span>\n  </md-content>\n</md-input-container>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <md-content\n    flex\n    layout-padding\n    layout=\"row\"\n    layout-align=\"center center\"\n    ng-bind-html=\"LabelView.sanitizedTitle\"\n  >\n  </md-content>\n</md-input-container>\n");
 
 /***/ }),
 
