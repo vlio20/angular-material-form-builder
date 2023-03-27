@@ -20,6 +20,8 @@ import { RadioButtonItem } from './directives/radio-button-item/radio-button-ite
 import { RadioButtonView } from './directives/radio-button-item/radio-button-view.directive'
 import { SelectView } from './directives/select-item/select-view.directive'
 import { SelectItem } from './directives/select-item/select-item.directive'
+import { DateView } from './directives/date-item/date-view.directive'
+import { DateItem } from './directives/date-item/date-item.directive'
 import { TextareaItem } from './directives/textarea-item/textarea-item.directive'
 import { TextareaView } from './directives/textarea-item/textarea-view.directive'
 
@@ -50,5 +52,7 @@ export default angular
   .directive('radioButtonView', RadioButtonView)
   .directive('selectItem', SelectItem)
   .directive('selectView', SelectView)
+  .directive('dateItem', DateItem)
+  .directive('dateView', DateView)
   .directive('textareaItem', TextareaItem)
   .directive('textareaView', TextareaView)

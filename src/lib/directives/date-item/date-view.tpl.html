@@ -1,0 +1,10 @@
+<md-input-container class="md-block">
+  <input
+    ng-model="DateView.formItem.value"
+    type="{{DateView.formItem.config.type}}"
+    ng-required="DateView.formItem.config.required"
+  />
+  <div ng-messages="DateView.form.$error">
+    <div ng-message="required">This field is required</div>
+  </div>
+</md-input-container>
