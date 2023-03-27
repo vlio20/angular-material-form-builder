@@ -6,5 +6,4 @@ bower_components/
 .DS_Store
 *_OLD_*
 coverage
-dist/
 .vscode/

@@ -58,29 +58,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AgreementItem": () => (/* binding */ AgreementItem)
 /* harmony export */ });
 /* harmony import */ var _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-item.controller */ "./src/lib/directives/agreement-item/agreement-item.controller.js");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
  // import AgreementItemTemplate from './agreement-item.tpl.html'
 
 /**
  * @implements {ng.IDirective}
  */
 
-class AgreementItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.scope = {
-      item: '='
-    };
-    this.controller = _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__.AgreementItemCtrl;
-    this.controllerAs = 'Agreement';
-    this.bindToController = true;
-  }
+var AgreementItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function AgreementItem() {
+  _classCallCheck(this, AgreementItem);
 
-}
+  this.restrict = 'E';
+  this.scope = {
+    item: '='
+  };
+  this.controller = _agreement_item_controller__WEBPACK_IMPORTED_MODULE_0__.AgreementItemCtrl;
+  this.controllerAs = 'Agreement';
+  this.bindToController = true;
+});
 
-AgreementItem.$inject = [];
 
 
 /***/ }),
@@ -95,86 +100,106 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AgreementViewCtrl": () => (/* binding */ AgreementViewCtrl)
 /* harmony export */ });
-class AgreementViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var AgreementViewCtrl = /*#__PURE__*/function () {
+  AgreementViewCtrl.$inject = ["$scope", "Utils"];
+
   /**
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor($scope, Utils) {
+  function AgreementViewCtrl($scope, Utils) {
+    _classCallCheck(this, AgreementViewCtrl);
+
     this.Scope = $scope;
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem || {}, {
-      config: {},
-      options: [{
-        value: '',
-        selected: false
-      }]
-    });
-    this.selectedOptions = this._getSelectedOptions();
-    this.disableOptions = false;
-    this.isValid = true;
-
-    this._updateView();
-
-    this._updateValidity();
-
-    if (this.isPreview()) {
-      this._enableWatchers();
-    }
-  }
-
-  toggleSelectedOption() {
-    this.selectedOptions = this._getSelectedOptions();
-
-    this._updateView();
-
-    this._updateValidity();
-  }
-
-  _getSelectedOptions() {
-    return this.formItem.options.filter(option => {
-      return option.selected;
-    });
-  }
-
-  _updateView() {
-    if (!this.formItem.config.maxSelections) {
+  _createClass(AgreementViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem || {}, {
+        config: {},
+        options: [{
+          value: '',
+          selected: false
+        }]
+      });
+      this.selectedOptions = this._getSelectedOptions();
       this.disableOptions = false;
-    } else if (this.selectedOptions.length === this.formItem.config.maxSelections) {
-      this.disableOptions = true;
-    } else {
-      this.disableOptions = false;
-    }
-  }
-
-  _updateValidity() {
-    if (this.formItem.config.required) {
-      this.isValid = this.selectedOptions.length > 0;
-    } else {
       this.isValid = true;
-    }
 
-    this.form.$setValidity('minSelections', this.isValid);
-  }
+      this._updateView();
 
-  _enableWatchers() {
-    this.Scope.$watch('AgreementView.formItem.config.required', newVal => {
-      if (newVal !== undefined) {
-        this._updateView();
+      this._updateValidity();
 
-        this._updateValidity();
+      if (this.isPreview()) {
+        this._enableWatchers();
       }
-    });
-  }
+    }
+  }, {
+    key: "toggleSelectedOption",
+    value: function toggleSelectedOption() {
+      this.selectedOptions = this._getSelectedOptions();
 
-}
+      this._updateView();
 
-AgreementViewCtrl.$inject = ["$scope", "Utils"];
+      this._updateValidity();
+    }
+  }, {
+    key: "_getSelectedOptions",
+    value: function _getSelectedOptions() {
+      return this.formItem.options.filter(function (option) {
+        return option.selected;
+      });
+    }
+  }, {
+    key: "_updateView",
+    value: function _updateView() {
+      if (!this.formItem.config.maxSelections) {
+        this.disableOptions = false;
+      } else if (this.selectedOptions.length === this.formItem.config.maxSelections) {
+        this.disableOptions = true;
+      } else {
+        this.disableOptions = false;
+      }
+    }
+  }, {
+    key: "_updateValidity",
+    value: function _updateValidity() {
+      if (this.formItem.config.required) {
+        this.isValid = this.selectedOptions.length > 0;
+      } else {
+        this.isValid = true;
+      }
+
+      this.form.$setValidity('minSelections', this.isValid);
+    }
+  }, {
+    key: "_enableWatchers",
+    value: function _enableWatchers() {
+      var _this = this;
+
+      this.Scope.$watch('AgreementView.formItem.config.required', function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateView();
+
+          _this._updateValidity();
+        }
+      });
+    }
+  }]);
+
+  return AgreementViewCtrl;
+}();
+
 
 
 /***/ }),
@@ -191,15 +216,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _agreement_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agreement-view.controller */ "./src/lib/directives/agreement-item/agreement-view.controller.js");
 /* harmony import */ var _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./agreement-view.tpl.html */ "./src/lib/directives/agreement-item/agreement-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
-class AgreementView {
+
+var AgreementView = /*#__PURE__*/function () {
+  AgreementView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function AgreementView($timeout) {
+    _classCallCheck(this, AgreementView);
+
     this.$timeout = $timeout;
     this.template = _agreement_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.restrict = 'E';
@@ -222,16 +257,19 @@ class AgreementView {
    */
 
 
-  link(scope, element, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(AgreementView, [{
+    key: "link",
+    value: function link(scope, element, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return AgreementView;
+}();
 
-AgreementView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -246,14 +284,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CheckboxesItemCtrl": () => (/* binding */ CheckboxesItemCtrl)
 /* harmony export */ });
-class CheckboxesItemCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var CheckboxesItemCtrl = /*#__PURE__*/function () {
+  CheckboxesItemCtrl.$inject = ["Utils", "$element"];
+
   /**
    * @ngInject
    *
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {JQLite} $element
    */
-  constructor(Utils, $element) {
+  function CheckboxesItemCtrl(Utils, $element) {
+    _classCallCheck(this, CheckboxesItemCtrl);
+
     this.Element = $element;
     this.item = Utils.extend(this.item || {}, {
       config: {
@@ -266,26 +314,33 @@ class CheckboxesItemCtrl {
     });
   }
 
-  deleteOption(index) {
-    this.item.options.splice(index, 1);
-  }
+  _createClass(CheckboxesItemCtrl, [{
+    key: "deleteOption",
+    value: function deleteOption(index) {
+      this.item.options.splice(index, 1);
+    }
+  }, {
+    key: "addOption",
+    value: function addOption() {
+      var _this = this;
 
-  addOption() {
-    this.item.options.push({
-      value: '',
-      selected: false
-    }); // Focus new element
+      this.item.options.push({
+        value: '',
+        selected: false
+      }); // Focus new element
 
-    setTimeout(() => {
-      const options = this.Element.find('input');
-      const addedOption = options[options.length - 1];
-      addedOption.focus();
-    }, 0);
-  }
+      setTimeout(function () {
+        var options = _this.Element.find('input');
 
-}
+        var addedOption = options[options.length - 1];
+        addedOption.focus();
+      }, 0);
+    }
+  }]);
 
-CheckboxesItemCtrl.$inject = ["Utils", "$element"];
+  return CheckboxesItemCtrl;
+}();
+
 
 
 /***/ }),
@@ -309,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function CheckboxesItem() {
-  const directive = {
+  var directive = {
     restrict: 'E',
     template: _checkboxes_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"],
     scope: {
@@ -336,83 +391,103 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CheckboxesViewCtrl": () => (/* binding */ CheckboxesViewCtrl)
 /* harmony export */ });
-class CheckboxesViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var CheckboxesViewCtrl = /*#__PURE__*/function () {
+  CheckboxesViewCtrl.$inject = ["$scope", "Utils"];
+
   /**
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor($scope, Utils) {
+  function CheckboxesViewCtrl($scope, Utils) {
+    _classCallCheck(this, CheckboxesViewCtrl);
+
     this.Scope = $scope;
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem || {}, {
-      config: {},
-      options: []
-    });
-    this.selectedOptions = this._getSelectedOptions();
-    this.disableOptions = false;
-    this.isValid = true;
-
-    this._updateView();
-
-    this._updateValidity();
-
-    if (this.isPreview()) {
-      this._enableWatchers();
-    }
-  }
-
-  toggleSelectedOption() {
-    this.selectedOptions = this._getSelectedOptions();
-
-    this._updateView();
-
-    this._updateValidity();
-  }
-
-  _getSelectedOptions() {
-    return this.formItem.options.filter(option => {
-      return option.selected;
-    });
-  }
-
-  _updateView() {
-    if (!this.formItem.config.maxSelections) {
+  _createClass(CheckboxesViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem || {}, {
+        config: {},
+        options: []
+      });
+      this.selectedOptions = this._getSelectedOptions();
       this.disableOptions = false;
-    } else if (this.selectedOptions.length === this.formItem.config.maxSelections) {
-      this.disableOptions = true;
-    } else {
-      this.disableOptions = false;
-    }
-  }
-
-  _updateValidity() {
-    if (this.formItem.config.required) {
-      this.isValid = this.selectedOptions.length > 0;
-    } else {
       this.isValid = true;
-    }
 
-    this.form.$setValidity('minSelections', this.isValid);
-  }
+      this._updateView();
 
-  _enableWatchers() {
-    this.Scope.$watch('CheckboxesView.formItem.config.required', newVal => {
-      if (newVal !== undefined) {
-        this._updateView();
+      this._updateValidity();
 
-        this._updateValidity();
+      if (this.isPreview()) {
+        this._enableWatchers();
       }
-    });
-  }
+    }
+  }, {
+    key: "toggleSelectedOption",
+    value: function toggleSelectedOption() {
+      this.selectedOptions = this._getSelectedOptions();
 
-}
+      this._updateView();
 
-CheckboxesViewCtrl.$inject = ["$scope", "Utils"];
+      this._updateValidity();
+    }
+  }, {
+    key: "_getSelectedOptions",
+    value: function _getSelectedOptions() {
+      return this.formItem.options.filter(function (option) {
+        return option.selected;
+      });
+    }
+  }, {
+    key: "_updateView",
+    value: function _updateView() {
+      if (!this.formItem.config.maxSelections) {
+        this.disableOptions = false;
+      } else if (this.selectedOptions.length === this.formItem.config.maxSelections) {
+        this.disableOptions = true;
+      } else {
+        this.disableOptions = false;
+      }
+    }
+  }, {
+    key: "_updateValidity",
+    value: function _updateValidity() {
+      if (this.formItem.config.required) {
+        this.isValid = this.selectedOptions.length > 0;
+      } else {
+        this.isValid = true;
+      }
+
+      this.form.$setValidity('minSelections', this.isValid);
+    }
+  }, {
+    key: "_enableWatchers",
+    value: function _enableWatchers() {
+      var _this = this;
+
+      this.Scope.$watch('CheckboxesView.formItem.config.required', function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateView();
+
+          _this._updateValidity();
+        }
+      });
+    }
+  }]);
+
+  return CheckboxesViewCtrl;
+}();
+
 
 
 /***/ }),
@@ -429,18 +504,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkboxes-view.tpl.html */ "./src/lib/directives/checkboxes-item/checkboxes-view.tpl.html");
 /* harmony import */ var _checkboxes_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkboxes-view.controller */ "./src/lib/directives/checkboxes-item/checkboxes-view.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class CheckboxesView {
+var CheckboxesView = /*#__PURE__*/function () {
+  CheckboxesView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function CheckboxesView($timeout) {
+    _classCallCheck(this, CheckboxesView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _checkboxes_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
@@ -463,16 +548,219 @@ class CheckboxesView {
    */
 
 
-  link(scope, element, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
+  _createClass(CheckboxesView, [{
+    key: "link",
+    value: function link(scope, element, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
+
+  return CheckboxesView;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/lib/directives/date-item/date-item.controller.js":
+/*!**************************************************************!*\
+  !*** ./src/lib/directives/date-item/date-item.controller.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DateItemCtrl": () => (/* binding */ DateItemCtrl)
+/* harmony export */ });
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DateItemCtrl = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ * @param {import('../../utils/utils.service').Utils} Utils
+ * @param {JQLite} $element
+ */
+["Utils", "$element", function DateItemCtrl(Utils, $element) {
+  _classCallCheck(this, DateItemCtrl);
+
+  this.Element = $element;
+  this.item = Utils.extend(this.item || {}, {
+    config: {
+      type: 'date'
+    }
+  });
+}]);
+
+
+
+/***/ }),
+
+/***/ "./src/lib/directives/date-item/date-item.directive.js":
+/*!*************************************************************!*\
+  !*** ./src/lib/directives/date-item/date-item.directive.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DateItem": () => (/* binding */ DateItem)
+/* harmony export */ });
+/* harmony import */ var _date_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date-item.controller */ "./src/lib/directives/date-item/date-item.controller.js");
+/* harmony import */ var _date_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date-item.tpl.html */ "./src/lib/directives/date-item/date-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+/**
+ * @implements {ng.IDirective}
+ */
+
+var DateItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function DateItem() {
+  _classCallCheck(this, DateItem);
+
+  this.restrict = 'E';
+  this.template = _date_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _date_item_controller__WEBPACK_IMPORTED_MODULE_0__.DateItemCtrl;
+  this.controllerAs = 'Date';
+  this.bindToController = true;
+});
+
+
+
+/***/ }),
+
+/***/ "./src/lib/directives/date-item/date-view.controller.js":
+/*!**************************************************************!*\
+  !*** ./src/lib/directives/date-item/date-view.controller.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DateViewCtrl": () => (/* binding */ DateViewCtrl)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var DateViewCtrl = /*#__PURE__*/function () {
+  DateViewCtrl.$inject = ["Utils"];
+
+  /**
+   * @ngInject
+   * @param {import('../../utils/utils.service').Utils} Utils
+   */
+  function DateViewCtrl(Utils) {
+    _classCallCheck(this, DateViewCtrl);
+
+    this.Utils = Utils;
+    this.formItem = {};
   }
 
-}
+  _createClass(DateViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.Utils.extend(this.formItem, {
+        config: {}
+      });
+    }
+  }]);
 
-CheckboxesView.$inject = ["$timeout"];
+  return DateViewCtrl;
+}();
+
+
+
+/***/ }),
+
+/***/ "./src/lib/directives/date-item/date-view.directive.js":
+/*!*************************************************************!*\
+  !*** ./src/lib/directives/date-item/date-view.directive.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DateView": () => (/* binding */ DateView)
+/* harmony export */ });
+/* harmony import */ var _date_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date-view.controller */ "./src/lib/directives/date-item/date-view.controller.js");
+/* harmony import */ var _date_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date-view.tpl.html */ "./src/lib/directives/date-item/date-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+
+
+/**
+ * @implements {ng.IDirective}
+ */
+
+var DateView = /*#__PURE__*/function () {
+  DateView.$inject = ["$timeout"];
+
+  /**
+   * @ngInject
+   * @param {ng.ITimeoutService} $timeout
+   */
+  function DateView($timeout) {
+    _classCallCheck(this, DateView);
+
+    this.$timeout = $timeout;
+    this.restrict = 'E';
+    this.template = _date_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+    this.scope = {
+      formItem: '=',
+      form: '='
+    };
+    this.controller = _date_view_controller__WEBPACK_IMPORTED_MODULE_0__.DateViewCtrl;
+    this.controllerAs = 'DateView';
+    this.bindToController = true;
+  }
+  /**
+   * @see https://docs.angularjs.org/api/ng/service/$compile#-link-
+   * @param {ng.IScope} scope - scope
+   * @param {JQLite} element - element
+   * @param {ng.IAttributes} attrs - attributes
+   * @param {FormItemCtrl} ctrl - this instance controller
+   * @param {ng.ITranscludeFunction} transcludeFn - transclude function ($transclude)
+   */
+
+
+  _createClass(DateView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
+
+  return DateView;
+}();
+
 
 
 /***/ }),
@@ -487,7 +775,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormItemCtrl": () => (/* binding */ FormItemCtrl)
 /* harmony export */ });
-const DEFAULT_TITLE = {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var DEFAULT_TITLE = {
   upload: 'Attachment',
   agreement: 'Agreement',
   input: 'Field',
@@ -499,14 +793,18 @@ const DEFAULT_TITLE = {
   textarea: 'Text'
 };
 
-class FormItemCtrl {
+var FormItemCtrl = /*#__PURE__*/function () {
+  FormItemCtrl.$inject = ["$scope", "$attrs", "Utils"];
+
   /**
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {ng.IAttributes} $attrs
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor($scope, $attrs, Utils) {
+  function FormItemCtrl($scope, $attrs, Utils) {
+    _classCallCheck(this, FormItemCtrl);
+
     this.Attrs = $attrs;
     this.Utils = Utils;
     this.templates = {
@@ -524,40 +822,45 @@ class FormItemCtrl {
     this.scope = $scope;
   }
 
-  init() {
-    this.item = this.Utils.extend(this.item || {}, {
-      type: this.Attrs.type,
-      props: {
-        title: DEFAULT_TITLE[this.Attrs.type],
-        helpText: ''
-      },
-      config: {
-        required: false
-      }
-    });
-  }
+  _createClass(FormItemCtrl, [{
+    key: "init",
+    value: function init() {
+      this.item = this.Utils.extend(this.item || {}, {
+        type: this.Attrs.type,
+        props: {
+          title: DEFAULT_TITLE[this.Attrs.type],
+          helpText: ''
+        },
+        config: {
+          required: false
+        }
+      });
+    }
+  }, {
+    key: "deleteClicked",
+    value: function deleteClicked() {
+      this.onDelete({
+        item: this.item,
+        index: this.index()
+      });
+    }
+    /**
+     *
+     * @param {string} type
+     */
 
-  deleteClicked() {
-    this.onDelete({
-      item: this.item,
-      index: this.index()
-    });
-  }
-  /**
-   *
-   * @param {string} type
-   */
+  }, {
+    key: "_getItemTemplate",
+    value: function _getItemTemplate(type) {
+      var prefix = '' + '<div class="form-item-container">' + '<div class="form-item-actions">' + '<md-button class="md-button" ng-if="FormItem.Attrs.onDelete" ng-click="FormItem.deleteClicked()"> ' + '<md-icon class="material-icons small">delete</md-icon>' + '</md-button>' + '<md-button class="md-button" ng-if="FormItem.Attrs.onUp" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})"> ' + '<md-icon class="material-icons small">arrow_drop_up</md-icon>' + '</md-button>' + '<md-button class="md-button" ng-if="FormItem.Attrs.onDown" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})"> ' + '<md-icon class="material-icons small">arrow_drop_down</md-icon>' + '</md-button>' + '</div>' + '<md-input-container>' + '<label>Field Title</label>' + '<input ng-model="FormItem.item.props.title"/>' + '</md-input-container>' + '<md-input-container>' + '<label>Help Text</label>' + '<input ng-model="FormItem.item.props.helpText" />' + '</md-input-container>';
+      var suffix = '' + '<md-input-container>' + '<md-checkbox ng-model="FormItem.item.config.required">Required field</md-checkbox>' + '</md-input-container>' + '</div>';
+      return prefix + this.templates[type] + suffix;
+    }
+  }]);
 
+  return FormItemCtrl;
+}();
 
-  _getItemTemplate(type) {
-    const prefix = '' + '<div class="form-item-container">' + '<div class="form-item-actions">' + '<md-button class="md-button" ng-if="FormItem.Attrs.onDelete" ng-click="FormItem.deleteClicked()"> ' + '<md-icon class="material-icons small">delete</md-icon>' + '</md-button>' + '<md-button class="md-button" ng-if="FormItem.Attrs.onUp" ng-click="FormItem.onUp({item: FormItem.item, index: FormItem.index()})"> ' + '<md-icon class="material-icons small">arrow_drop_up</md-icon>' + '</md-button>' + '<md-button class="md-button" ng-if="FormItem.Attrs.onDown" ng-click="FormItem.onDown({item: FormItem.item, index: FormItem.index()})"> ' + '<md-icon class="material-icons small">arrow_drop_down</md-icon>' + '</md-button>' + '</div>' + '<md-input-container>' + '<label>Field Title</label>' + '<input ng-model="FormItem.item.props.title"/>' + '</md-input-container>' + '<md-input-container>' + '<label>Help Text</label>' + '<input ng-model="FormItem.item.props.helpText" />' + '</md-input-container>';
-    const suffix = '' + '<md-input-container>' + '<md-checkbox ng-model="FormItem.item.config.required">Required field</md-checkbox>' + '</md-input-container>' + '</div>';
-    return prefix + this.templates[type] + suffix;
-  }
-
-}
-
-FormItemCtrl.$inject = ["$scope", "$attrs", "Utils"];
 
 
 /***/ }),
@@ -574,18 +877,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _form_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-item.tpl.html */ "./src/lib/directives/form-item/form-item.tpl.html");
 /* harmony import */ var _form_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-item.controller */ "./src/lib/directives/form-item/form-item.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class FormItem {
+var FormItem = /*#__PURE__*/function () {
+  FormItem.$inject = ["$compile"];
+
   /**
    * @ngInject
    * @param {ng.ICompileService} $compile
    */
-  constructor($compile) {
+  function FormItem($compile) {
+    _classCallCheck(this, FormItem);
+
     this.$compile = $compile;
     this.restrict = 'E';
     this.scope = {
@@ -610,20 +923,23 @@ class FormItem {
    */
 
 
-  link(scope, element, attrs, ctrl) {
-    const template = ctrl._getItemTemplate(attrs.type);
+  _createClass(FormItem, [{
+    key: "link",
+    value: function link(scope, element, attrs, ctrl) {
+      var template = ctrl._getItemTemplate(attrs.type);
 
-    const el = this.$compile(template)(scope); // element.append(el)
-    // if done like above adds twice
-    // element.append(this.$compile(template)(scope))
+      var el = this.$compile(template)(scope); // element.append(el)
+      // if done like above adds twice
+      // element.append(this.$compile(template)(scope))
 
-    ctrl.init();
-    return el;
-  }
+      ctrl.init();
+      return el;
+    }
+  }]);
 
-}
+  return FormItem;
+}();
 
-FormItem.$inject = ["$compile"];
 
 
 /***/ }),
@@ -638,11 +954,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormItemsContainerCtrl": () => (/* binding */ FormItemsContainerCtrl)
 /* harmony export */ });
-class FormItemsContainerCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var FormItemsContainerCtrl = /*#__PURE__*/function () {
   /**
    * @ngInject
    */
-  constructor() {
+  function FormItemsContainerCtrl() {
+    _classCallCheck(this, FormItemsContainerCtrl);
+
     /**
      * @type {import('../../main/main.controller').FormConfig}
      */
@@ -657,41 +981,46 @@ class FormItemsContainerCtrl {
    */
 
 
-  delete(item, index) {
-    this.form.items.splice(index, 1);
-  }
-  /**
-   *
-   * @param {import('../../main/main.controller').Item} item
-   * @param {number} index
-   */
-
-
-  up(item, index) {
-    if (index !== 0) {
-      const prevItem = this.form.items[index - 1];
-      this.form.items[index] = prevItem;
-      this.form.items[index - 1] = item;
+  _createClass(FormItemsContainerCtrl, [{
+    key: "delete",
+    value: function _delete(item, index) {
+      this.form.items.splice(index, 1);
     }
-  }
-  /**
-   *
-   * @param {import('../../main/main.controller').Item} item
-   * @param {number} index
-   */
+    /**
+     *
+     * @param {import('../../main/main.controller').Item} item
+     * @param {number} index
+     */
 
-
-  down(item, index) {
-    if (index !== this.form.items.length - 1) {
-      const nextItem = this.form.items[index + 1];
-      this.form.items[index] = nextItem;
-      this.form.items[index + 1] = item;
+  }, {
+    key: "up",
+    value: function up(item, index) {
+      if (index !== 0) {
+        var prevItem = this.form.items[index - 1];
+        this.form.items[index] = prevItem;
+        this.form.items[index - 1] = item;
+      }
     }
-  }
+    /**
+     *
+     * @param {import('../../main/main.controller').Item} item
+     * @param {number} index
+     */
 
-}
+  }, {
+    key: "down",
+    value: function down(item, index) {
+      if (index !== this.form.items.length - 1) {
+        var nextItem = this.form.items[index + 1];
+        this.form.items[index] = nextItem;
+        this.form.items[index + 1] = item;
+      }
+    }
+  }]);
 
-FormItemsContainerCtrl.$inject = [];
+  return FormItemsContainerCtrl;
+}();
+
 
 
 /***/ }),
@@ -708,30 +1037,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-items-container.controller */ "./src/lib/directives/form-items-container/form-items-container.controller.js");
 /* harmony import */ var _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-items-container.tpl.html */ "./src/lib/directives/form-items-container/form-items-container.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class FormItemsContainer {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.scope = {
-      form: '='
-    };
-    this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
-    this.controllerAs = 'container';
-    this.bindToController = true;
-  }
+var FormItemsContainer = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function FormItemsContainer() {
+  _classCallCheck(this, FormItemsContainer);
 
-}
+  this.restrict = 'E';
+  this.scope = {
+    form: '='
+  };
+  this.template = _form_items_container_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.controller = _form_items_container_controller__WEBPACK_IMPORTED_MODULE_0__.FormItemsContainerCtrl;
+  this.controllerAs = 'container';
+  this.bindToController = true;
+});
 
-FormItemsContainer.$inject = [];
 
 
 /***/ }),
@@ -746,20 +1080,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormViewCtrl": () => (/* binding */ FormViewCtrl)
 /* harmony export */ });
-class FormViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var FormViewCtrl = /*#__PURE__*/function () {
+  FormViewCtrl.$inject = ["$scope"];
+
   /**
    * @ngInject
    * @param {ng.IScù} $scope
    */
-  constructor($scope) {
+  function FormViewCtrl($scope) {
+    _classCallCheck(this, FormViewCtrl);
+
     this.Scope = $scope;
   }
 
-  init() {}
+  _createClass(FormViewCtrl, [{
+    key: "init",
+    value: function init() {}
+  }]);
 
-}
+  return FormViewCtrl;
+}();
 
-FormViewCtrl.$inject = ["$scope"];
 
 
 /***/ }),
@@ -776,17 +1123,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _form_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-view.controller */ "./src/lib/directives/form-view/form-view.controller.js");
 /* harmony import */ var _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-view.tpl.html */ "./src/lib/directives/form-view/form-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class FormView {
+var FormView = /*#__PURE__*/function () {
   /**
    * @ngInject
    */
-  constructor() {
+  function FormView() {
+    _classCallCheck(this, FormView);
+
     this.restrict = 'E';
     this.template = _form_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.scope = {
@@ -806,13 +1161,16 @@ class FormView {
    */
 
 
-  link(scope, element, attrs, ctrl) {
-    ctrl.init();
-  }
+  _createClass(FormView, [{
+    key: "link",
+    value: function link(scope, element, attrs, ctrl) {
+      ctrl.init();
+    }
+  }]);
 
-}
+  return FormView;
+}();
 
-FormView.$inject = [];
 
 
 /***/ }),
@@ -827,24 +1185,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InputItemCtrl": () => (/* binding */ InputItemCtrl)
 /* harmony export */ });
-class InputItemCtrl {
-  /**
-   * @ngInject
-   * @param {import('../../utils/utils.service').Utils} Utils
-   * @param {JQLite} $element
-   */
-  constructor(Utils, $element) {
-    this.Element = $element;
-    this.item = Utils.extend(this.item || {}, {
-      config: {
-        type: 'text'
-      }
-    });
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-InputItemCtrl.$inject = ["Utils", "$element"];
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var InputItemCtrl = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ * @param {import('../../utils/utils.service').Utils} Utils
+ * @param {JQLite} $element
+ */
+["Utils", "$element", function InputItemCtrl(Utils, $element) {
+  _classCallCheck(this, InputItemCtrl);
+
+  this.Element = $element;
+  this.item = Utils.extend(this.item || {}, {
+    config: {
+      type: 'text'
+    }
+  });
+}]);
+
 
 
 /***/ }),
@@ -861,30 +1224,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _input_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-item.controller */ "./src/lib/directives/input-item/input-item.controller.js");
 /* harmony import */ var _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-item.tpl.html */ "./src/lib/directives/input-item/input-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class InputItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _input_item_controller__WEBPACK_IMPORTED_MODULE_0__.InputItemCtrl;
-    this.controllerAs = 'Input';
-    this.bindToController = true;
-  }
+var InputItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function InputItem() {
+  _classCallCheck(this, InputItem);
 
-}
+  this.restrict = 'E';
+  this.template = _input_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _input_item_controller__WEBPACK_IMPORTED_MODULE_0__.InputItemCtrl;
+  this.controllerAs = 'Input';
+  this.bindToController = true;
+});
 
-InputItem.$inject = [];
 
 
 /***/ }),
@@ -899,25 +1267,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InputViewCtrl": () => (/* binding */ InputViewCtrl)
 /* harmony export */ });
-class InputViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var InputViewCtrl = /*#__PURE__*/function () {
+  InputViewCtrl.$inject = ["Utils"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor(Utils) {
+  function InputViewCtrl(Utils) {
+    _classCallCheck(this, InputViewCtrl);
+
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.Utils.extend(this.formItem, {
-      config: {}
-    });
-  }
+  _createClass(InputViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.Utils.extend(this.formItem, {
+        config: {}
+      });
+    }
+  }]);
 
-}
+  return InputViewCtrl;
+}();
 
-InputViewCtrl.$inject = ["Utils"];
 
 
 /***/ }),
@@ -934,18 +1315,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _input_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-view.controller */ "./src/lib/directives/input-item/input-view.controller.js");
 /* harmony import */ var _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-view.tpl.html */ "./src/lib/directives/input-item/input-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class InputView {
+var InputView = /*#__PURE__*/function () {
+  InputView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function InputView($timeout) {
+    _classCallCheck(this, InputView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _input_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
@@ -967,16 +1358,19 @@ class InputView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(InputView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return InputView;
+}();
 
-InputView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -991,18 +1385,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LabelItemCtrl": () => (/* binding */ LabelItemCtrl)
 /* harmony export */ });
-class LabelItemCtrl {
-  /**
-   * @ngInject
-   * @param {JQLite} $element
-   */
-  constructor($element) {
-    this.Element = $element;
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-LabelItemCtrl.$inject = ["$element"];
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LabelItemCtrl = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ * @param {JQLite} $element
+ */
+["$element", function LabelItemCtrl($element) {
+  _classCallCheck(this, LabelItemCtrl);
+
+  this.Element = $element;
+}]);
+
 
 
 /***/ }),
@@ -1019,25 +1418,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _label_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-item.controller */ "./src/lib/directives/label-item/label-item.controller.js");
 /* harmony import */ var _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-item.tpl.html */ "./src/lib/directives/label-item/label-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class LabelItem {
-  constructor() {
-    this.restrict = 'E';
-    this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _label_item_controller__WEBPACK_IMPORTED_MODULE_0__.LabelItemCtrl;
-    this.controllerAs = 'Label';
-    this.bindToController = true;
-  }
+var LabelItem = /*#__PURE__*/_createClass(function LabelItem() {
+  _classCallCheck(this, LabelItem);
 
-}
+  this.restrict = 'E';
+  this.template = _label_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _label_item_controller__WEBPACK_IMPORTED_MODULE_0__.LabelItemCtrl;
+  this.controllerAs = 'Label';
+  this.bindToController = true;
+});
 
 
 
@@ -1053,28 +1457,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LabelViewCtrl": () => (/* binding */ LabelViewCtrl)
 /* harmony export */ });
-class LabelViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var LabelViewCtrl = /*#__PURE__*/function () {
+  LabelViewCtrl.$inject = ["Utils", "$sce"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {ng.ISCEService} $sce
    */
-  constructor(Utils, $sce) {
+  function LabelViewCtrl(Utils, $sce) {
+    _classCallCheck(this, LabelViewCtrl);
+
     this.Utils = Utils;
     this.$sce = $sce;
   }
 
-  init() {
-    this.Utils.extend(this.formItem, {});
-  }
+  _createClass(LabelViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.Utils.extend(this.formItem, {});
+    }
+  }, {
+    key: "sanitizedTitle",
+    get: function get() {
+      return this.$sce.trustAsHtml(this.formItem.value);
+    }
+  }]);
 
-  get sanitizedTitle() {
-    return this.$sce.trustAsHtml(this.formItem.value);
-  }
+  return LabelViewCtrl;
+}();
 
-}
-
-LabelViewCtrl.$inject = ["Utils", "$sce"];
 
 
 /***/ }),
@@ -1091,18 +1509,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _label_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./label-view.controller */ "./src/lib/directives/label-item/label-view.controller.js");
 /* harmony import */ var _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./label-view.tpl.html */ "./src/lib/directives/label-item/label-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class LabelView {
+var LabelView = /*#__PURE__*/function () {
+  LabelView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function LabelView($timeout) {
+    _classCallCheck(this, LabelView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _label_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
@@ -1124,16 +1552,19 @@ class LabelView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(LabelView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return LabelView;
+}();
 
-LabelView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -1148,13 +1579,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MatrixItemCtrl": () => (/* binding */ MatrixItemCtrl)
 /* harmony export */ });
-class MatrixItemCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var MatrixItemCtrl = /*#__PURE__*/function () {
+  MatrixItemCtrl.$inject = ["Utils", "$document"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {ng.IDocumentService} $document
    */
-  constructor(Utils, $document) {
+  function MatrixItemCtrl(Utils, $document) {
+    _classCallCheck(this, MatrixItemCtrl);
+
     this.RowContainer = angular.element($document[0].querySelector('.rowContainer'));
     this.ColumnContainer = angular.element($document[0].querySelector('.columnContainer'));
     this.item = Utils.extend(this.item || {}, {
@@ -1174,44 +1615,53 @@ class MatrixItemCtrl {
    */
 
 
-  deleteRow(index) {
-    this.item.config.rows.splice(index, 1);
-  }
+  _createClass(MatrixItemCtrl, [{
+    key: "deleteRow",
+    value: function deleteRow(index) {
+      this.item.config.rows.splice(index, 1);
+    }
+  }, {
+    key: "addRow",
+    value: function addRow() {
+      this.item.config.rows.push({
+        value: ''
+      });
+      setTimeout(function () {
+        var options = this.RowContainer.find('input');
+        var addedOption = options[options.length - 1];
+        addedOption.focus();
+      }.bind(this), 0);
+    }
+    /**
+     *
+     * @param {number} index
+     */
 
-  addRow() {
-    this.item.config.rows.push({
-      value: ''
-    });
-    setTimeout(function () {
-      const options = this.RowContainer.find('input');
-      const addedOption = options[options.length - 1];
-      addedOption.focus();
-    }.bind(this), 0);
-  }
-  /**
-   *
-   * @param {number} index
-   */
+  }, {
+    key: "deleteColumn",
+    value: function deleteColumn(index) {
+      this.item.config.columns.splice(index, 1);
+    }
+  }, {
+    key: "addColumn",
+    value: function addColumn() {
+      var _this = this;
 
+      this.item.config.columns.push({
+        value: ''
+      });
+      setTimeout(function () {
+        var options = _this.ColumnContainer.find('input');
 
-  deleteColumn(index) {
-    this.item.config.columns.splice(index, 1);
-  }
+        var addedOption = options[options.length - 1];
+        addedOption.focus();
+      }, 0);
+    }
+  }]);
 
-  addColumn() {
-    this.item.config.columns.push({
-      value: ''
-    });
-    setTimeout(() => {
-      const options = this.ColumnContainer.find('input');
-      const addedOption = options[options.length - 1];
-      addedOption.focus();
-    }, 0);
-  }
+  return MatrixItemCtrl;
+}();
 
-}
-
-MatrixItemCtrl.$inject = ["Utils", "$document"];
 
 
 /***/ }),
@@ -1228,30 +1678,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-item.controller */ "./src/lib/directives/matrix-item/matrix-item.controller.js");
 /* harmony import */ var _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-item.tpl.html */ "./src/lib/directives/matrix-item/matrix-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class MatrixItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__.MatrixItemCtrl;
-    this.controllerAs = 'Matrix';
-    this.bindToController = true;
-  }
+var MatrixItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function MatrixItem() {
+  _classCallCheck(this, MatrixItem);
 
-}
+  this.restrict = 'E';
+  this.template = _matrix_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _matrix_item_controller__WEBPACK_IMPORTED_MODULE_0__.MatrixItemCtrl;
+  this.controllerAs = 'Matrix';
+  this.bindToController = true;
+});
 
-MatrixItem.$inject = [];
 
 
 /***/ }),
@@ -1266,61 +1721,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MatrixViewCtrl": () => (/* binding */ MatrixViewCtrl)
 /* harmony export */ });
-class MatrixViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var MatrixViewCtrl = /*#__PURE__*/function () {
+  MatrixViewCtrl.$inject = ["$scope", "Utils"];
+
   /**
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor($scope, Utils) {
+  function MatrixViewCtrl($scope, Utils) {
+    _classCallCheck(this, MatrixViewCtrl);
+
     this.Scope = $scope;
     this.Utils = Utils;
     this.isValid = true;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem, {
-      config: {
-        rows: [],
-        columns: []
+  _createClass(MatrixViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem, {
+        config: {
+          rows: [],
+          columns: []
+        }
+      });
+
+      this._updateValidity();
+
+      if (this.isPreview()) {
+        this._enableWatchers();
       }
-    });
-
-    this._updateValidity();
-
-    if (this.isPreview()) {
-      this._enableWatchers();
     }
-  }
+  }, {
+    key: "_updateValidity",
+    value: function _updateValidity() {
+      var valid = true;
 
-  _updateValidity() {
-    let valid = true;
-
-    if (this.formItem.config.required) {
-      valid = !this.formItem.config.rows.some(row => typeof row['selected'] === 'undefined'); //   for (let i = 0; i < this.formItem.config.rows.length; i++) {
-      //     if (typeof this.formItem.config.rows[i]['selected'] === 'undefined') {
-      //       valid = false
-      //       break
-      //     }
-      //   }
-    }
-
-    this.isValid = valid;
-    this.form.$setValidity('required', this.isValid);
-  }
-
-  _enableWatchers() {
-    this.Scope.$watchGroup(['MatrixView.formItem.config.required', 'MatrixView.formItem.config.rows.length'], newVal => {
-      if (newVal !== undefined) {
-        this._updateValidity();
+      if (this.formItem.config.required) {
+        valid = !this.formItem.config.rows.some(function (row) {
+          return typeof row['selected'] === 'undefined';
+        }); //   for (let i = 0; i < this.formItem.config.rows.length; i++) {
+        //     if (typeof this.formItem.config.rows[i]['selected'] === 'undefined') {
+        //       valid = false
+        //       break
+        //     }
+        //   }
       }
-    });
-  }
 
-}
+      this.isValid = valid;
+      this.form.$setValidity('required', this.isValid);
+    }
+  }, {
+    key: "_enableWatchers",
+    value: function _enableWatchers() {
+      var _this = this;
 
-MatrixViewCtrl.$inject = ["$scope", "Utils"];
+      this.Scope.$watchGroup(['MatrixView.formItem.config.required', 'MatrixView.formItem.config.rows.length'], function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateValidity();
+        }
+      });
+    }
+  }]);
+
+  return MatrixViewCtrl;
+}();
+
 
 
 /***/ }),
@@ -1337,18 +1811,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./matrix-view.tpl.html */ "./src/lib/directives/matrix-item/matrix-view.tpl.html");
 /* harmony import */ var _matrix_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./matrix-view.controller */ "./src/lib/directives/matrix-item/matrix-view.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class MatrixView {
+var MatrixView = /*#__PURE__*/function () {
+  MatrixView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function MatrixView($timeout) {
+    _classCallCheck(this, MatrixView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _matrix_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
@@ -1371,16 +1855,19 @@ class MatrixView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(MatrixView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return MatrixView;
+}();
 
-MatrixView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -1395,13 +1882,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RadioButtonItemCtrl": () => (/* binding */ RadioButtonItemCtrl)
 /* harmony export */ });
-class RadioButtonItemCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var RadioButtonItemCtrl = /*#__PURE__*/function () {
+  RadioButtonItemCtrl.$inject = ["Utils", "$element"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {JQLite} $element
    */
-  constructor(Utils, $element) {
+  function RadioButtonItemCtrl(Utils, $element) {
+    _classCallCheck(this, RadioButtonItemCtrl);
+
     this.Element = $element;
     this.item = Utils.extend(this.item || {}, {
       config: {},
@@ -1411,24 +1908,31 @@ class RadioButtonItemCtrl {
     });
   }
 
-  deleteOption(index) {
-    this.item.options.splice(index, 1);
-  }
+  _createClass(RadioButtonItemCtrl, [{
+    key: "deleteOption",
+    value: function deleteOption(index) {
+      this.item.options.splice(index, 1);
+    }
+  }, {
+    key: "addOption",
+    value: function addOption() {
+      var _this = this;
 
-  addOption() {
-    this.item.options.push({
-      value: ''
-    });
-    setTimeout(() => {
-      const options = this.Element.find('input');
-      const addedOption = options[options.length - 1];
-      addedOption.focus();
-    }, 0);
-  }
+      this.item.options.push({
+        value: ''
+      });
+      setTimeout(function () {
+        var options = _this.Element.find('input');
 
-}
+        var addedOption = options[options.length - 1];
+        addedOption.focus();
+      }, 0);
+    }
+  }]);
 
-RadioButtonItemCtrl.$inject = ["Utils", "$element"];
+  return RadioButtonItemCtrl;
+}();
+
 
 
 /***/ }),
@@ -1445,30 +1949,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-item.controller */ "./src/lib/directives/radio-button-item/radio-button-item.controller.js");
 /* harmony import */ var _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-item.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class RadioButtonItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__.RadioButtonItemCtrl;
-    this.controllerAs = 'RadioButton';
-    this.bindToController = true;
-  }
+var RadioButtonItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function RadioButtonItem() {
+  _classCallCheck(this, RadioButtonItem);
 
-}
+  this.restrict = 'E';
+  this.template = _radio_button_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _radio_button_item_controller__WEBPACK_IMPORTED_MODULE_0__.RadioButtonItemCtrl;
+  this.controllerAs = 'RadioButton';
+  this.bindToController = true;
+});
 
-RadioButtonItem.$inject = [];
 
 
 /***/ }),
@@ -1483,26 +1992,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "RadioButtonViewCtrl": () => (/* binding */ RadioButtonViewCtrl)
 /* harmony export */ });
-class RadioButtonViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var RadioButtonViewCtrl = /*#__PURE__*/function () {
+  RadioButtonViewCtrl.$inject = ["Utils"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor(Utils) {
+  function RadioButtonViewCtrl(Utils) {
+    _classCallCheck(this, RadioButtonViewCtrl);
+
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem, {
-      config: {},
-      options: []
-    });
-  }
+  _createClass(RadioButtonViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem, {
+        config: {},
+        options: []
+      });
+    }
+  }]);
 
-}
+  return RadioButtonViewCtrl;
+}();
 
-RadioButtonViewCtrl.$inject = ["Utils"];
 
 
 /***/ }),
@@ -1519,15 +2041,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _radio_button_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio-button-view.controller */ "./src/lib/directives/radio-button-item/radio-button-view.controller.js");
 /* harmony import */ var _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./radio-button-view.tpl.html */ "./src/lib/directives/radio-button-item/radio-button-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
-class RadioButtonView {
+
+var RadioButtonView = /*#__PURE__*/function () {
+  RadioButtonView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function RadioButtonView($timeout) {
+    _classCallCheck(this, RadioButtonView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _radio_button_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
@@ -1550,16 +2082,19 @@ class RadioButtonView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(RadioButtonView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return RadioButtonView;
+}();
 
-RadioButtonView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -1574,13 +2109,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SelectItemCtrl": () => (/* binding */ SelectItemCtrl)
 /* harmony export */ });
-class SelectItemCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var SelectItemCtrl = /*#__PURE__*/function () {
+  SelectItemCtrl.$inject = ["Utils", "$element"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {JQLite} $element
    */
-  constructor(Utils, $element) {
+  function SelectItemCtrl(Utils, $element) {
+    _classCallCheck(this, SelectItemCtrl);
+
     this.Element = $element;
     this.item = Utils.extend(this.item || {}, {
       config: {},
@@ -1595,24 +2140,31 @@ class SelectItemCtrl {
    */
 
 
-  deleteOption(index) {
-    this.item.options.splice(index, 1);
-  }
+  _createClass(SelectItemCtrl, [{
+    key: "deleteOption",
+    value: function deleteOption(index) {
+      this.item.options.splice(index, 1);
+    }
+  }, {
+    key: "addOption",
+    value: function addOption() {
+      var _this = this;
 
-  addOption() {
-    this.item.options.push({
-      value: ''
-    });
-    setTimeout(() => {
-      const options = this.Element.find('input');
-      const addedOption = options[options.length - 1];
-      addedOption.focus();
-    }, 0);
-  }
+      this.item.options.push({
+        value: ''
+      });
+      setTimeout(function () {
+        var options = _this.Element.find('input');
 
-}
+        var addedOption = options[options.length - 1];
+        addedOption.focus();
+      }, 0);
+    }
+  }]);
 
-SelectItemCtrl.$inject = ["Utils", "$element"];
+  return SelectItemCtrl;
+}();
+
 
 
 /***/ }),
@@ -1629,30 +2181,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-item.tpl.html */ "./src/lib/directives/select-item/select-item.tpl.html");
 /* harmony import */ var _select_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-item.controller */ "./src/lib/directives/select-item/select-item.controller.js");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class SelectItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _select_item_controller__WEBPACK_IMPORTED_MODULE_1__.SelectItemCtrl;
-    this.controllerAs = 'Select';
-    this.bindToController = true;
-  }
+var SelectItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function SelectItem() {
+  _classCallCheck(this, SelectItem);
 
-}
+  this.restrict = 'E';
+  this.template = _select_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _select_item_controller__WEBPACK_IMPORTED_MODULE_1__.SelectItemCtrl;
+  this.controllerAs = 'Select';
+  this.bindToController = true;
+});
 
-SelectItem.$inject = [];
 
 
 /***/ }),
@@ -1667,26 +2224,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SelectViewCtrl": () => (/* binding */ SelectViewCtrl)
 /* harmony export */ });
-class SelectViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var SelectViewCtrl = /*#__PURE__*/function () {
+  SelectViewCtrl.$inject = ["Utils"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor(Utils) {
+  function SelectViewCtrl(Utils) {
+    _classCallCheck(this, SelectViewCtrl);
+
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem, {
-      config: {},
-      options: []
-    });
-  }
+  _createClass(SelectViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem, {
+        config: {},
+        options: []
+      });
+    }
+  }]);
 
-}
+  return SelectViewCtrl;
+}();
 
-SelectViewCtrl.$inject = ["Utils"];
 
 
 /***/ }),
@@ -1703,18 +2273,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-view.tpl.html */ "./src/lib/directives/select-item/select-view.tpl.html");
 /* harmony import */ var _select_view_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./select-view.controller */ "./src/lib/directives/select-item/select-view.controller.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class SelectView {
+var SelectView = /*#__PURE__*/function () {
+  SelectView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function SelectView($timeout) {
+    _classCallCheck(this, SelectView);
+
     this.$timeout = $timeout;
     this.restrict = 'E';
     this.template = _select_view_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
@@ -1737,16 +2317,19 @@ class SelectView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(SelectView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return SelectView;
+}();
 
-SelectView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -1761,22 +2344,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TextareaItemCtrl": () => (/* binding */ TextareaItemCtrl)
 /* harmony export */ });
-class TextareaItemCtrl {
-  /**
-   * @ngInject
-   * @param {import('../../utils/utils.service').Utils} Utils
-   * @param {JQLite} $element
-   */
-  constructor(Utils, $element) {
-    this.Element = $element;
-    this.item = Utils.extend(this.item || {}, {
-      config: {}
-    });
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-TextareaItemCtrl.$inject = ["Utils", "$element"];
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TextareaItemCtrl = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ * @param {import('../../utils/utils.service').Utils} Utils
+ * @param {JQLite} $element
+ */
+["Utils", "$element", function TextareaItemCtrl(Utils, $element) {
+  _classCallCheck(this, TextareaItemCtrl);
+
+  this.Element = $element;
+  this.item = Utils.extend(this.item || {}, {
+    config: {}
+  });
+}]);
+
 
 
 /***/ }),
@@ -1793,30 +2381,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-item.controller */ "./src/lib/directives/textarea-item/textarea-item.controller.js");
 /* harmony import */ var _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-item.tpl.html */ "./src/lib/directives/textarea-item/textarea-item.tpl.html");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class TextareaItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaItemCtrl;
-    this.controllerAs = 'Textarea';
-    this.bindToController = true;
-  }
+var TextareaItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function TextareaItem() {
+  _classCallCheck(this, TextareaItem);
 
-}
+  this.restrict = 'E';
+  this.template = _textarea_item_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _textarea_item_controller__WEBPACK_IMPORTED_MODULE_0__.TextareaItemCtrl;
+  this.controllerAs = 'Textarea';
+  this.bindToController = true;
+});
 
-TextareaItem.$inject = [];
 
 
 /***/ }),
@@ -1831,25 +2424,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TextareaViewCtrl": () => (/* binding */ TextareaViewCtrl)
 /* harmony export */ });
-class TextareaViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var TextareaViewCtrl = /*#__PURE__*/function () {
+  TextareaViewCtrl.$inject = ["Utils"];
+
   /**
    * @ngInject
    * @param {import('../../utils/utils.service').Utils} Utils
    */
-  constructor(Utils) {
+  function TextareaViewCtrl(Utils) {
+    _classCallCheck(this, TextareaViewCtrl);
+
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.formItem = this.Utils.extend(this.formItem, {
-      config: {}
-    });
-  }
+  _createClass(TextareaViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.formItem = this.Utils.extend(this.formItem, {
+        config: {}
+      });
+    }
+  }]);
 
-}
+  return TextareaViewCtrl;
+}();
 
-TextareaViewCtrl.$inject = ["Utils"];
 
 
 /***/ }),
@@ -1866,18 +2472,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _textarea_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textarea-view.controller */ "./src/lib/directives/textarea-item/textarea-view.controller.js");
 /* harmony import */ var _textarea_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea-view.tpl.html */ "./src/lib/directives/textarea-item/textarea-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class TextareaView {
+var TextareaView = /*#__PURE__*/function () {
+  TextareaView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function TextareaView($timeout) {
+    _classCallCheck(this, TextareaView);
+
     this.$timeout = $timeout;
     this.scope = {
       formItem: '=',
@@ -1899,16 +2515,19 @@ class TextareaView {
    */
 
 
-  link(scope, elem, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-  }
+  _createClass(TextareaView, [{
+    key: "link",
+    value: function link(scope, elem, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+    }
+  }]);
 
-}
+  return TextareaView;
+}();
 
-TextareaView.$inject = ["$timeout"];
 
 
 /***/ }),
@@ -1923,24 +2542,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UploadItemCtrl": () => (/* binding */ UploadItemCtrl)
 /* harmony export */ });
-class UploadItemCtrl {
-  /**
-   * @ngInject
-   *
-   * @param {import('../../utils/utils.service').Utils} Utils
-   * @param {JQLite} $element
-   */
-  constructor(Utils, $element) {
-    this.Element = $element;
-    this.item = Utils.extend(this.item || {}, {
-      config: {},
-      options: []
-    });
-  }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-UploadItemCtrl.$inject = ["Utils", "$element"];
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var UploadItemCtrl = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ *
+ * @param {import('../../utils/utils.service').Utils} Utils
+ * @param {JQLite} $element
+ */
+["Utils", "$element", function UploadItemCtrl(Utils, $element) {
+  _classCallCheck(this, UploadItemCtrl);
+
+  this.Element = $element;
+  this.item = Utils.extend(this.item || {}, {
+    config: {},
+    options: []
+  });
+}]);
+
 
 
 /***/ }),
@@ -1957,30 +2581,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-item.tpl.html */ "./src/lib/directives/upload-item/upload-item.tpl.html");
 /* harmony import */ var _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-item.controller */ "./src/lib/directives/upload-item/upload-item.controller.js");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 /**
  * @implements {ng.IDirective}
  */
 
-class UploadItem {
-  /**
-   * @ngInject
-   */
-  constructor() {
-    this.restrict = 'E';
-    this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
-    this.scope = {
-      item: '='
-    };
-    this.controller = _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl;
-    this.controllerAs = 'Upload';
-    this.bindToController = true;
-  }
+var UploadItem = /*#__PURE__*/_createClass(
+/**
+ * @ngInject
+ */
+function UploadItem() {
+  _classCallCheck(this, UploadItem);
 
-}
+  this.restrict = 'E';
+  this.template = _upload_item_tpl_html__WEBPACK_IMPORTED_MODULE_0__["default"];
+  this.scope = {
+    item: '='
+  };
+  this.controller = _upload_item_controller__WEBPACK_IMPORTED_MODULE_1__.UploadItemCtrl;
+  this.controllerAs = 'Upload';
+  this.bindToController = true;
+});
 
-UploadItem.$inject = [];
 
 
 /***/ }),
@@ -1995,90 +2624,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UploadViewCtrl": () => (/* binding */ UploadViewCtrl)
 /* harmony export */ });
-class UploadViewCtrl {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var UploadViewCtrl = /*#__PURE__*/function () {
+  UploadViewCtrl.$inject = ["$scope", "Utils", "$element"];
+
   /**
    * @ngInject
    * @param {ng.IScope} $scope
    * @param {import('../../utils/utils.service').Utils} Utils
    * @param {JQLite} $element
    */
-  constructor($scope, Utils, $element) {
+  function UploadViewCtrl($scope, Utils, $element) {
+    _classCallCheck(this, UploadViewCtrl);
+
     this.Scope = $scope;
     this.Element = $element;
     this.Utils = Utils;
     this.formItem = {};
   }
 
-  init() {
-    this.isMultiple = false;
-    this.showAllowed = false;
-    this.formItem = this.Utils.extend(this.formItem || {}, {
-      config: {
-        size: 10,
-        uploadFileButtonLabel: 'Add files'
-      },
-      options: []
-    });
+  _createClass(UploadViewCtrl, [{
+    key: "init",
+    value: function init() {
+      this.isMultiple = false;
+      this.showAllowed = false;
+      this.formItem = this.Utils.extend(this.formItem || {}, {
+        config: {
+          size: 10,
+          uploadFileButtonLabel: 'Add files'
+        },
+        options: []
+      });
 
-    if (this.isPreview()) {
-      this._enableWatchers();
-    }
-  }
-
-  _updateMultiple() {
-    this.isMultiple = !!this.formItem.config.multipleUpload;
-    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
-
-    if (input) {
-      this.formItem.options = [];
-
-      if (this.isMultiple) {
-        input.attr('multiple', 'multiple');
-      } else {
-        input.removeAttr('multiple');
+      if (this.isPreview()) {
+        this._enableWatchers();
       }
     }
-  }
+  }, {
+    key: "_updateMultiple",
+    value: function _updateMultiple() {
+      this.isMultiple = !!this.formItem.config.multipleUpload;
+      var input = angular.element(this.Element[0].querySelector('input[type=file]'));
 
-  _updateAccept() {
-    this.showAllowed = !!this.formItem.config.showAccept;
-    const input = angular.element(this.Element[0].querySelector('input[type=file]'));
+      if (input) {
+        this.formItem.options = [];
 
-    if (input) {
-      if (this.showAllowed) {
-        input[0].setAttribute('accept', this.formItem.config.accept);
-      } else {
-        input[0].removeAttribute('accept');
-        delete this.formItem.config.accept;
+        if (this.isMultiple) {
+          input.attr('multiple', 'multiple');
+        } else {
+          input.removeAttr('multiple');
+        }
       }
     }
-  }
+  }, {
+    key: "_updateAccept",
+    value: function _updateAccept() {
+      this.showAllowed = !!this.formItem.config.showAccept;
+      var input = angular.element(this.Element[0].querySelector('input[type=file]'));
 
-  _enableWatchers() {
-    this.Scope.$watch('UploadView.formItem.config.multipleUpload', newVal => {
-      if (newVal !== undefined) {
-        this._updateMultiple();
+      if (input) {
+        if (this.showAllowed) {
+          input[0].setAttribute('accept', this.formItem.config.accept);
+        } else {
+          input[0].removeAttribute('accept');
+          delete this.formItem.config.accept;
+        }
       }
-    });
-    this.Scope.$watch('UploadView.formItem.config.showAccept', newVal => {
-      if (newVal !== undefined) {
-        this._updateAccept();
-      }
-    });
-    this.Scope.$watch('UploadView.formItem.config.accept', newVal => {
-      if (newVal !== undefined) {
-        this._updateAccept();
-      }
-    });
-  }
+    }
+  }, {
+    key: "_enableWatchers",
+    value: function _enableWatchers() {
+      var _this = this;
 
-  removeItem(index) {
-    this.formItem.options.splice(index, 1);
-  }
+      this.Scope.$watch('UploadView.formItem.config.multipleUpload', function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateMultiple();
+        }
+      });
+      this.Scope.$watch('UploadView.formItem.config.showAccept', function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateAccept();
+        }
+      });
+      this.Scope.$watch('UploadView.formItem.config.accept', function (newVal) {
+        if (newVal !== undefined) {
+          _this._updateAccept();
+        }
+      });
+    }
+  }, {
+    key: "removeItem",
+    value: function removeItem(index) {
+      this.formItem.options.splice(index, 1);
+    }
+  }]);
 
-}
+  return UploadViewCtrl;
+}();
 
-UploadViewCtrl.$inject = ["$scope", "Utils", "$element"];
 
 
 /***/ }),
@@ -2095,16 +2743,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _upload_view_controller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./upload-view.controller */ "./src/lib/directives/upload-item/upload-view.controller.js");
 /* harmony import */ var _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./upload-view.tpl.html */ "./src/lib/directives/upload-item/upload-view.tpl.html");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
-const MB = 1024 * 1024;
 
-class UploadView {
+var MB = 1024 * 1024;
+
+var UploadView = /*#__PURE__*/function () {
+  UploadView.$inject = ["$timeout"];
+
   /**
    * @ngInject
    * @param {ng.ITimeoutService} $timeout
    */
-  constructor($timeout) {
+  function UploadView($timeout) {
+    _classCallCheck(this, UploadView);
+
     this.$timeout = $timeout;
     this.template = _upload_view_tpl_html__WEBPACK_IMPORTED_MODULE_1__["default"];
     this.restrict = 'E';
@@ -2127,59 +2785,62 @@ class UploadView {
    */
 
 
-  link(scope, element, attrs, ctrl) {
-    //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
-    this.$timeout(function () {
-      ctrl.init();
-    }, 50);
-    const button = angular.element(element[0].querySelector('.upload-button'));
-    const input = angular.element(element[0].querySelector('input[type=file]'));
-    const label = angular.element(element[0].querySelector('label'));
+  _createClass(UploadView, [{
+    key: "link",
+    value: function link(scope, element, attrs, ctrl) {
+      //this timeout is placed here in order to make sure that the creator directive of this view is finished its work
+      this.$timeout(function () {
+        ctrl.init();
+      }, 50);
+      var button = angular.element(element[0].querySelector('.upload-button'));
+      var input = angular.element(element[0].querySelector('input[type=file]'));
+      var label = angular.element(element[0].querySelector('label'));
 
-    if (label.length) {
-      label.css('display', 'none');
-    }
+      if (label.length) {
+        label.css('display', 'none');
+      }
 
-    button.on('click', () => {
-      label.css('display', 'none');
-      typeof input.trigger === 'function' ? input.trigger('click') : input[0].click();
-    });
-    input.on('change', e => {
-      scope.$apply(function () {
-        /**
-         * @type {File[]}
-         */
-        const files = Array.from(e.target.files); // Max allowed size in MB
-
-        const maxSizeMB = ctrl.formItem.config.size * MB;
-        const exceedsSize = files.some(file => file.size >= maxSizeMB);
-
-        if (exceedsSize) {
-          label.css('display', 'block');
-          label.text(ctrl.formItem.config.sizeErrMessage);
-          ctrl.formItem.options = [];
-        } else {
-          ctrl.formItem.options = files.map(file => {
-            const {
-              name,
-              size,
-              type
-            } = file;
-            return {
-              name,
-              size,
-              type,
-              file
-            };
-          });
-        }
+      button.on('click', function () {
+        label.css('display', 'none');
+        typeof input.trigger === 'function' ? input.trigger('click') : input[0].click();
       });
-    });
-  }
+      input.on('change', function (e) {
+        scope.$apply(function () {
+          /**
+           * @type {File[]}
+           */
+          var files = Array.from(e.target.files); // Max allowed size in MB
 
-}
+          var maxSizeMB = ctrl.formItem.config.size * MB;
+          var exceedsSize = files.some(function (file) {
+            return file.size >= maxSizeMB;
+          });
 
-UploadView.$inject = ["$timeout"];
+          if (exceedsSize) {
+            label.css('display', 'block');
+            label.text(ctrl.formItem.config.sizeErrMessage);
+            ctrl.formItem.options = [];
+          } else {
+            ctrl.formItem.options = files.map(function (file) {
+              var name = file.name,
+                  size = file.size,
+                  type = file.type;
+              return {
+                name: name,
+                size: size,
+                type: type,
+                file: file
+              };
+            });
+          }
+        });
+      });
+    }
+  }]);
+
+  return UploadView;
+}();
+
 
 
 /***/ }),
@@ -2194,15 +2855,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MainController": () => (/* binding */ MainController)
 /* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 /**
  * @typedef {{type:string}} Item
  * @typedef {{items: Item[]}} FormConfig
  */
-class MainController {
+var MainController = /*#__PURE__*/function () {
   /**
    * @ngInject
    */
-  constructor() {
+  function MainController() {
+    _classCallCheck(this, MainController);
+
     /**
      * @type {FormConfig}
      */
@@ -2216,55 +2885,61 @@ class MainController {
    */
 
 
-  addItem(type) {
-    this.form.items.push({
-      type
-    });
-  }
-  /**
-   * Remove item at index
-   * @param {Item} item
-   * @param {number} index
-   */
-
-
-  delete(item, index) {
-    this.form.items.splice(index, 1);
-  }
-  /**
-   * insert before (bounded)
-   * Pops out latest element (wanted?)
-   * @param {Item} item
-   * @param {number} index
-   */
-
-
-  up(item, index) {
-    if (index !== 0) {
-      const prevItem = this.form.items[index - 1];
-      this.form.items[index] = prevItem;
-      this.form.items[index - 1] = item;
+  _createClass(MainController, [{
+    key: "addItem",
+    value: function addItem(type) {
+      this.form.items.push({
+        type: type
+      });
     }
-  }
-  /**
-   * insert after (bounded)
-   * Pops out latest element (wanted?)
-   * @param {Item} item
-   * @param {number} index
-   */
+    /**
+     * Remove item at index
+     * @param {Item} item
+     * @param {number} index
+     */
 
-
-  down(item, index) {
-    if (index !== this.form.items.length - 1) {
-      const nextItem = this.form.items[index + 1];
-      this.form.items[index] = nextItem;
-      this.form.items[index + 1] = item;
+  }, {
+    key: "delete",
+    value: function _delete(item, index) {
+      this.form.items.splice(index, 1);
     }
-  }
+    /**
+     * insert before (bounded)
+     * Pops out latest element (wanted?)
+     * @param {Item} item
+     * @param {number} index
+     */
 
-}
+  }, {
+    key: "up",
+    value: function up(item, index) {
+      if (index !== 0) {
+        var prevItem = this.form.items[index - 1];
+        this.form.items[index] = prevItem;
+        this.form.items[index - 1] = item;
+      }
+    }
+    /**
+     * insert after (bounded)
+     * Pops out latest element (wanted?)
+     * @param {Item} item
+     * @param {number} index
+     */
 
-MainController.$inject = [];
+  }, {
+    key: "down",
+    value: function down(item, index) {
+      if (index !== this.form.items.length - 1) {
+        var nextItem = this.form.items[index + 1];
+        this.form.items[index] = nextItem;
+        this.form.items[index + 1] = item;
+      }
+    }
+  }]);
+
+  return MainController;
+}();
+
 
 
 /***/ }),
@@ -2279,26 +2954,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Utils": () => (/* binding */ Utils)
 /* harmony export */ });
-class Utils {
-  /**
-   * Recursively extend object properties
-   * @param {Object} dest
-   * @param {Object} src
-   * @returns {Object}
-   */
-  extend(dest, src) {
-    return Object.keys(src).reduce((result, key) => {
-      if (typeof result[key] === 'undefined') {
-        result[key] = src[key];
-      } else if (typeof src[key] === 'object') {
-        result[key] = this.extend(result[key], src[key]);
-      }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-      return result;
-    }, typeof dest === 'undefined' ? {} : dest);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var Utils = /*#__PURE__*/function () {
+  function Utils() {
+    _classCallCheck(this, Utils);
   }
 
-}
+  _createClass(Utils, [{
+    key: "extend",
+    value:
+    /**
+     * Recursively extend object properties
+     * @param {Object} dest
+     * @param {Object} src
+     * @returns {Object}
+     */
+    function extend(dest, src) {
+      var _this = this;
+
+      return Object.keys(src).reduce(function (result, key) {
+        if (typeof result[key] === 'undefined') {
+          result[key] = src[key];
+        } else if (_typeof(src[key]) === 'object') {
+          result[key] = _this.extend(result[key], src[key]);
+        }
+
+        return result;
+      }, typeof dest === 'undefined' ? {} : dest);
+    }
+  }]);
+
+  return Utils;
+}();
 
 
 
@@ -2358,6 +3052,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/lib/directives/date-item/date-item.tpl.html":
+/*!*********************************************************!*\
+  !*** ./src/lib/directives/date-item/date-item.tpl.html ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <label>Type</label>\n  <md-select ng-model=\"Date.item.config.type\">\n    <md-option value=\"date\">Date</md-option>\n    <md-option value=\"time\">Time</md-option>\n    <md-option value=\"datetime-local\">DateTime</md-option>\n  </md-select>\n</md-input-container>\n");
+
+/***/ }),
+
+/***/ "./src/lib/directives/date-item/date-view.tpl.html":
+/*!*********************************************************!*\
+  !*** ./src/lib/directives/date-item/date-view.tpl.html ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<md-input-container class=\"md-block\">\n  <input\n    ng-model=\"DateView.formItem.value\"\n    type=\"{{DateView.formItem.config.type}}\"\n    ng-required=\"DateView.formItem.config.required\"\n  />\n  <div ng-messages=\"DateView.form.$error\">\n    <div ng-message=\"required\">This field is required</div>\n  </div>\n</md-input-container>\n");
+
+/***/ }),
+
 /***/ "./src/lib/directives/form-item/form-item.tpl.html":
 /*!*********************************************************!*\
   !*** ./src/lib/directives/form-item/form-item.tpl.html ***!
@@ -2368,7 +3090,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"form-item-container md-inline-form\">\n  <div class=\"form-item-actions\">\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDelete\"\n      ng-click=\"FormItem.deleteClicked()\"\n    >\n      <md-icon class=\"material-icons small\">delete</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onUp\"\n      ng-click=\"FormItem.onUp({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_up</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDown\"\n      ng-click=\"FormItem.onDown({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_down</md-icon>\n    </md-button>\n  </div>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Field Title</label>\n    <input ng-model=\"FormItem.item.props.title\" />\n  </md-input-container>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Help Text</label>\n    <input ng-model=\"FormItem.item.props.helpText\" />\n  </md-input-container>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type === 'agreement'\"\n    class=\"md-block\"\n  >\n    <label>Option Text</label>\n    <input ng-model=\"FormItem.item.options[0].value\" />\n  </md-input-container>\n\n  <div ng-switch=\"FormItem.item.type\">\n    <upload-item ng-switch-when=\"upload\" item=\"FormItem.item\"></upload-item>\n    <agreement-item\n      ng-switch-when=\"agreement\"\n      item=\"FormItem.item\"\n    ></agreement-item>\n    <label-item ng-switch-when=\"label\" item=\"FormItem.item\"></label-item>\n    <input-item ng-switch-when=\"input\" item=\"FormItem.item\"></input-item>\n    <radio-button-item\n      ng-switch-when=\"multipleChoices\"\n      item=\"FormItem.item\"\n    ></radio-button-item>\n    <matrix-item ng-switch-when=\"matrix\" item=\"FormItem.item\"></matrix-item>\n    <checkboxes-item\n      ng-switch-when=\"checkboxes\"\n      item=\"FormItem.item\"\n    ></checkboxes-item>\n    <textarea-item\n      ng-switch-when=\"textarea\"\n      item=\"FormItem.item\"\n    ></textarea-item>\n    <select-item\n      ng-switch-when=\"chooseFromList\"\n      item=\"FormItem.item\"\n    ></select-item>\n    <p ng-switch-default>UNKNOWN TYPE</p>\n  </div>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type != 'label' && FormItem.item.type != 'upload'\"\n    class=\"md-block\"\n  >\n    <md-checkbox ng-model=\"FormItem.item.config.required\"\n      >Required field</md-checkbox\n    >\n  </md-input-container>\n</div>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<div class=\"form-item-container md-inline-form\">\n  <div class=\"form-item-actions\">\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDelete\"\n      ng-click=\"FormItem.deleteClicked()\"\n    >\n      <md-icon class=\"material-icons small\">delete</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onUp\"\n      ng-click=\"FormItem.onUp({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_up</md-icon>\n    </md-button>\n    <md-button\n      class=\"md-button\"\n      ng-if=\"FormItem.Attrs.onDown\"\n      ng-click=\"FormItem.onDown({item: FormItem.item, index: FormItem.index()})\"\n    >\n      <md-icon class=\"material-icons small\">arrow_drop_down</md-icon>\n    </md-button>\n  </div>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Field Title</label>\n    <input ng-model=\"FormItem.item.props.title\" />\n  </md-input-container>\n\n  <md-input-container ng-if=\"FormItem.item.type != 'label'\" class=\"md-block\">\n    <label>Help Text</label>\n    <input ng-model=\"FormItem.item.props.helpText\" />\n  </md-input-container>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type === 'agreement'\"\n    class=\"md-block\"\n  >\n    <label>Option Text</label>\n    <input ng-model=\"FormItem.item.options[0].value\" />\n  </md-input-container>\n\n  <div ng-switch=\"FormItem.item.type\">\n    <upload-item ng-switch-when=\"upload\" item=\"FormItem.item\"></upload-item>\n    <agreement-item\n      ng-switch-when=\"agreement\"\n      item=\"FormItem.item\"\n    ></agreement-item>\n    <label-item ng-switch-when=\"label\" item=\"FormItem.item\"></label-item>\n    <input-item ng-switch-when=\"input\" item=\"FormItem.item\"></input-item>\n    <radio-button-item\n      ng-switch-when=\"multipleChoices\"\n      item=\"FormItem.item\"\n    ></radio-button-item>\n    <matrix-item ng-switch-when=\"matrix\" item=\"FormItem.item\"></matrix-item>\n    <checkboxes-item\n      ng-switch-when=\"checkboxes\"\n      item=\"FormItem.item\"\n    ></checkboxes-item>\n    <textarea-item\n      ng-switch-when=\"textarea\"\n      item=\"FormItem.item\"\n    ></textarea-item>\n    <date-item ng-switch-when=\"date\" item=\"FormItem.item\"></date-item>\n    <select-item\n      ng-switch-when=\"chooseFromList\"\n      item=\"FormItem.item\"\n    ></select-item>\n    <p ng-switch-default>UNKNOWN TYPE</p>\n  </div>\n\n  <md-input-container\n    ng-if=\"FormItem.item.type != 'label' && FormItem.item.type != 'upload'\"\n    class=\"md-block\"\n  >\n    <md-checkbox ng-model=\"FormItem.item.config.required\"\n      >Required field</md-checkbox\n    >\n  </md-input-container>\n</div>\n");
 
 /***/ }),
 
@@ -2684,8 +3406,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/radio-button-item/radio-button-view.directive */ "./src/lib/directives/radio-button-item/radio-button-view.directive.js");
 /* harmony import */ var _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directives/select-item/select-view.directive */ "./src/lib/directives/select-item/select-view.directive.js");
 /* harmony import */ var _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directives/select-item/select-item.directive */ "./src/lib/directives/select-item/select-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/lib/directives/textarea-item/textarea-item.directive.js");
-/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/lib/directives/textarea-item/textarea-view.directive.js");
+/* harmony import */ var _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directives/date-item/date-view.directive */ "./src/lib/directives/date-item/date-view.directive.js");
+/* harmony import */ var _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./directives/date-item/date-item.directive */ "./src/lib/directives/date-item/date-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./directives/textarea-item/textarea-item.directive */ "./src/lib/directives/textarea-item/textarea-item.directive.js");
+/* harmony import */ var _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./directives/textarea-item/textarea-view.directive */ "./src/lib/directives/textarea-item/textarea-view.directive.js");
 
 
 
@@ -2710,7 +3434,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_22__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_23__.TextareaView));
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView).directive('dateItem', _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__.DateItem).directive('dateView', _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__.DateView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__.TextareaView));
 })();
 
 /******/ 	return __webpack_exports__;
