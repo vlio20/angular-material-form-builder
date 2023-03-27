@@ -7,7 +7,9 @@
   >
     <ng-form name="formItemForm">
       <div>
-        <div class="formItem-title" ng-show="formItem.type !== 'label'">{{formItem.props.title}}</div>
+        <div class="formItem-title" ng-show="formItem.type !== 'label'">
+          {{formItem.props.title}}
+        </div>
         <div class="formItem-help-text">{{formItem.props.helpText}}</div>
 
         <upload-view
@@ -44,6 +46,11 @@
           form="formItemForm"
           ng-switch-when="textarea"
         ></textarea-view>
+        <date-view
+          form-item="formItem"
+          form="formItemForm"
+          ng-switch-when="date"
+        ></date-view>
         <matrix-view
           form-item="formItem"
           is-preview="true"

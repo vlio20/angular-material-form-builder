@@ -8,6 +8,7 @@ const DEFAULT_TITLE = {
   matrix: 'Matrix',
   checkboxes: 'Options',
   textarea: 'Text',
+  date: 'Date',
 }
 
 class FormItemCtrl {
@@ -32,6 +33,7 @@ class FormItemCtrl {
       matrix: '<matrix-item item="FormItem.item"></matrix-item>',
       checkboxes: '<checkboxes-item item="FormItem.item"></checkboxes-item>',
       textarea: '<textarea-item item="FormItem.item"></textarea-item>',
+      date: '<date-item item="FormItem.item"></date-item>',
     }
     this.item = {}
     this.scope = $scope
