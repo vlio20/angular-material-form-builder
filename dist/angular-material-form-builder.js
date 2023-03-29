@@ -3438,7 +3438,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController).directive('uploadItem', _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem).directive('uploadView', _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView).directive('agreementItem', _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem).directive('agreementView', _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView).directive('checkboxesItem', _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem).directive('checkboxesView', _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView).directive('formItem', _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem).directive('formItemsContainer', _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer).directive('formView', _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView).directive('inputItem', _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem).directive('inputView', _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView).directive('labelItem', _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem).directive('labelView', _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView).directive('matrixItem', _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem).directive('matrixView', _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView).directive('radioButtonItem', _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem).directive('radioButtonView', _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView).directive('selectItem', _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem).directive('selectView', _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView).directive('dateItem', _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__.DateItem).directive('dateView', _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__.DateView).directive('textareaItem', _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__.TextareaItem).directive('textareaView', _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__.TextareaView));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (angular.module('angularMaterialFormBuilder', ['ngMaterial', 'angular-sortable-view', 'ngMessages']).service('Utils', _utils_utils_service__WEBPACK_IMPORTED_MODULE_6__.Utils).controller('MainController', function () {
+  return new _main_main_controller__WEBPACK_IMPORTED_MODULE_5__.MainController();
+}).directive('uploadItem', function () {
+  return new _directives_upload_item_upload_item_directive__WEBPACK_IMPORTED_MODULE_1__.UploadItem();
+}).directive('uploadView', function () {
+  return new _directives_upload_item_upload_view_directive__WEBPACK_IMPORTED_MODULE_2__.UploadView();
+}).directive('agreementItem', function () {
+  return new _directives_agreement_item_agreement_item_directive__WEBPACK_IMPORTED_MODULE_3__.AgreementItem();
+}).directive('agreementView', function () {
+  return new _directives_agreement_item_agreement_view_directive__WEBPACK_IMPORTED_MODULE_4__.AgreementView();
+}).directive('checkboxesItem', function () {
+  return new _directives_checkboxes_item_checkboxes_item_directive__WEBPACK_IMPORTED_MODULE_7__.CheckboxesItem();
+}).directive('checkboxesView', function () {
+  return new _directives_checkboxes_item_checkboxes_view_directive__WEBPACK_IMPORTED_MODULE_8__.CheckboxesView();
+}).directive('formItem', function () {
+  return new _directives_form_item_form_item_directive__WEBPACK_IMPORTED_MODULE_9__.FormItem();
+}).directive('formItemsContainer', function () {
+  return new _directives_form_items_container_form_items_container_directive__WEBPACK_IMPORTED_MODULE_10__.FormItemsContainer();
+}).directive('formView', function () {
+  return new _directives_form_view_form_view_directive__WEBPACK_IMPORTED_MODULE_11__.FormView();
+}).directive('inputItem', function () {
+  return new _directives_input_item_input_item_directive__WEBPACK_IMPORTED_MODULE_12__.InputItem();
+}).directive('inputView', function () {
+  return new _directives_input_item_input_view_directive__WEBPACK_IMPORTED_MODULE_13__.InputView();
+}).directive('labelItem', function () {
+  return new _directives_label_item_label_item_directive__WEBPACK_IMPORTED_MODULE_14__.LabelItem();
+}).directive('labelView', function () {
+  return new _directives_label_item_label_view_directive__WEBPACK_IMPORTED_MODULE_15__.LabelView();
+}).directive('matrixItem', function () {
+  return new _directives_matrix_item_matrix_item_directive__WEBPACK_IMPORTED_MODULE_16__.MatrixItem();
+}).directive('matrixView', function () {
+  return new _directives_matrix_item_matrix_view_directive__WEBPACK_IMPORTED_MODULE_17__.MatrixView();
+}).directive('radioButtonItem', function () {
+  return new _directives_radio_button_item_radio_button_item_directive__WEBPACK_IMPORTED_MODULE_18__.RadioButtonItem();
+}).directive('radioButtonView', function () {
+  return new _directives_radio_button_item_radio_button_view_directive__WEBPACK_IMPORTED_MODULE_19__.RadioButtonView();
+}).directive('selectItem', function () {
+  return new _directives_select_item_select_item_directive__WEBPACK_IMPORTED_MODULE_21__.SelectItem();
+}).directive('selectView', function () {
+  return new _directives_select_item_select_view_directive__WEBPACK_IMPORTED_MODULE_20__.SelectView();
+}).directive('dateItem', function () {
+  return new _directives_date_item_date_item_directive__WEBPACK_IMPORTED_MODULE_23__.DateItem();
+}).directive('dateView', function () {
+  return new _directives_date_item_date_view_directive__WEBPACK_IMPORTED_MODULE_22__.DateView();
+}).directive('textareaItem', function () {
+  return new _directives_textarea_item_textarea_item_directive__WEBPACK_IMPORTED_MODULE_24__.TextareaItem();
+}).directive('textareaView', function () {
+  return new _directives_textarea_item_textarea_view_directive__WEBPACK_IMPORTED_MODULE_25__.TextareaView();
+}));
 })();
 
 /******/ 	return __webpack_exports__;
