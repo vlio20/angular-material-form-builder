@@ -1,6 +1,6 @@
 {
   "name": "@xenialab/angular-material-form-builder",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Form builder for Angular Material (AngularJS version)",
   "main": "dist/angular-material-form-builder.min.js",
   "scripts": {
@@ -29,7 +29,8 @@
     "Andrea Bianco <andrea.bianco@xenialab.it>",
     "Vito Macchia <vito.macchia@xenialab.it>",
     "Marco Messina <marco.messina@xenialab.it>",
-    "Rodolfo Bevione <rodolfolbevione@xenialab.it>"
+    "Rodolfo Bevione <rodolfolbevione@xenialab.it>",
+    "Massimiliano Bungaro <massimiliano.bungaro@xenialab.it>"
   ],
   "engines": {
     "node": ">=14",
